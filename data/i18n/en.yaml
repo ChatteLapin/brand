@@ -1,0 +1,51 @@
+# ChatteLapin official site — English translation dictionary
+#
+# Mirrors ja.yaml key structure 1:1. When ja.yaml gains a key, en.yaml must follow.
+# Stage migration: only hero + mission migrated so far. Remaining sections (products /
+# about / contact / footer) move section-by-section in separate commits.
+
+hero:
+  eyebrow:
+    num: "§ 00"
+    label: "Prologue"
+  title:
+    line1: "Place a quiet hour"
+    line2: "between technology"
+    line3: "and the analog."
+  lede: "What the digital quietly took away — the time to read slowly, the time to think at one's own pace, the texture of paper, the small ties between people — we set it back, within the digital. The mission once carried by our musical theatre company, <em>to restore inner ease</em>, is now reimplemented through digital means. This is the work of ChatteLapin."
+  meta:
+    founded_label: "Founded"
+    founded_value: "2026·05·19"
+    trade_label: "Trade"
+    trade_value: "Software Studio"
+    domicile_label: "Domicile"
+    domicile_value: "Atami, JP"
+  logo_alt: "ChatteLapin logo. A watercolor figure of a cat-like rabbit, with hand-lettered Chatte Lapin"
+  figure:
+    num: "Fig. 01"
+    desc: "Logotype — ChatteLapin"
+  scroll_label: "Scroll"
+  scroll_aria: "To the next section"
+
+mission:
+  num: "§ 01"
+  marginalia: "Mission"
+  title: "Which bridges we build."
+  lede: "The digital has brought convenience; at the same time, it has quietly pushed aside the time to think at one's own pace, the texture of paper, and the small ties between people. Each activity of ChatteLapin is an attempt to set the receding analog values back, within the digital."
+  bridge:
+    talent:
+      num: "01"
+      title: "Flagship — Talent"
+      text: "Restoring, within a digital game, the time to read as one reads a paper book."
+    volt:
+      num: "02"
+      title: "Experiment — volt"
+      text: "A proof-of-concept project to rebind, with AI, the small ties between people in a digital space."
+    business:
+      num: "03"
+      title: "Operations — business"
+      text: "Reweaving paper receipts and ledgers, into the digital, through AI."
+    brand:
+      num: "04"
+      title: "Brand — brand"
+      text: "An unwavering brand experience across print and screen / the foundation of this official site."

@@ -1,0 +1,51 @@
+# ChatteLapin 公式サイト 日本語翻訳辞書 (= source of truth)
+#
+# 構造方針: section 単位の namespace (= hero / mission / products / about / contact / footer)
+# page 側からは `import jaDict from '../../../data/i18n/ja.yaml'` で読み込み、 `{jaDict.hero.title.line1}` 等で参照。
+# 段階移行中: 現状 hero + mission のみ yaml 化。 残り section は段階的に別 commit で移行。
+
+hero:
+  eyebrow:
+    num: "§ 00"
+    label: "Prologue"
+  title:
+    line1: "テクノロジーと"
+    line2: "アナログの間に、"
+    line3: "静かな時間を置く。"
+  lede: "デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、 もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。"
+  meta:
+    founded_label: "Founded"
+    founded_value: "2026·05·19"
+    trade_label: "Trade"
+    trade_value: "Software Studio"
+    domicile_label: "Domicile"
+    domicile_value: "Atami, JP"
+  logo_alt: "ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
+  figure:
+    num: "Fig. 01"
+    desc: "銘 — シャラパン"
+  scroll_label: "Scroll"
+  scroll_aria: "次のセクションへ"
+
+mission:
+  num: "§ 01"
+  marginalia: "Mission"
+  title: "どの橋をかけているか。"
+  lede: "デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。"
+  bridge:
+    talent:
+      num: "01"
+      title: "主力 — Talent"
+      text: "デジタルゲームの中に、 紙の本のような読書の時間を取り戻す。"
+    volt:
+      num: "02"
+      title: "実験 — volt"
+      text: "デジタル空間に、 人と人の縁を AI で結びなおす実証実験。"
+    business:
+      num: "03"
+      title: "運営 — business"
+      text: "紙のレシートと帳簿を、 AI でデジタルに編みなおす。"
+    brand:
+      num: "04"
+      title: "広報 — brand"
+      text: "印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。"

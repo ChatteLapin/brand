@@ -4,6 +4,11 @@ import Layout from '../components/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import logotype from '../assets/chattelapin-logotype.png';
 import businessInfo from '../../../data/business-info.yaml';
+import i18n from '../../../data/i18n/ja.yaml';
+
+// mission.bridge は yaml 辞書では dict 構造 (= talent / volt / business / brand)、
+// レンダリング順序を明示するため 4 件を配列化する。 ja/en 共通仕様。
+const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.mission.bridge.business, i18n.mission.bridge.brand];
 ---
 
 <Layout
@@ -11,36 +16,34 @@ import businessInfo from '../../../data/business-info.yaml';
   description="シャラパン (ChatteLapin) — テクノロジーとアナログの間に、 静かな時間を置く。 ソフトウェア開発業として、 主力プロダクト『Talent』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム) を軸に活動する個人事業。"
 >
   <!-- ==========================================================
-       § 00 Hero
+       § 00 Hero  (= 翻訳テキストは data/i18n/ja.yaml 参照)
        ========================================================== -->
   <section id="top" class="hero">
     <div class="hero__inner col-wrap">
       <div class="hero__grid">
         <div class="hero__text">
           <p class="hero__eyebrow fade-up">
-            <span class="hero__eyebrow-num">§ 00</span>
-            <span class="hero__eyebrow-label">Prologue</span>
+            <span class="hero__eyebrow-num">{i18n.hero.eyebrow.num}</span>
+            <span class="hero__eyebrow-label">{i18n.hero.eyebrow.label}</span>
           </p>
           <h1 class="hero__title fade-up delay-1">
-            <span class="hero__title-line">テクノロジーと</span>
-            <span class="hero__title-line">アナログの間に、</span>
-            <span class="hero__title-line hero__title-line--emphasis">静かな時間を置く。</span>
+            <span class="hero__title-line">{i18n.hero.title.line1}</span>
+            <span class="hero__title-line">{i18n.hero.title.line2}</span>
+            <span class="hero__title-line hero__title-line--emphasis">{i18n.hero.title.line3}</span>
           </h1>
-          <p class="hero__lede fade-up delay-3">
-            デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、 もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。
-          </p>
+          <p class="hero__lede fade-up delay-3" set:html={i18n.hero.lede}></p>
           <div class="hero__meta fade-up delay-4">
             <div class="hero__meta-item">
-              <span class="hero__meta-label">Founded</span>
-              <span class="hero__meta-value">2026·05·19</span>
+              <span class="hero__meta-label">{i18n.hero.meta.founded_label}</span>
+              <span class="hero__meta-value">{i18n.hero.meta.founded_value}</span>
             </div>
             <div class="hero__meta-item">
-              <span class="hero__meta-label">Trade</span>
-              <span class="hero__meta-value">Software Studio</span>
+              <span class="hero__meta-label">{i18n.hero.meta.trade_label}</span>
+              <span class="hero__meta-value">{i18n.hero.meta.trade_value}</span>
             </div>
             <div class="hero__meta-item">
-              <span class="hero__meta-label">Domicile</span>
-              <span class="hero__meta-value">Atami, JP</span>
+              <span class="hero__meta-label">{i18n.hero.meta.domicile_label}</span>
+              <span class="hero__meta-value">{i18n.hero.meta.domicile_value}</span>
             </div>
           </div>
         </div>
@@ -49,7 +52,7 @@ import businessInfo from '../../../data/business-info.yaml';
           <div class="hero__figure-frame">
             <Image
               src={logotype}
-              alt="ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
+              alt={i18n.hero.logo_alt}
               width={600}
               height={600}
               class="hero__figure-img"
@@ -62,65 +65,44 @@ import businessInfo from '../../../data/business-info.yaml';
             />
           </div>
           <figcaption class="hero__figure-caption">
-            <span class="hero__figure-num">Fig. 01</span>
-            <span class="hero__figure-desc">銘 — シャラパン</span>
+            <span class="hero__figure-num">{i18n.hero.figure.num}</span>
+            <span class="hero__figure-desc">{i18n.hero.figure.desc}</span>
           </figcaption>
         </figure>
       </div>
 
-      <a href="#mission" class="hero__scroll fade-in delay-5" aria-label="次のセクションへ">
-        <span class="hero__scroll-label">Scroll</span>
+      <a href="#mission" class="hero__scroll fade-in delay-5" aria-label={i18n.hero.scroll_aria}>
+        <span class="hero__scroll-label">{i18n.hero.scroll_label}</span>
         <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
     </div>
   </section>
 
   <!-- ==========================================================
-       § 01 Mission — どの橋をかけているか
+       § 01 Mission — どの橋をかけているか  (= 翻訳テキストは data/i18n/ja.yaml)
        ========================================================== -->
   <section id="mission" class="section reveal">
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 01</p>
-          <p class="marginalia">Mission</p>
+          <p class="section-num">{i18n.mission.num}</p>
+          <p class="marginalia">{i18n.mission.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <h2 class="section__title">どの橋をかけているか。</h2>
-          <p class="section__lede dropcap">
-            デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
-          </p>
+          <h2 class="section__title">{i18n.mission.title}</h2>
+          <p class="section__lede dropcap" set:html={i18n.mission.lede}></p>
 
           <ol class="bridge-list">
-            <li class="bridge-list__item">
-              <span class="bridge-list__num">01</span>
-              <div class="bridge-list__body">
-                <h3 class="bridge-list__title">主力 — Talent</h3>
-                <p class="bridge-list__text">デジタルゲームの中に、 紙の本のような読書の時間を取り戻す。</p>
-              </div>
-            </li>
-            <li class="bridge-list__item">
-              <span class="bridge-list__num">02</span>
-              <div class="bridge-list__body">
-                <h3 class="bridge-list__title">実験 — volt</h3>
-                <p class="bridge-list__text">デジタル空間に、 人と人の縁を AI で結びなおす実証実験。</p>
-              </div>
-            </li>
-            <li class="bridge-list__item">
-              <span class="bridge-list__num">03</span>
-              <div class="bridge-list__body">
-                <h3 class="bridge-list__title">運営 — business</h3>
-                <p class="bridge-list__text">紙のレシートと帳簿を、 AI でデジタルに編みなおす。</p>
-              </div>
-            </li>
-            <li class="bridge-list__item">
-              <span class="bridge-list__num">04</span>
-              <div class="bridge-list__body">
-                <h3 class="bridge-list__title">広報 — brand</h3>
-                <p class="bridge-list__text">印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。</p>
-              </div>
-            </li>
+            {bridgeItems.map((item) => (
+              <li class="bridge-list__item">
+                <span class="bridge-list__num">{item.num}</span>
+                <div class="bridge-list__body">
+                  <h3 class="bridge-list__title">{item.title}</h3>
+                  <p class="bridge-list__text">{item.text}</p>
+                </div>
+              </li>
+            ))}
           </ol>
         </div>
       </div>
