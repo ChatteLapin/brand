@@ -1,35 +1,27 @@
 ---
 // ChatteLapin Header — 古典書物の扉ページ × シャープなナビゲーション
+// 翻訳テキストは data/i18n/{ja,en}.yaml に集約。 locale は Astro.currentLocale で切替。
 import { Image } from 'astro:assets';
 import mark from '../assets/chattelapin-mark.png';
+import jaDict from '../../../data/i18n/ja.yaml';
+import enDict from '../../../data/i18n/en.yaml';
 
 const locale = Astro.currentLocale || 'ja';
 const isJa = locale === 'ja';
+const i18n = isJa ? jaDict : enDict;
 const homeHref = isJa ? '/' : '/en';
-const otherLocaleHref = isJa ? '/en' : '/';
-const otherLocaleLabel = isJa ? 'EN' : 'JA';
-const otherLocaleAria = isJa ? 'Switch to English' : '日本語に切替';
-const navAriaLabel = isJa ? '主要ナビゲーション' : 'Primary navigation';
-const brandAriaLabel = isJa ? 'ChatteLapin トップへ' : 'ChatteLapin home';
 
-const navItems = isJa
-  ? [
-      { num: '01', label: 'ミッション', href: `${homeHref}#mission` },
-      { num: '02', label: 'プロダクト', href: `${homeHref}#products` },
-      { num: '03', label: '事業概要', href: `${homeHref}#about` },
-      { num: '04', label: 'お問合せ', href: `${homeHref}#contact` },
-    ]
-  : [
-      { num: '01', label: 'Mission', href: `${homeHref}#mission` },
-      { num: '02', label: 'Products', href: `${homeHref}#products` },
-      { num: '03', label: 'About', href: `${homeHref}#about` },
-      { num: '04', label: 'Contact', href: `${homeHref}#contact` },
-    ];
+const navItems = [
+  { num: '01', label: i18n.header.nav.mission, href: `${homeHref}#mission` },
+  { num: '02', label: i18n.header.nav.products, href: `${homeHref}#products` },
+  { num: '03', label: i18n.header.nav.about, href: `${homeHref}#about` },
+  { num: '04', label: i18n.header.nav.contact, href: `${homeHref}#contact` },
+];
 ---
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href={homeHref} class="site-header__brand" aria-label={brandAriaLabel}>
+    <a href={homeHref} class="site-header__brand" aria-label={i18n.header.brand_aria}>
       <Image
         src={mark}
         alt=""
@@ -47,7 +39,7 @@ const navItems = isJa
       </span>
     </a>
 
-    <nav class="site-nav" aria-label={navAriaLabel}>
+    <nav class="site-nav" aria-label={i18n.header.nav_aria}>
       <ol class="site-nav__list">
         {navItems.map((item) => (
           <li class="site-nav__item">
@@ -58,8 +50,8 @@ const navItems = isJa
           </li>
         ))}
         <li class="site-nav__item site-nav__item--locale">
-          <a href={otherLocaleHref} class="site-nav__link site-nav__link--locale" aria-label={otherLocaleAria}>
-            <span class="site-nav__label">{otherLocaleLabel}</span>
+          <a href={isJa ? '/en' : '/'} class="site-nav__link site-nav__link--locale" aria-label={i18n.header.switch_locale_aria}>
+            <span class="site-nav__label">{i18n.header.switch_locale_label}</span>
           </a>
         </li>
       </ol>

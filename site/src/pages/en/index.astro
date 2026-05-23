@@ -318,16 +318,14 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 04</p>
-          <p class="marginalia">Contact</p>
+          <p class="section-num">{i18n.contact.num}</p>
+          <p class="marginalia">{i18n.contact.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">Contact</p>
-          <h2 class="section__title">Get in touch.</h2>
-          <p class="section__lede">
-            Business inquiries are received via <strong>GitHub Issues</strong>. The button below opens the Issue form directly (a free GitHub account is required; sign-up takes only a few minutes).
-          </p>
+          <p class="eyebrow">{i18n.contact.eyebrow}</p>
+          <h2 class="section__title">{i18n.contact.title}</h2>
+          <p class="section__lede" set:html={i18n.contact.lede}></p>
 
           <div class="contact-cta">
             <a
@@ -336,16 +334,12 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
               rel="noopener"
               class="btn btn--arrow"
             >
-              Contact via GitHub Issues
+              {i18n.contact.cta.label}
             </a>
-            <p class="contact-cta__hint">
-              Opens the GitHub.com Issue form in a new tab
-            </p>
+            <p class="contact-cta__hint">{i18n.contact.cta.hint}</p>
           </div>
 
-          <p class="section__paragraph section__paragraph--quiet">
-            Inquiries are received on the <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (the public repository that consolidates the source of this site and ChatteLapin's brand and communications assets). We accept inquiries of any kind, and route them to the appropriate area. An email form will be added in due course.
-          </p>
+          <p class="section__paragraph section__paragraph--quiet" set:html={i18n.contact.fallback}></p>
         </div>
       </div>
     </div>

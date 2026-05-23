@@ -27,6 +27,28 @@ hero:
   scroll_label: "Scroll"
   scroll_aria: "次のセクションへ"
 
+header:
+  brand_aria: "ChatteLapin トップへ"
+  nav_aria: "主要ナビゲーション"
+  switch_locale_aria: "Switch to English"
+  switch_locale_label: "EN"
+  nav:
+    mission: "ミッション"
+    products: "プロダクト"
+    about: "事業概要"
+    contact: "お問合せ"
+
+footer:
+  colophon_label: "Colophon"
+  colophon_text: '本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br /> 2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br /> ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br /> Astro と Tailwind を用い、 静かに組版されました。'
+  nav_label_navigation: "Navigation"
+  nav_label_elsewhere: "Elsewhere"
+  nav_aria: "フッターナビゲーション"
+  github_org: "GitHub Organization"
+  issues_link: "お問合せ Issues"
+  copy_name: "ChatteLapin · シャラパン"
+  rights: "All rights reserved."
+
 mission:
   num: "§ 01"
   marginalia: "Mission"
@@ -49,3 +71,14 @@ mission:
       num: "04"
       title: "広報 — brand"
       text: "印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。"
+
+contact:
+  num: "§ 04"
+  marginalia: "Contact"
+  eyebrow: "お問合せ"
+  title: "声をかけてください。"
+  lede: '業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。'
+  cta:
+    label: "GitHub Issues でお問合せ"
+    hint: "新規タブで GitHub.com の Issue 作成画面が開きます"
+  fallback: 'お問合せは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。'

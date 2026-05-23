@@ -1,38 +1,21 @@
 ---
 // ChatteLapin Footer — 古典書物のコロフォン (= 末尾発行記録) 風
+// 翻訳テキストは data/i18n/{ja,en}.yaml に集約。 colophon は HTML (= <strong>, <br>) を含むため set:html で render。
+import jaDict from '../../../data/i18n/ja.yaml';
+import enDict from '../../../data/i18n/en.yaml';
 
 const year = new Date().getFullYear();
 const locale = Astro.currentLocale || 'ja';
 const isJa = locale === 'ja';
+const i18n = isJa ? jaDict : enDict;
 const homeHref = isJa ? '/' : '/en';
 
-const labels = isJa
-  ? {
-      navAria: 'フッターナビゲーション',
-      nav: [
-        { label: 'ミッション', href: `${homeHref}#mission` },
-        { label: 'プロダクト', href: `${homeHref}#products` },
-        { label: '事業概要', href: `${homeHref}#about` },
-        { label: 'お問合せ', href: `${homeHref}#contact` },
-      ],
-      githubOrg: 'GitHub Organization',
-      issuesLink: 'お問合せ Issues',
-      copyName: 'ChatteLapin · シャラパン',
-      rights: 'All rights reserved.',
-    }
-  : {
-      navAria: 'Footer navigation',
-      nav: [
-        { label: 'Mission', href: `${homeHref}#mission` },
-        { label: 'Products', href: `${homeHref}#products` },
-        { label: 'About', href: `${homeHref}#about` },
-        { label: 'Contact', href: `${homeHref}#contact` },
-      ],
-      githubOrg: 'GitHub Organization',
-      issuesLink: 'Contact via Issues',
-      copyName: 'ChatteLapin',
-      rights: 'All rights reserved.',
-    };
+const navItems = [
+  { label: i18n.header.nav.mission, href: `${homeHref}#mission` },
+  { label: i18n.header.nav.products, href: `${homeHref}#products` },
+  { label: i18n.header.nav.about, href: `${homeHref}#about` },
+  { label: i18n.header.nav.contact, href: `${homeHref}#contact` },
+];
 ---
 
 <footer class="site-footer">
@@ -42,44 +25,30 @@ const labels = isJa
 
   <div class="site-footer__inner">
     <div class="site-footer__colophon">
-      <p class="site-footer__colophon-label">Colophon</p>
-      {isJa ? (
-        <p class="site-footer__colophon-text">
-          本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br />
-          2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br />
-          ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br />
-          Astro と Tailwind を用い、 静かに組版されました。
-        </p>
-      ) : (
-        <p class="site-footer__colophon-text">
-          The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br />
-          Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br />
-          Operated under blue-form taxation with a 650,000 JPY deduction, <br />
-          and quietly typeset with Astro and Tailwind.
-        </p>
-      )}
+      <p class="site-footer__colophon-label">{i18n.footer.colophon_label}</p>
+      <p class="site-footer__colophon-text" set:html={i18n.footer.colophon_text}></p>
     </div>
 
-    <nav class="site-footer__nav" aria-label={labels.navAria}>
-      <p class="site-footer__nav-label">Navigation</p>
+    <nav class="site-footer__nav" aria-label={i18n.footer.nav_aria}>
+      <p class="site-footer__nav-label">{i18n.footer.nav_label_navigation}</p>
       <ul class="site-footer__nav-list">
-        {labels.nav.map((item) => (
+        {navItems.map((item) => (
           <li><a href={item.href}>{item.label}</a></li>
         ))}
       </ul>
     </nav>
 
     <div class="site-footer__elsewhere">
-      <p class="site-footer__nav-label">Elsewhere</p>
+      <p class="site-footer__nav-label">{i18n.footer.nav_label_elsewhere}</p>
       <ul class="site-footer__nav-list">
         <li>
           <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">
-            {labels.githubOrg}
+            {i18n.footer.github_org}
           </a>
         </li>
         <li>
           <a href="https://github.com/ChatteLapin/brand/issues/new" target="_blank" rel="noopener">
-            {labels.issuesLink}
+            {i18n.footer.issues_link}
           </a>
         </li>
       </ul>
@@ -90,9 +59,9 @@ const labels = isJa
     <p class="site-footer__copy">
       <span class="site-footer__year">{year}</span>
       <span aria-hidden="true">·</span>
-      <span>{labels.copyName}</span>
+      <span>{i18n.footer.copy_name}</span>
       <span aria-hidden="true">·</span>
-      <span class="site-footer__rights">{labels.rights}</span>
+      <span class="site-footer__rights">{i18n.footer.rights}</span>
     </p>
   </div>
 </footer>

@@ -27,6 +27,28 @@ hero:
   scroll_label: "Scroll"
   scroll_aria: "To the next section"
 
+header:
+  brand_aria: "ChatteLapin home"
+  nav_aria: "Primary navigation"
+  switch_locale_aria: "日本語に切替"
+  switch_locale_label: "JA"
+  nav:
+    mission: "Mission"
+    products: "Products"
+    about: "About"
+    contact: "Contact"
+
+footer:
+  colophon_label: "Colophon"
+  colophon_text: 'The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br /> Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br /> Operated under blue-form taxation with a 650,000 JPY deduction, <br /> and quietly typeset with Astro and Tailwind.'
+  nav_label_navigation: "Navigation"
+  nav_label_elsewhere: "Elsewhere"
+  nav_aria: "Footer navigation"
+  github_org: "GitHub Organization"
+  issues_link: "Contact via Issues"
+  copy_name: "ChatteLapin"
+  rights: "All rights reserved."
+
 mission:
   num: "§ 01"
   marginalia: "Mission"
@@ -49,3 +71,14 @@ mission:
       num: "04"
       title: "Brand — brand"
       text: "An unwavering brand experience across print and screen / the foundation of this official site."
+
+contact:
+  num: "§ 04"
+  marginalia: "Contact"
+  eyebrow: "Contact"
+  title: "Get in touch."
+  lede: 'Business inquiries are received via <strong>GitHub Issues</strong>. The button below opens the Issue form directly (a free GitHub account is required; sign-up takes only a few minutes).'
+  cta:
+    label: "Contact via GitHub Issues"
+    hint: "Opens the GitHub.com Issue form in a new tab"
+  fallback: 'Inquiries are received on the <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (the public repository that consolidates the source of this site and ChatteLapin''s brand and communications assets). We accept inquiries of any kind, and route them to the appropriate area. An email form will be added in due course.'

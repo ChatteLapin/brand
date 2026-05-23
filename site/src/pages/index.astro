@@ -318,16 +318,14 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 04</p>
-          <p class="marginalia">Contact</p>
+          <p class="section-num">{i18n.contact.num}</p>
+          <p class="marginalia">{i18n.contact.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">お問合せ</p>
-          <h2 class="section__title">声をかけてください。</h2>
-          <p class="section__lede">
-            業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。
-          </p>
+          <p class="eyebrow">{i18n.contact.eyebrow}</p>
+          <h2 class="section__title">{i18n.contact.title}</h2>
+          <p class="section__lede" set:html={i18n.contact.lede}></p>
 
           <div class="contact-cta">
             <a
@@ -336,16 +334,12 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
               rel="noopener"
               class="btn btn--arrow"
             >
-              GitHub Issues でお問合せ
+              {i18n.contact.cta.label}
             </a>
-            <p class="contact-cta__hint">
-              新規タブで GitHub.com の Issue 作成画面が開きます
-            </p>
+            <p class="contact-cta__hint">{i18n.contact.cta.hint}</p>
           </div>
 
-          <p class="section__paragraph section__paragraph--quiet">
-            お問合せは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。
-          </p>
+          <p class="section__paragraph section__paragraph--quiet" set:html={i18n.contact.fallback}></p>
         </div>
       </div>
     </div>
