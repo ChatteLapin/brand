@@ -1,6 +1,5 @@
 ---
-// プロダクトカード
-// 4 プロダクト (= talent / business / brand / volt) を visual 統一表示
+// プロダクトカード — 編集記事風 (= 番号 + タイトル + バッジ + tagline + 矢印リンク)
 
 interface Props {
   name: string;
@@ -8,34 +7,89 @@ interface Props {
   href: string;
   badge?: string;
   size?: 'large' | 'medium' | 'small';
+  number?: string;
+  variant?: 'primary' | 'satellite';
 }
 
-const { name, tagline, href, badge, size = 'medium' } = Astro.props;
+const {
+  name,
+  tagline,
+  href,
+  badge,
+  size = 'medium',
+  number,
+  variant = 'satellite',
+} = Astro.props;
 
 const sizeClasses = {
-  large: 'p-8 md:p-10',
-  medium: 'p-6',
-  small: 'p-5',
-};
-
-const titleSizeClasses = {
-  large: 'text-3xl md:text-4xl',
-  medium: 'text-2xl',
-  small: 'text-xl',
+  large: 'card-large',
+  medium: 'card-medium',
+  small: 'card-small',
 };
 ---
 
-<a
-  href={href}
-  class={`block rounded-lg border border-[color:var(--color-line)] bg-white/60 no-underline transition hover:border-[color:var(--color-accent-soft)] hover:shadow-md ${sizeClasses[size]}`}
->
-  <div class="flex items-start justify-between">
-    <h3 class={`font-serif tracking-wide text-[color:var(--color-ink)] ${titleSizeClasses[size]}`}>{name}</h3>
+<a href={href} class={`editorial-card ${sizeClasses[size]} variant-${variant}`}>
+  {number && <span class="editorial-card__num">{number}</span>}
+
+  <div class="editorial-card__head">
+    <h3 class="editorial-card__title">{name}</h3>
     {badge && (
-      <span class="rounded-full bg-[color:var(--color-accent-soft)]/30 px-3 py-1 text-xs font-semibold text-[color:var(--color-accent)]">
+      <span class={`editorial-card__badge ${variant === 'primary' ? 'editorial-card__badge--primary' : ''}`}>
         {badge}
       </span>
     )}
   </div>
-  <p class="mt-3 text-[color:var(--color-ink-soft)]">{tagline}</p>
+
+  <p class="editorial-card__tagline">{tagline}</p>
+
+  <span class="editorial-card__arrow">
+    Read more
+  </span>
 </a>
+
+<style>
+  .card-large {
+    padding: 2.5rem 2.5rem 2rem;
+  }
+  .card-medium {
+    padding: 2rem 2rem 1.75rem;
+  }
+  .card-small {
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+
+  .card-large .editorial-card__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+  .card-medium .editorial-card__title {
+    font-size: 1.375rem;
+  }
+  .card-small .editorial-card__title {
+    font-size: 1.125rem;
+  }
+
+  .editorial-card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .variant-primary {
+    background-color: rgba(255, 252, 245, 0.7);
+    border-color: var(--color-olive);
+    border-width: 1px;
+  }
+
+  .variant-primary:hover {
+    border-color: var(--color-olive-deep);
+    background-color: rgba(255, 252, 245, 0.95);
+  }
+
+  .card-large .editorial-card__tagline {
+    font-size: 1rem;
+    line-height: 1.95;
+    max-width: 56ch;
+  }
+</style>

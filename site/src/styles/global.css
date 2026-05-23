@@ -1,46 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
-/* ChatteLapin ブランドカラー (= brand/guidelines.md の方針に整合)
- * 主色: 温かい白 #fdf6ec (= 紙のような背景)
- * 副色: 落ち着いたインク #2a2a2a (= 本文)
- * アクセント: 茶系 #8b6f47 (= ロゴと調和) */
+/* ============================================================
+ * Fonts — 古典セリフ × デジタル機能美の対比設計
+ *  和文見出し: Shippori Mincho B1 (= 文学的明朝、 高可読)
+ *  和文本文:   Noto Sans JP (= 安定した可読性)
+ *  欧文見出し: EB Garamond (= 古典セリフ、 italic 美麗)
+ *  欧文本文:   IBM Plex Sans (= 機能美、 デジタル機能性側)
+ *  等幅:       IBM Plex Mono (= 節番号・データ表・コード)
+ * ============================================================ */
 
-:root {
-  --color-paper: #fdf6ec;
-  --color-ink: #2a2a2a;
-  --color-ink-soft: #4a4a4a;
-  --color-accent: #8b6f47;
-  --color-accent-soft: #c9b48a;
-  --color-line: #e0d6c2;
+/* ============================================================
+ * Theme — ロゴから抽出した配色を Tailwind v4 theme として定義
+ * ============================================================ */
+
+@theme {
+  --color-paper: #f5ecd7;
+  --color-paper-warm: #ebe0c4;
+  --color-paper-fold: #d9cdb0;
+  --color-paper-deep: #c4b594;
+
+  --color-ink-deep: #2a1f15;
+  --color-ink-soft: #5a4a3a;
+  --color-ink-faint: #8a7a6a;
+  --color-ink-mute: #b5a896;
+
+  --color-olive: #6b7a3f;
+  --color-olive-deep: #4a5a2f;
+  --color-olive-soft: #9aa570;
+
+  --color-blue-grey: #5a7080;
+  --color-blue-grey-deep: #3f5360;
+  --color-blue-grey-soft: #8ea0ad;
+
+  --color-blush: #c9959b;
+  --color-blush-soft: #d4a8ac;
+  --color-blush-deep: #a06d73;
+
+  --font-serif-jp: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'Yu Mincho', 'Times New Roman', serif;
+  --font-sans-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
+  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Menlo', 'Consolas', ui-monospace, monospace;
 }
+
+/* ============================================================
+ * Base
+ * ============================================================ */
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light;
 }
 
 body {
   background-color: var(--color-paper);
-  color: var(--color-ink);
-  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
-  line-height: 1.7;
+  color: var(--color-ink-deep);
+  font-family: var(--font-sans-jp);
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* 日本語カーニング・禁則処理 — プロ印刷物の文字組みに近づける */
+  font-feature-settings: "palt" 1, "kern" 1, "pkna" 1, "vpal" 1, "vkrn" 1;
+  font-kerning: normal;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: anywhere;
+  hanging-punctuation: allow-end;
+  text-wrap: pretty;
+
+  /* 紙のテクスチャを SVG noise + radial gradient で再現
+     ※ over-the-top にならない強度 */
+  background-image:
+    radial-gradient(at 18% 12%, rgba(217, 205, 176, 0.32) 0%, transparent 55%),
+    radial-gradient(at 82% 78%, rgba(196, 181, 148, 0.22) 0%, transparent 55%),
+    radial-gradient(at 50% 50%, rgba(245, 236, 215, 0.0) 0%, rgba(235, 224, 196, 0.08) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.045 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+  background-attachment: fixed;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 240px 240px;
 }
 
-/* やや古めかしい雰囲気を意識 (= talent コンセプトと整合) */
-h1, h2, h3, h4 {
-  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Times New Roman', serif;
-  letter-spacing: 0.02em;
-  color: var(--color-ink);
+main {
+  position: relative;
 }
+
+/* ============================================================
+ * Typography
+ * ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif-jp);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-deep);
+  line-height: 1.4;
+  /* 見出しはバランス改行で「孤立行」 「孤立文字」 を避ける */
+  text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: keep-all;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+p {
+  letter-spacing: 0.025em;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--color-ink-deep);
+}
+
+em {
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* small caps utility (= 欧文用) */
+.small-caps {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-feature-settings: "smcp" 1;
+  font-size: 0.8125rem;
+}
+
+/* mono utility (= 節番号・ラベル・データ) */
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* drop cap (= 古典写本風) */
+.dropcap {
+  position: relative;
+}
+.dropcap::first-letter {
+  font-family: var(--font-serif-jp);
+  font-size: 4.2em;
+  font-weight: 600;
+  float: left;
+  line-height: 0.85;
+  margin: 0.08em 0.14em 0 -0.04em;
+  color: var(--color-olive-deep);
+}
+
+/* section 番号 (= 編集 layout) */
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-ink-faint);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* marginalia (= 余白に置く脇注ラベル) */
+.marginalia {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  font-weight: 500;
+}
+
+/* eyebrow (= 見出し上の小ラベル) */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background-color: currentColor;
+}
+
+/* ============================================================
+ * Links
+ * ============================================================ */
 
 a {
-  color: var(--color-accent);
+  color: var(--color-olive-deep);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-decoration-color: var(--color-olive-soft);
+  text-underline-offset: 4px;
+  transition: color 180ms ease, text-decoration-color 180ms ease, text-decoration-thickness 180ms ease;
 }
 
 a:hover {
-  color: var(--color-ink);
+  color: var(--color-blush-deep);
+  text-decoration-color: var(--color-blush);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-olive-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+ * Selection
+ * ============================================================ */
+
+::selection {
+  background-color: var(--color-blush);
+  color: var(--color-paper);
+}
+
+/* ============================================================
+ * Decorative rules
+ * ============================================================ */
+
+.ornament-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 4rem 0;
+  color: var(--color-olive);
+}
+
+.ornament-rule::before,
+.ornament-rule::after {
+  content: "";
+  flex: 1;
+  max-width: 8rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-paper-fold) 30%,
+    var(--color-paper-fold) 70%,
+    transparent
+  );
+}
+
+.ornament-rule__glyph {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  opacity: 0.7;
+}
+
+/* paper edge — 紙の縁を模した区切り */
+.paper-edge {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--color-paper-fold) 12%,
+    var(--color-paper-fold) 88%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+ * Blockquote (= 引用)
+ * ============================================================ */
+
+blockquote {
+  font-family: var(--font-serif-jp);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.95;
+  color: var(--color-ink-soft);
+  position: relative;
+}
+
+blockquote::before {
+  content: "❝";
+  position: absolute;
+  top: -0.5rem;
+  left: -2rem;
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--color-olive-soft);
+  opacity: 0.7;
+  line-height: 1;
+}
+
+/* ============================================================
+ * Code
+ * ============================================================ */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 0.1em 0.4em;
+  background-color: var(--color-paper-warm);
+  border: 1px solid var(--color-paper-fold);
+  border-radius: 3px;
+  color: var(--color-ink-soft);
+}
+
+/* ============================================================
+ * Tables — 編集記事的な情報密度の高い表
+ * ============================================================ */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--font-sans-jp);
+}
+
+thead tr {
+  border-bottom: 1px solid var(--color-ink-faint);
+}
+
+th {
+  text-align: left;
+  padding: 0.75rem 1rem 0.75rem 0;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--color-paper-fold);
+  transition: background-color 160ms ease;
+}
+
+tbody tr:hover {
+  background-color: rgba(235, 224, 196, 0.4);
+}
+
+td {
+  text-align: left;
+  padding: 0.875rem 1rem 0.875rem 0;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink-deep);
+  vertical-align: top;
+}
+
+/* ============================================================
+ * Buttons — デジタル機能性側を担う鋭いボタン
+ * ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  font-family: var(--font-sans-jp);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid var(--color-ink-deep);
+  background-color: transparent;
+  color: var(--color-ink-deep);
+  position: relative;
+  overflow: hidden;
+  transition: color 200ms ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-ink-deep);
+  transform: translateX(-101%);
+  transition: transform 280ms cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
+.btn:hover {
+  color: var(--color-paper);
+  text-decoration: none;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
+
+.btn--arrow::after {
+  content: "→";
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  transition: transform 220ms ease;
+}
+
+.btn:hover .btn--arrow::after,
+.btn--arrow:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+ * Motion
+ * ============================================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-up { animation: fadeUp 900ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.fade-in { animation: fadeIn 1200ms ease-out both; }
+
+.delay-1 { animation-delay: 100ms; }
+.delay-2 { animation-delay: 220ms; }
+.delay-3 { animation-delay: 360ms; }
+.delay-4 { animation-delay: 520ms; }
+.delay-5 { animation-delay: 700ms; }
+.delay-6 { animation-delay: 900ms; }
+
+/* scroll-triggered reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+ * Skip link
+ * ============================================================ */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-ink-deep);
+  color: var(--color-paper);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ============================================================
+ * Scrollbar
+ * ============================================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper-warm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-paper-deep);
+  border: 3px solid var(--color-paper-warm);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
+}
+
+/* ============================================================
+ * Card — プロダクトカード 共通
+ * ============================================================ */
+
+.editorial-card {
+  display: block;
+  position: relative;
+  padding: 2rem 2rem 1.75rem;
+  background-color: rgba(255, 252, 245, 0.5);
+  border: 1px solid var(--color-paper-fold);
+  text-decoration: none;
+  color: var(--color-ink-deep);
+  transition: background-color 240ms ease, border-color 240ms ease, transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  background-color: rgba(255, 252, 245, 0.85);
+  border-color: var(--color-olive);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--color-ink-deep);
+}
+
+.editorial-card__num {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--color-ink-faint);
+  text-transform: uppercase;
+}
+
+.editorial-card__title {
+  font-family: var(--font-serif-jp);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-deep);
+}
+
+.editorial-card__badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background-color: var(--color-paper-warm);
+  border: 1px solid var(--color-paper-fold);
+  color: var(--color-ink-soft);
+}
+
+.editorial-card__badge--primary {
+  background-color: var(--color-olive);
+  border-color: var(--color-olive);
+  color: var(--color-paper);
+}
+
+.editorial-card__tagline {
+  margin-top: 1.25rem;
+  color: var(--color-ink-soft);
+  line-height: 1.85;
+  font-size: 0.9375rem;
+}
+
+.editorial-card__arrow {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-olive-deep);
+}
+
+.editorial-card:hover .editorial-card__arrow {
+  color: var(--color-blush-deep);
+}
+
+.editorial-card__arrow::after {
+  content: "→";
+  font-family: var(--font-serif);
+  transition: transform 220ms ease;
+}
+
+.editorial-card:hover .editorial-card__arrow::after {
+  transform: translateX(6px);
+}
+
+/* ============================================================
+ * Layout grid utilities
+ * ============================================================ */
+
+.col-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 3rem);
+  padding-right: clamp(1.5rem, 5vw, 3rem);
+}
+
+.col-wrap-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 2.5rem);
+  padding-right: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+/* editorial grid for body content with marginalia */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 960px) {
+  .editorial-grid {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* hero grid */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 880px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }

@@ -6,62 +6,387 @@ import Layout from '../../components/Layout.astro';
   title="volt"
   description="ChatteLapin の実験プロダクト。 AI Proxy + Discord Bot + 構造化データ管理によるオンラインコミュニティ運営の実証実験プロジェクト。"
 >
-  <article>
-    <h1 class="font-serif text-3xl md:text-4xl">volt</h1>
-    <p class="mt-2 text-lg italic text-[color:var(--color-ink-soft)]">
-      AI 活用 コミュニティ運営の実証実験
-    </p>
+  <article class="product-article">
+    <header class="product-header reveal">
+      <div class="col-wrap">
+        <p class="product-header__breadcrumb">
+          <a href="/#products">プロダクト</a>
+          <span aria-hidden="true">/</span>
+          <span>volt</span>
+        </p>
+        <p class="eyebrow product-header__eyebrow">実験プロダクト</p>
+        <h1 class="product-header__title">volt</h1>
+        <p class="product-header__tagline">
+          AI 活用 コミュニティ運営の実証実験。
+        </p>
+        <div class="product-header__meta">
+          <div><span>分野</span><strong>AI Proxy × Bot 運用</strong></div>
+          <div><span>状態</span><strong>稼働中 / 知見蓄積</strong></div>
+          <div><span>接続先</span><strong>Talent B2B 機能の前段検証</strong></div>
+        </div>
+      </div>
+    </header>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">プロジェクトの目的</h2>
-      <p class="mt-4 leading-relaxed">
-        volt は <strong>AI Proxy + Discord Bot + 構造化データ管理</strong> を組み合わせた、 オンラインコミュニティ運営の実証実験プロジェクトです。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 デジタル空間の人と人の小さな縁という観点で実装しています。
-      </p>
-      <p class="mt-4 leading-relaxed">
-        現代のオンラインコミュニティは、 短文・即時応答・通知の連鎖で疲弊しがちです。 volt は、 AI を介して情報を整理・要約・提示することで、 メンバーが必要なときだけ深く関わり、 普段は穏やかに繋がれる運営モデルを検証しています。
-      </p>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 01</p>
+            <p class="marginalia">Purpose</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">プロジェクトの目的。</h2>
+            <p class="section__paragraph">
+              volt は <strong>AI Proxy + Discord Bot + 構造化データ管理</strong> を組み合わせた、 オンラインコミュニティ運営の実証実験プロジェクトです。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 デジタル空間の人と人の小さな縁という観点で実装しています。
+            </p>
+            <p class="section__paragraph">
+              現代のオンラインコミュニティは、 短文・即時応答・通知の連鎖で疲弊しがちです。 volt は、 AI を介して情報を整理・要約・提示することで、 メンバーが必要なときだけ深く関わり、 普段は穏やかに繋がれる運営モデルを検証しています。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">主力プロダクト『Talent』 への接続</h2>
-      <p class="mt-4 leading-relaxed">
-        volt は単独で完結する実験ではなく、 主力プロダクト <a href="/products/talent">Talent</a> の長期ロードマップにある <strong>B2B 教育機関向け機能</strong> (= マルチプレイヤー教室モード / コミュニティ運営機能) の前段技術検証を兼ねています。
-      </p>
-      <ul class="mt-4 list-disc space-y-2 pl-6">
-        <li>Bot 運用ノウハウ — Talent の教師ダッシュボード / クラス運営の基盤として転用</li>
-        <li>AI Proxy — LLM API キーをクライアントに露出させない安全設計</li>
-        <li>構造化データ管理 — 学習履歴・進捗トラッキングの設計知見</li>
-        <li>PM2 プロセス管理 — ChatteLapin 全プロダクトの統一運用方針</li>
-      </ul>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 02</p>
+            <p class="marginalia">Bridge to Talent</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">主力プロダクト『Talent』 への接続。</h2>
+            <p class="section__paragraph">
+              volt は単独で完結する実験ではなく、 主力プロダクト <a href="/products/talent">Talent</a> の長期ロードマップにある <strong>B2B 教育機関向け機能</strong> (= マルチプレイヤー教室モード / コミュニティ運営機能) の前段技術検証を兼ねています。
+            </p>
+            <ul class="bridge-relay">
+              <li>
+                <span class="bridge-relay__from">Bot 運用ノウハウ</span>
+                <span class="bridge-relay__arrow" aria-hidden="true">→</span>
+                <span class="bridge-relay__to">Talent の教師ダッシュボード / クラス運営の基盤として転用</span>
+              </li>
+              <li>
+                <span class="bridge-relay__from">AI Proxy</span>
+                <span class="bridge-relay__arrow" aria-hidden="true">→</span>
+                <span class="bridge-relay__to">LLM API キーをクライアントに露出させない安全設計</span>
+              </li>
+              <li>
+                <span class="bridge-relay__from">構造化データ管理</span>
+                <span class="bridge-relay__arrow" aria-hidden="true">→</span>
+                <span class="bridge-relay__to">学習履歴・進捗トラッキングの設計知見</span>
+              </li>
+              <li>
+                <span class="bridge-relay__from">PM2 プロセス管理</span>
+                <span class="bridge-relay__arrow" aria-hidden="true">→</span>
+                <span class="bridge-relay__to">ChatteLapin 全プロダクトの統一運用方針</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">技術スタック</h2>
-      <ul class="mt-4 list-disc space-y-2 pl-6">
-        <li>TypeScript + tsx (= ビルド不要の TS 直接実行)</li>
-        <li>discord.js v14 (= Components V2 含む最新仕様)</li>
-        <li>外部 AI API (= Google Cloud Function 経由の Proxy 構成)</li>
-        <li>構造化データストア (= Google Sheets API)</li>
-        <li>PM2 (= namespace=chattelapin で統一管理)</li>
-      </ul>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 03</p>
+            <p class="marginalia">Stack</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">技術スタック。</h2>
+            <ul class="check-list">
+              <li>TypeScript + tsx (= ビルド不要の TS 直接実行)</li>
+              <li>discord.js v14 (= Components V2 含む最新仕様)</li>
+              <li>外部 AI API (= Google Cloud Function 経由の Proxy 構成)</li>
+              <li>構造化データストア (= Google Sheets API)</li>
+              <li>PM2 (= namespace=chattelapin で統一管理)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">運用実績と検証</h2>
-      <p class="mt-4 leading-relaxed">
-        本プロジェクトは特定のオンラインゲームコミュニティを対象に運用中で、 メンバーへの情報提供・予定調整・データ集計の AI 支援を実装しています。 運用データから「どのタイミングで人は AI 支援を求めるか」 「Bot が静かに在ることの効果」 等の知見を蓄積しています。
-      </p>
-      <p class="mt-4 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
-        ※ 運用対象コミュニティは個別契約。 公開・非公開を含め本ページでの詳細記載は控えます。
-      </p>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 04</p>
+            <p class="marginalia">Operation</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">運用実績と検証。</h2>
+            <p class="section__paragraph">
+              本プロジェクトは特定のオンラインゲームコミュニティを対象に運用中で、 メンバーへの情報提供・予定調整・データ集計の AI 支援を実装しています。 運用データから「どのタイミングで人は AI 支援を求めるか」 「Bot が静かに在ることの効果」 等の知見を蓄積しています。
+            </p>
+            <p class="section__paragraph section__paragraph--quiet">
+              ※ 運用対象コミュニティは個別契約。 公開・非公開を含め本ページでの詳細記載は控えます。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6">
-      <h2 class="font-serif text-2xl">関連リンク</h2>
-      <ul class="mt-3 list-disc space-y-2 pl-6">
-        <li>repo: <a href="https://github.com/ChatteLapin/volt" target="_blank" rel="noopener">github.com/ChatteLapin/volt</a> (= private)</li>
-        <li>関連プロダクト: <a href="/products/talent">Talent</a> (= B2B 教育機関向け機能の前段検証先)</li>
-      </ul>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ —</p>
+            <p class="marginalia">Links</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">関連リンク。</h2>
+            <ul class="link-list">
+              <li>
+                <span class="link-list__label">repo</span>
+                <span><a href="https://github.com/ChatteLapin/volt" target="_blank" rel="noopener">github.com/ChatteLapin/volt</a> <span class="link-list__note">(= private)</span></span>
+              </li>
+              <li>
+                <span class="link-list__label">関連プロダクト</span>
+                <span><a href="/products/talent">Talent</a> <span class="link-list__note">(= B2B 教育機関向け機能の前段検証先)</span></span>
+              </li>
+              <li>
+                <span class="link-list__label">お問合せ</span>
+                <a href="/#contact">トップページのお問合せセクション</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </Layout>
+
+<style>
+  .product-article { padding-bottom: 4rem; }
+
+  .product-header {
+    padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--color-paper-fold);
+  }
+
+  .product-header__breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    margin: 0 0 1.5rem;
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+  }
+  .product-header__breadcrumb a {
+    color: var(--color-ink-faint);
+    text-decoration: none;
+  }
+  .product-header__breadcrumb a:hover {
+    color: var(--color-olive-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .product-header__eyebrow { margin: 0 0 0.875rem; }
+
+  .product-header__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin: 0 0 1rem;
+    line-height: 1;
+    color: var(--color-ink-deep);
+  }
+
+  .product-header__tagline {
+    font-family: var(--font-serif-jp);
+    font-style: italic;
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--color-ink-soft);
+    letter-spacing: 0.05em;
+    margin: 0 0 2.5rem;
+    max-width: 60ch;
+  }
+
+  .product-header__meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-paper-fold);
+    max-width: 48rem;
+  }
+  @media (min-width: 640px) {
+    .product-header__meta { grid-template-columns: repeat(3, 1fr); }
+  }
+  .product-header__meta > div { display: flex; flex-direction: column; gap: 0.35rem; }
+  .product-header__meta span {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.22em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .product-header__meta strong {
+    font-family: var(--font-serif-jp);
+    font-size: 0.9375rem;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+
+  .product-section {
+    padding: clamp(3rem, 6vw, 4.5rem) 0;
+    border-bottom: 1px solid var(--color-paper-fold);
+  }
+  .product-section:last-of-type { border-bottom: none; }
+
+  .section__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-top: 0.5rem;
+  }
+  @media (min-width: 960px) {
+    .section__aside {
+      position: sticky;
+      top: 6rem;
+      align-self: flex-start;
+      padding-top: 1rem;
+    }
+  }
+
+  .section__body { min-width: 0; }
+
+  .section__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    color: var(--color-ink-deep);
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .section__paragraph {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.95;
+    color: var(--color-ink-deep);
+    margin: 0 0 1.25rem;
+    max-width: 62ch;
+  }
+  .section__paragraph--quiet {
+    color: var(--color-ink-soft);
+    font-size: 0.875rem;
+  }
+
+  /* Bridge relay (= volt → talent への接続) */
+  .bridge-relay {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bridge-relay li {
+    display: grid;
+    grid-template-columns: minmax(10rem, 14rem) 2rem 1fr;
+    gap: 0.875rem;
+    padding: 1.125rem 0;
+    border-top: 1px solid var(--color-paper-fold);
+    align-items: baseline;
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 640px) {
+    .bridge-relay li {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .bridge-relay__arrow { display: none; }
+  }
+
+  .bridge-relay__from {
+    font-family: var(--font-serif-jp);
+    font-weight: 600;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.06em;
+  }
+  .bridge-relay__arrow {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--color-olive);
+    text-align: center;
+  }
+  .bridge-relay__to {
+    color: var(--color-ink-soft);
+  }
+
+  .check-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.85;
+    color: var(--color-ink-deep);
+  }
+  .check-list li::before {
+    content: "✓";
+    flex-shrink: 0;
+    width: 1.25rem;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--color-olive);
+    line-height: 1.85;
+  }
+
+  .link-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+  .link-list li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.875rem 0;
+    border-top: 1px solid var(--color-paper-fold);
+  }
+  @media (min-width: 640px) {
+    .link-list li {
+      grid-template-columns: 10rem 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+  }
+  .link-list__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    font-weight: 500;
+  }
+  .link-list__note {
+    font-family: var(--font-serif-jp);
+    font-size: 0.8125rem;
+    color: var(--color-ink-faint);
+    font-style: italic;
+  }
+</style>

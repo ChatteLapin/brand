@@ -1,6 +1,6 @@
 # ChatteLapin brand
 
-個人事業屋号 **シャラパン (ChatteLapin)** の **ブランド・広報資産** を集約する公開 repo。 ロゴ等のデザイン資産から、 公式サイトのソースコード、 将来の名刺・チラシ・プレスリリース等の広報物までを single source of truth として一元管理する。
+**シャラパン (ChatteLapin)** の **ブランド・広報資産** を集約する公開 repo。 ロゴ等のデザイン資産から、 公式サイトのソースコード、 将来の名刺・チラシ・プレスリリース等の広報物までを single source of truth として一元管理する。
 
 ## 役割
 
@@ -59,7 +59,7 @@ brand/
 - 本番ビルド: `cd site && npm run build` → `site/dist/` 生成
 
 ### 公式サイトの構成
-- `/` — 屋号紹介 + 主力プロダクト + 周辺活動 + 事業概要 + 事業者プロフィール + お問い合わせ (= single-page スクロール構造)
+- `/` — 事業者紹介 + 主力プロダクト + 周辺活動 + 事業概要 + 事業者プロフィール + お問合せ (= single-page スクロール構造)
 - `/products/talent` — 主力プロダクト Talent 紹介ページ (= talent docs 公開可能部分のサブセット、 talent の成長に合わせて同期更新)
 - `/products/volt` — 実験プロダクト紹介ページ
 - `/products/business-automation` — AI 会計自動化基盤紹介ページ

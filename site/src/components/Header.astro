@@ -1,20 +1,204 @@
 ---
-// ChatteLapin ヘッダ
-// 屋号ロゴ + ナビゲーション
+// ChatteLapin Header — 古典書物の扉ページ × シャープなナビゲーション
 ---
 
-<header class="border-b border-[color:var(--color-line)]">
-  <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-    <a href="/" class="flex items-center gap-3 no-underline">
-      <img src="/logo.png" alt="ChatteLapin" width="40" height="40" class="rounded-full" />
-      <span class="font-serif text-xl tracking-wide text-[color:var(--color-ink)]">ChatteLapin</span>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__brand" aria-label="ChatteLapin トップへ">
+      <img
+        src="/logo.png"
+        alt=""
+        width="44"
+        height="44"
+        class="site-header__mark"
+      />
+      <span class="site-header__wordmark">
+        <span class="site-header__name-ja">シャラパン</span>
+        <span class="site-header__name-en">Chatte Lapin</span>
+      </span>
     </a>
-    <nav>
-      <ul class="flex items-center gap-6 text-sm">
-        <li><a href="/#products" class="no-underline hover:underline">プロダクト</a></li>
-        <li><a href="/#about" class="no-underline hover:underline">事業概要</a></li>
-        <li><a href="/#contact" class="no-underline hover:underline">お問い合わせ</a></li>
-      </ul>
+
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ol class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="/#mission" class="site-nav__link">
+            <span class="site-nav__num">01</span>
+            <span class="site-nav__label">ミッション</span>
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a href="/#products" class="site-nav__link">
+            <span class="site-nav__num">02</span>
+            <span class="site-nav__label">プロダクト</span>
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a href="/#about" class="site-nav__link">
+            <span class="site-nav__num">03</span>
+            <span class="site-nav__label">事業概要</span>
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a href="/#contact" class="site-nav__link">
+            <span class="site-nav__num">04</span>
+            <span class="site-nav__label">お問合せ</span>
+          </a>
+        </li>
+      </ol>
     </nav>
   </div>
 </header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(245, 236, 215, 0.88);
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border-bottom: 1px solid var(--color-paper-fold);
+  }
+
+  .site-header__inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0.875rem clamp(1.25rem, 4vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .site-header__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    text-decoration: none;
+    color: var(--color-ink-deep);
+  }
+  .site-header__brand:hover {
+    text-decoration: none;
+    color: var(--color-ink-deep);
+  }
+
+  .site-header__mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-paper-fold);
+    background-color: var(--color-paper-warm);
+  }
+
+  .site-header__wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    gap: 0.125rem;
+  }
+
+  .site-header__name-ja {
+    font-family: var(--font-serif-jp);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-deep);
+  }
+
+  .site-header__name-en {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-faint);
+  }
+
+  .site-nav__list {
+    display: flex;
+    gap: clamp(1rem, 2.5vw, 2.25rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav__link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    text-decoration: none;
+    color: var(--color-ink-soft);
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 200ms ease;
+  }
+  .site-nav__link:hover {
+    color: var(--color-ink-deep);
+    text-decoration: none;
+  }
+
+  .site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: var(--color-olive-deep);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 280ms cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .site-nav__link:hover::after,
+  .site-nav__link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .site-nav__num {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--color-olive);
+    font-weight: 500;
+  }
+
+  .site-nav__label {
+    font-family: var(--font-sans-jp);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  /* モバイル — 番号は隠す、 ラベルは短縮 */
+  @media (max-width: 640px) {
+    .site-header__inner {
+      padding: 0.75rem 1.25rem;
+      gap: 1rem;
+    }
+    .site-header__mark {
+      width: 36px;
+      height: 36px;
+    }
+    .site-header__name-ja {
+      font-size: 0.95rem;
+    }
+    .site-header__name-en {
+      font-size: 0.65rem;
+    }
+    .site-nav__list {
+      gap: 0.875rem;
+    }
+    .site-nav__num {
+      display: none;
+    }
+    .site-nav__label {
+      font-size: 0.8125rem;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .site-header__wordmark {
+      display: none;
+    }
+  }
+</style>

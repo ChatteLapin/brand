@@ -1,21 +1,177 @@
 ---
-// ChatteLapin フッタ
+// ChatteLapin Footer — 古典書物のコロフォン (= 末尾発行記録) 風
 const year = new Date().getFullYear();
 ---
 
-<footer class="mt-24 border-t border-[color:var(--color-line)] bg-white/40">
-  <div class="mx-auto max-w-3xl px-6 py-10 text-sm text-[color:var(--color-ink-soft)]">
-    <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-      <div>
-        <p class="font-serif text-base text-[color:var(--color-ink)]">シャラパン (ChatteLapin)</p>
-        <p>個人事業 / 2026-05-19 開業 / 青色申告 65 万円控除</p>
-        <p>業種: ソフトウェア開発業 / 管轄: 熱海税務署</p>
-      </div>
-      <div class="flex flex-col gap-1 sm:items-end">
-        <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener" class="no-underline hover:underline">GitHub: ChatteLapin</a>
-        <a href="/#contact" class="no-underline hover:underline">お問い合わせ</a>
-      </div>
+<footer class="site-footer">
+  <div class="site-footer__rule" aria-hidden="true">
+    <span class="site-footer__rule-glyph">❦</span>
+  </div>
+
+  <div class="site-footer__inner">
+    <div class="site-footer__colophon">
+      <p class="site-footer__colophon-label">Colophon</p>
+      <p class="site-footer__colophon-text">
+        本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br />
+        2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br />
+        ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br />
+        Astro と Tailwind を用い、 静かに組版されました。
+      </p>
     </div>
-    <p class="mt-6 text-center text-xs">© {year} ChatteLapin. All rights reserved.</p>
+
+    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+      <p class="site-footer__nav-label">Navigation</p>
+      <ul class="site-footer__nav-list">
+        <li><a href="/#mission">ミッション</a></li>
+        <li><a href="/#products">プロダクト</a></li>
+        <li><a href="/#about">事業概要</a></li>
+        <li><a href="/#contact">お問合せ</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__elsewhere">
+      <p class="site-footer__nav-label">Elsewhere</p>
+      <ul class="site-footer__nav-list">
+        <li>
+          <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">
+            GitHub Organization
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ChatteLapin/brand/issues/new" target="_blank" rel="noopener">
+            お問合せ Issues
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__base">
+    <p class="site-footer__copy">
+      <span class="site-footer__year">{year}</span>
+      <span aria-hidden="true">·</span>
+      <span>ChatteLapin · シャラパン</span>
+      <span aria-hidden="true">·</span>
+      <span class="site-footer__rights">All rights reserved.</span>
+    </p>
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    border-top: 1px solid var(--color-paper-fold);
+    background-color: rgba(235, 224, 196, 0.35);
+    position: relative;
+  }
+
+  .site-footer__rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .site-footer__rule-glyph {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-olive);
+    opacity: 0.8;
+    padding: 0 1.5rem;
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-paper-fold);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 760px) {
+    .site-footer__inner {
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  .site-footer__colophon-label,
+  .site-footer__nav-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-olive);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-paper-fold);
+    font-weight: 500;
+  }
+
+  .site-footer__colophon-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.875rem;
+    line-height: 2;
+    color: var(--color-ink-soft);
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  .site-footer__colophon-text strong {
+    font-weight: 600;
+    color: var(--color-ink-deep);
+  }
+
+  .site-footer__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+  }
+
+  .site-footer__nav-list a {
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .site-footer__nav-list a:hover {
+    color: var(--color-blush-deep);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .site-footer__base {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 1.5rem clamp(1.5rem, 5vw, 3rem) 0;
+    border-top: 1px solid var(--color-paper-fold);
+  }
+
+  .site-footer__copy {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

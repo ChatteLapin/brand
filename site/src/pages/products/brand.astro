@@ -6,52 +6,342 @@ import Layout from '../../components/Layout.astro';
   title="brand — ブランド・広報資産基盤"
   description="ChatteLapin のロゴ・favicon・ガイドラインに加え、 公式サイトのソースコードや将来の広報物 (= 名刺・チラシ・プレスリリース) を集約する公開ブランド・広報資産基盤。"
 >
-  <article>
-    <h1 class="font-serif text-3xl md:text-4xl">brand</h1>
-    <p class="mt-2 text-lg italic text-[color:var(--color-ink-soft)]">
-      ブランド・広報資産基盤 (= 公開)
-    </p>
+  <article class="product-article">
+    <header class="product-header reveal">
+      <div class="col-wrap">
+        <p class="product-header__breadcrumb">
+          <a href="/#products">プロダクト</a>
+          <span aria-hidden="true">/</span>
+          <span>brand</span>
+        </p>
+        <p class="eyebrow product-header__eyebrow">公開ブランド・広報</p>
+        <h1 class="product-header__title">brand</h1>
+        <p class="product-header__tagline">
+          ブランド・広報資産基盤 (= 公開)。
+        </p>
+        <div class="product-header__meta">
+          <div><span>分野</span><strong>Brand × Communications</strong></div>
+          <div><span>状態</span><strong>稼働中 (= 本サイトを内包)</strong></div>
+          <div><span>公開</span><strong>public repo</strong></div>
+        </div>
+      </div>
+    </header>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">位置づけ</h2>
-      <p class="mt-4 leading-relaxed">
-        brand は、 ChatteLapin の <strong>対外的なブランド表現の source of truth</strong> です。 ロゴ・favicon 等のデザイン資産に加え、 公式サイト (= 本サイト <a href="/">chattelapin.orz.cc</a>) のソースコード、 将来的に名刺・チラシ・プレスリリース等の広報物までを公開 repo として一元管理します。
-      </p>
-      <p class="mt-4 leading-relaxed">
-        ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 ブランド表現の側面で実装。 画面 (= デジタル) と印刷物 (= アナログ) の双方で同じ「静けさ」 「温かみ」 が感じられる意匠を一元管理します。
-      </p>
-      <p class="mt-4 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
-        商品として外販はしませんが、 ロゴガイドライン・公式サイトのソースを公開することで、 取材・コラボ・ブランド引用時の参照先を提供します。
-      </p>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 01</p>
+            <p class="marginalia">Position</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">位置づけ。</h2>
+            <p class="section__paragraph">
+              brand は、 ChatteLapin の <strong>対外的なブランド表現の source of truth</strong> です。 ロゴ・favicon 等のデザイン資産に加え、 公式サイト (= 本サイト <a href="/">chattelapin.orz.cc</a>) のソースコード、 将来的に名刺・チラシ・プレスリリース等の広報物までを公開 repo として一元管理します。
+            </p>
+            <p class="section__paragraph">
+              ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 ブランド表現の側面で実装。 画面 (= デジタル) と印刷物 (= アナログ) の双方で同じ「静けさ」 「温かみ」 が感じられる意匠を一元管理します。
+            </p>
+            <p class="section__paragraph section__paragraph--quiet">
+              商品として外販はしませんが、 ロゴガイドライン・公式サイトのソースを公開することで、 取材・コラボ・ブランド引用時の参照先を提供します。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">資産構成</h2>
-      <ul class="mt-4 list-disc space-y-2 pl-6">
-        <li><strong>マスターロゴ</strong>: 2048x2048 RGB / 編集元</li>
-        <li><strong>ロゴ派生</strong>: 64px / 400px / 600px (= 透過)</li>
-        <li><strong>favicon</strong>: 16px / 32px / favicon.ico</li>
-        <li><strong>アイコン</strong>: PWA 192px / 512px / Apple Touch Icon</li>
-        <li><strong>ガイドライン</strong>: 使用方針 / 命名規約 / 再生成コマンド</li>
-        <li><strong>公式サイト</strong> (= `brand/site/`): Astro + Cloudflare Pages デプロイ元</li>
-        <li><strong>将来追加</strong>: 名刺・チラシ・パンフレット (`brand/print/`) / プレスリリース・取材対応資料 (`brand/pr/`)</li>
-      </ul>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 02</p>
+            <p class="marginalia">Assets</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">資産構成。</h2>
+            <ul class="asset-list">
+              <li>
+                <p class="asset-list__title">マスターロゴ</p>
+                <p class="asset-list__text">2048x2048 RGB — 全派生 file の編集元</p>
+              </li>
+              <li>
+                <p class="asset-list__title">ロゴ派生</p>
+                <p class="asset-list__text">64px / 400px / 600px (= 透過、 web embed / og image / 名刺等)</p>
+              </li>
+              <li>
+                <p class="asset-list__title">favicon</p>
+                <p class="asset-list__text">16px / 32px / favicon.ico (= ブラウザタブ)</p>
+              </li>
+              <li>
+                <p class="asset-list__title">アイコン</p>
+                <p class="asset-list__text">PWA 192px / 512px / Apple Touch Icon (= OS インテグレーション)</p>
+              </li>
+              <li>
+                <p class="asset-list__title">ガイドライン</p>
+                <p class="asset-list__text">使用方針 / 命名規約 / 派生 file 再生成コマンド</p>
+              </li>
+              <li>
+                <p class="asset-list__title">公式サイト</p>
+                <p class="asset-list__text">本サイト (= <code>brand/site/</code>) — Astro v5 + Cloudflare Pages</p>
+              </li>
+              <li class="asset-list__item--future">
+                <p class="asset-list__title">将来追加</p>
+                <p class="asset-list__text">名刺・チラシ・パンフレット (<code>brand/print/</code>) / プレスリリース・取材対応資料 (<code>brand/pr/</code>)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10">
-      <h2 class="font-serif text-2xl">運用方針</h2>
-      <p class="mt-4 leading-relaxed">
-        マスターロゴを source of truth とし、 派生 file は ImageMagick 等のコマンドで再生成します。 各プロダクトは brand repo から `cp` で取り込み、 ブランド変更時の追従コストを最小化する設計です。 公式サイトは本 repo から直接 Cloudflare Pages にデプロイされます。
-      </p>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ 03</p>
+            <p class="marginalia">Operation</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">運用方針。</h2>
+            <p class="section__paragraph">
+              マスターロゴを source of truth とし、 派生 file は ImageMagick 等のコマンドで再生成します。 各プロダクトは brand repo から <code>cp</code> で取り込み、 ブランド変更時の追従コストを最小化する設計です。 公式サイトは本 repo から直接 Cloudflare Pages にデプロイされます。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-10 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6">
-      <h2 class="font-serif text-2xl">関連リンク</h2>
-      <ul class="mt-3 list-disc space-y-2 pl-6">
-        <li>repo: <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">github.com/ChatteLapin/brand</a> (= public)</li>
-        <li>公式サイト: <a href="/">chattelapin.orz.cc</a> (= 本サイト)</li>
-        <li>ブランド使用ガイドライン: <a href="https://github.com/ChatteLapin/brand/blob/main/guidelines.md" target="_blank" rel="noopener">guidelines.md</a></li>
-      </ul>
+    <section class="product-section reveal">
+      <div class="col-wrap">
+        <div class="editorial-grid">
+          <aside class="section__aside">
+            <p class="section-num">§ —</p>
+            <p class="marginalia">Links</p>
+          </aside>
+          <div class="section__body">
+            <h2 class="section__title">関連リンク。</h2>
+            <ul class="link-list">
+              <li>
+                <span class="link-list__label">repo</span>
+                <span><a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">github.com/ChatteLapin/brand</a> <span class="link-list__note">(= public)</span></span>
+              </li>
+              <li>
+                <span class="link-list__label">公式サイト</span>
+                <a href="/">chattelapin.orz.cc</a> <span class="link-list__note">(= 本サイト)</span>
+              </li>
+              <li>
+                <span class="link-list__label">ガイドライン</span>
+                <a href="https://github.com/ChatteLapin/brand/blob/main/guidelines.md" target="_blank" rel="noopener">guidelines.md</a>
+              </li>
+              <li>
+                <span class="link-list__label">お問合せ</span>
+                <a href="/#contact">トップページのお問合せセクション</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </Layout>
+
+<style>
+  .product-article { padding-bottom: 4rem; }
+
+  .product-header {
+    padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--color-paper-fold);
+  }
+  .product-header__breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    margin: 0 0 1.5rem;
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+  }
+  .product-header__breadcrumb a { color: var(--color-ink-faint); text-decoration: none; }
+  .product-header__breadcrumb a:hover {
+    color: var(--color-olive-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .product-header__eyebrow { margin: 0 0 0.875rem; }
+  .product-header__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin: 0 0 1rem;
+    line-height: 1;
+    color: var(--color-ink-deep);
+  }
+  .product-header__tagline {
+    font-family: var(--font-serif-jp);
+    font-style: italic;
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--color-ink-soft);
+    letter-spacing: 0.05em;
+    margin: 0 0 2.5rem;
+    max-width: 60ch;
+  }
+  .product-header__meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-paper-fold);
+    max-width: 48rem;
+  }
+  @media (min-width: 640px) {
+    .product-header__meta { grid-template-columns: repeat(3, 1fr); }
+  }
+  .product-header__meta > div { display: flex; flex-direction: column; gap: 0.35rem; }
+  .product-header__meta span {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.22em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .product-header__meta strong {
+    font-family: var(--font-serif-jp);
+    font-size: 0.9375rem;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+
+  .product-section {
+    padding: clamp(3rem, 6vw, 4.5rem) 0;
+    border-bottom: 1px solid var(--color-paper-fold);
+  }
+  .product-section:last-of-type { border-bottom: none; }
+
+  .section__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-top: 0.5rem;
+  }
+  @media (min-width: 960px) {
+    .section__aside {
+      position: sticky;
+      top: 6rem;
+      align-self: flex-start;
+      padding-top: 1rem;
+    }
+  }
+
+  .section__body { min-width: 0; }
+
+  .section__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    color: var(--color-ink-deep);
+    margin: 0.5rem 0 1.5rem;
+  }
+  .section__paragraph {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.95;
+    color: var(--color-ink-deep);
+    margin: 0 0 1.25rem;
+    max-width: 62ch;
+  }
+  .section__paragraph--quiet {
+    color: var(--color-ink-soft);
+    font-size: 0.875rem;
+  }
+
+  /* Asset list */
+  .asset-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .asset-list li {
+    padding: 1.125rem 0;
+    border-top: 1px solid var(--color-paper-fold);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.375rem;
+  }
+  @media (min-width: 560px) {
+    .asset-list li {
+      grid-template-columns: 11rem 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+  }
+
+  .asset-list__title {
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  .asset-list__text {
+    font-family: var(--font-sans-jp);
+    font-size: 0.875rem;
+    line-height: 1.85;
+    color: var(--color-ink-soft);
+    margin: 0;
+  }
+
+  .asset-list__item--future .asset-list__title {
+    color: var(--color-blush-deep);
+    font-style: italic;
+  }
+
+  .link-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+  .link-list li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.875rem 0;
+    border-top: 1px solid var(--color-paper-fold);
+  }
+  @media (min-width: 640px) {
+    .link-list li {
+      grid-template-columns: 10rem 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+  }
+  .link-list__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    font-weight: 500;
+  }
+  .link-list__note {
+    font-family: var(--font-serif-jp);
+    font-size: 0.8125rem;
+    color: var(--color-ink-faint);
+    font-style: italic;
+  }
+</style>

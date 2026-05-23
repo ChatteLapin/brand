@@ -5,180 +5,1006 @@ import ProductCard from '../components/ProductCard.astro';
 
 <Layout
   title="ChatteLapin"
-  description="シャラパン (ChatteLapin) - テクノロジーとアナログの間に、 静かな時間を置く。 ソフトウェア開発業として、 主力プロダクト『Talent』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム) を軸に活動する個人事業。"
+  description="シャラパン (ChatteLapin) — テクノロジーとアナログの間に、 静かな時間を置く。 ソフトウェア開発業として、 主力プロダクト『Talent』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム) を軸に活動する個人事業。"
 >
-  <section id="top" class="text-center">
-    <h1 class="font-serif text-4xl md:text-5xl">ChatteLapin</h1>
-    <p class="mt-4 text-lg text-[color:var(--color-ink-soft)]">シャラパン</p>
-    <p class="mt-10 font-serif text-2xl md:text-3xl leading-snug">
-      テクノロジーとアナログの間に、
-      <br class="md:hidden" />
-      静かな時間を置く。
-    </p>
-    <p class="mt-6 text-sm md:text-base text-[color:var(--color-ink-soft)] leading-relaxed">
-      デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、
-      <br class="hidden md:inline" />
-      もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。
-    </p>
-  </section>
+  <!-- ==========================================================
+       § 00 Hero
+       ========================================================== -->
+  <section id="top" class="hero">
+    <div class="hero__inner col-wrap">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow fade-up">
+            <span class="hero__eyebrow-num">§ 00</span>
+            <span class="hero__eyebrow-label">Prologue</span>
+          </p>
+          <h1 class="hero__title fade-up delay-1">
+            <span class="hero__title-line">テクノロジーと</span>
+            <span class="hero__title-line">アナログの間に、</span>
+            <span class="hero__title-line hero__title-line--emphasis">静かな時間を置く。</span>
+          </h1>
+          <p class="hero__lede fade-up delay-3">
+            デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、 もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。
+          </p>
+          <div class="hero__meta fade-up delay-4">
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Founded</span>
+              <span class="hero__meta-value">2026·05·19</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Trade</span>
+              <span class="hero__meta-value">Software Studio</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Domicile</span>
+              <span class="hero__meta-value">Atami, JP</span>
+            </div>
+          </div>
+        </div>
 
-  <section id="mission" class="mt-16 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6 md:p-8">
-    <h2 class="font-serif text-2xl">どの橋をかけているか</h2>
-    <p class="mt-4 leading-relaxed">
-      デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。
-    </p>
-    <p class="mt-4 leading-relaxed">
-      ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
-    </p>
-    <ul class="mt-6 grid gap-3 text-sm md:text-base">
-      <li><strong class="font-serif">主力 Talent</strong> — デジタルゲームの中に、 紙の本のような読書の時間を取り戻す</li>
-      <li>volt (= 実験) — デジタル空間に、 人と人の縁を AI で結びなおす実証実験</li>
-      <li>business (= 内部運用) — 紙のレシートと帳簿を、 AI でデジタルに編みなおす</li>
-      <li>brand (= 公開ブランド・広報) — 印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台</li>
-    </ul>
-  </section>
+        <figure class="hero__figure fade-up delay-2">
+          <div class="hero__figure-frame">
+            <img
+              src="/chattelapin-logotype.png"
+              alt="ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
+              width="600"
+              height="600"
+              class="hero__figure-img"
+              fetchpriority="high"
+            />
+          </div>
+          <figcaption class="hero__figure-caption">
+            <span class="hero__figure-num">Fig. 01</span>
+            <span class="hero__figure-desc">銘 — シャラパン</span>
+          </figcaption>
+        </figure>
+      </div>
 
-  <section id="products" class="mt-20">
-    <h2 class="font-serif text-3xl md:text-4xl">主力プロダクト</h2>
-    <p class="mt-2 text-sm text-[color:var(--color-ink-soft)]">
-      事業の中核を担う、 外部提供のプロダクト。
-    </p>
-    <div class="mt-8 grid gap-5">
-      <ProductCard
-        name="Talent"
-        tagline="国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
-        href="/products/talent"
-        badge="主力"
-        size="large"
-      />
-    </div>
-
-    <h3 class="mt-12 font-serif text-2xl">主力を支える周辺の取り組み</h3>
-    <p class="mt-2 text-sm text-[color:var(--color-ink-soft)]">
-      主力プロダクトの開発と長期運営を可能にするための、 実験プロジェクト・内部運営基盤・公開ブランド広報基盤。
-    </p>
-    <div class="mt-8 grid gap-5 md:grid-cols-2">
-      <ProductCard
-        name="volt"
-        tagline="AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
-        href="/products/volt"
-        badge="実験"
-        size="medium"
-      />
-      <ProductCard
-        name="business"
-        tagline="freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
-        href="/products/business-automation"
-        badge="運営基盤"
-        size="medium"
-      />
-      <ProductCard
-        name="brand"
-        tagline="ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
-        href="/products/brand"
-        badge="公開ブランド・広報"
-        size="medium"
-      />
-    </div>
-  </section>
-
-  <section id="about" class="mt-20">
-    <h2 class="font-serif text-3xl md:text-4xl">事業概要</h2>
-
-    <div class="mt-8 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6 md:p-8">
-      <p class="text-sm uppercase tracking-widest text-[color:var(--color-accent)]">Mission</p>
-      <p class="mt-3 font-serif text-2xl md:text-3xl leading-snug">
-        テクノロジーとアナログの間に、 静かな時間を置く。
-      </p>
-      <p class="mt-4 leading-relaxed">
-        デジタルは便利を運んできた一方で、 ゆっくり考える時間・紙のような手触り・人と人の小さな縁を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
-      </p>
-      <p class="mt-4 leading-relaxed">
-        単に古き良きを保存するのではなく、 <strong>テクノロジーで運営しなければ実現できない静けさ</strong> を、 設計の段階から組み込みます。 すべての活動 — 主力プロダクトの開発も、 それを支える事業基盤の整備も — がこの基準のうえに立ちます。
-      </p>
-    </div>
-
-    <h3 class="mt-12 font-serif text-2xl">事業の概要</h3>
-    <p class="mt-4 leading-relaxed">
-      ChatteLapin の業種は <strong>ソフトウェア開発業</strong> です。 ソフトウェアという一つの道具で、 <strong>文化・教育・コミュニティ運営</strong> の領域に静かな時間を置く — それが事業の中核です。
-    </p>
-    <p class="mt-4 leading-relaxed">
-      主力は新規ゲーム事業『<a href="/products/talent">Talent</a>』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム)。 これを軸として、 周辺の活動 (= AI 活用コミュニティ運営の実証実験、 事業運営を支える AI 駆動 会計自動化基盤、 ブランド・広報資産を一元化する公開基盤) を内製で並行展開しています。
-    </p>
-    <p class="mt-4 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
-      いずれも独立した「製品ライン」 ではなく、 ひとつのミッションから派生した手段の集合として位置づけています。
-    </p>
-
-    <h3 class="mt-12 font-serif text-2xl">前史 — 音楽劇団シャラパンからの継承</h3>
-    <p class="mt-4 leading-relaxed">
-      事業者は過去に「音楽劇団シャラパン」 を立ち上げ、 主宰として「空想音楽劇 真昼の銀河」 等の公演を行ってきました。 当時の主宰メッセージには以下の理念が掲げられていました:
-    </p>
-    <blockquote class="mt-4 rounded border-l-4 border-[color:var(--color-accent)] bg-white/40 p-5">
-      <p class="leading-relaxed italic">
-        経済的なゆとりだけでなく、 精神的なゆとりまでもが社会から失われがちな時代に — 観る人の心にゆとりが生まれ、 自身と隣の人々の心の豊かさを取り戻すこと。 質と量の高いステージを提供して社会に貢献すること。
-      </p>
-      <footer class="mt-3 text-right text-sm text-[color:var(--color-ink-soft)]">— 音楽劇団シャラパン 主宰</footer>
-    </blockquote>
-    <p class="mt-6 leading-relaxed">
-      音楽劇団シャラパンの理念は、 メディアを変えて現在も継承しています。 演劇というアナログメディアで実現してきた <strong>「心のゆとり」</strong> を、 デジタル時代の手法 (= ゲーム / AI / コミュニティ運営) で再実装する — それが現在の ChatteLapin の活動です。
-    </p>
-    <p class="mt-4 leading-relaxed">
-      屋号「シャラパン」 を継続しているのも、 この理念の連続性を象徴しています。 「テクノロジーとアナログの間に、 静かな時間を置く」 という現在のミッションは、 音楽劇団時代の「心のゆとりを取り戻す」 を、 現代の手段で言い換えたものです。
-    </p>
-
-    <h3 class="mt-12 font-serif text-2xl">事業者プロフィール</h3>
-    <p class="mt-4 leading-relaxed">
-      1984 年 (= 昭和 59 年) 生まれ。 就職氷河期末期に社会に出て、 続く <strong>ゆとり世代</strong> を一歩前から見つめてきた世代です。 世間で「悪名」 のように扱われた『ゆとり』 という言葉の用法とは別に、 <strong>本当の意味でのゆとり</strong> — 経済の余裕だけでなく、 時間と精神の余白 — を意識し続けてきました。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 は、 個人的な実感とも地続きの取り組みです。
-    </p>
-    <ul class="mt-6 list-disc space-y-2 pl-6 leading-relaxed">
-      <li>米国アリゾナ大学 Eller 経営学部卒業 (= 情報システム経営 / 起業学 / 国際経営)</li>
-      <li>過去に Web ベンチャーを設立</li>
-      <li>音楽劇団シャラパン主宰として「空想音楽劇 真昼の銀河」 等の舞台公演を企画・制作</li>
-      <li>並行して芸能・舞台・モデル業の活動経験 (= ダンス / 2.5 次元舞台プロデュース 等)</li>
-      <li>現職: 東京を拠点とする FA 機器メーカーで IT エンジニア・経営企画 (= 正社員、 副業公認)</li>
-      <li>2026-05-19 シャラパン (ChatteLapin) を個人事業として開業</li>
-    </ul>
-    <p class="mt-6 leading-relaxed">
-      <strong>国際経営学の学術背景</strong>・ <strong>20 年超の IT エンジニアと経営企画の実装力</strong>・ <strong>音楽劇団主宰として培った文化事業の現場経験</strong> — この 3 つが交差する立場から、 単なる技術プロダクトではなく <strong>文化・教育・経営の交差点に位置する作品</strong> を生み出すことを事業の中核に据えています。
-    </p>
-
-    <h3 class="mt-12 font-serif text-2xl">基本情報</h3>
-    <dl class="mt-4 grid grid-cols-1 gap-y-3 md:grid-cols-[max-content_1fr] md:gap-x-6">
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">屋号</dt>
-      <dd>シャラパン (ブランド表記: ChatteLapin)</dd>
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">開業日</dt>
-      <dd>2026-05-19</dd>
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">事業形態</dt>
-      <dd>個人事業主</dd>
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">業種</dt>
-      <dd>ソフトウェア開発業</dd>
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">管轄税務署</dt>
-      <dd>熱海税務署</dd>
-      <dt class="font-semibold text-[color:var(--color-ink-soft)]">GitHub Org</dt>
-      <dd><a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">github.com/ChatteLapin</a></dd>
-    </dl>
-  </section>
-
-  <section id="contact" class="mt-20">
-    <h2 class="font-serif text-3xl md:text-4xl">お問い合わせ</h2>
-
-    <p class="mt-6 leading-relaxed">
-      業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。
-    </p>
-
-    <p class="mt-6">
-      <a
-        href="https://github.com/ChatteLapin/brand/issues/new"
-        target="_blank"
-        rel="noopener"
-        class="inline-block rounded-md border border-[color:var(--color-ink)] bg-white/60 px-6 py-3 font-serif text-base no-underline hover:bg-[color:var(--color-ink)] hover:text-white"
-      >
-        → GitHub Issues でお問い合わせ
+      <a href="#mission" class="hero__scroll fade-in delay-5" aria-label="次のセクションへ">
+        <span class="hero__scroll-label">Scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
-    </p>
+    </div>
+  </section>
 
-    <p class="mt-6 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
-      お問い合わせは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。
-    </p>
+  <!-- ==========================================================
+       § 01 Mission — どの橋をかけているか
+       ========================================================== -->
+  <section id="mission" class="section reveal">
+    <div class="col-wrap">
+      <div class="editorial-grid">
+        <aside class="section__aside">
+          <p class="section-num">§ 01</p>
+          <p class="marginalia">Mission</p>
+        </aside>
+
+        <div class="section__body">
+          <h2 class="section__title">どの橋をかけているか。</h2>
+          <p class="section__lede dropcap">
+            デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+          </p>
+
+          <ol class="bridge-list">
+            <li class="bridge-list__item">
+              <span class="bridge-list__num">01</span>
+              <div class="bridge-list__body">
+                <h3 class="bridge-list__title">主力 — Talent</h3>
+                <p class="bridge-list__text">デジタルゲームの中に、 紙の本のような読書の時間を取り戻す。</p>
+              </div>
+            </li>
+            <li class="bridge-list__item">
+              <span class="bridge-list__num">02</span>
+              <div class="bridge-list__body">
+                <h3 class="bridge-list__title">実験 — volt</h3>
+                <p class="bridge-list__text">デジタル空間に、 人と人の縁を AI で結びなおす実証実験。</p>
+              </div>
+            </li>
+            <li class="bridge-list__item">
+              <span class="bridge-list__num">03</span>
+              <div class="bridge-list__body">
+                <h3 class="bridge-list__title">運営 — business</h3>
+                <p class="bridge-list__text">紙のレシートと帳簿を、 AI でデジタルに編みなおす。</p>
+              </div>
+            </li>
+            <li class="bridge-list__item">
+              <span class="bridge-list__num">04</span>
+              <div class="bridge-list__body">
+                <h3 class="bridge-list__title">広報 — brand</h3>
+                <p class="bridge-list__text">印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-rule" aria-hidden="true"><span class="ornament-rule__glyph">❦   ❦   ❦</span></div>
+
+  <!-- ==========================================================
+       § 02 Products
+       ========================================================== -->
+  <section id="products" class="section reveal">
+    <div class="col-wrap">
+      <div class="editorial-grid">
+        <aside class="section__aside">
+          <p class="section-num">§ 02</p>
+          <p class="marginalia">Products</p>
+        </aside>
+
+        <div class="section__body">
+          <p class="eyebrow">事業の中核</p>
+          <h2 class="section__title">主力プロダクト。</h2>
+          <p class="section__lede">
+            外部に提供する、 事業の長期的な収益と社会的価値の軸を担うプロダクト。
+          </p>
+
+          <div class="products-primary">
+            <ProductCard
+              name="Talent"
+              tagline="国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
+              href="/products/talent"
+              badge="主力"
+              size="large"
+              number="01"
+              variant="primary"
+            />
+          </div>
+
+          <div class="products-divider" aria-hidden="true">
+            <span class="products-divider__label">そして、 これを支える</span>
+          </div>
+
+          <h3 class="section__subtitle">主力を支える周辺の取り組み。</h3>
+          <p class="section__lede section__lede--small">
+            主力プロダクトの開発と長期運営を可能にするための、 実証実験プロジェクト・内部運営基盤・公開ブランド広報基盤。
+          </p>
+
+          <div class="products-satellite">
+            <ProductCard
+              name="volt"
+              tagline="AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
+              href="/products/volt"
+              badge="実験"
+              size="medium"
+              number="02"
+            />
+            <ProductCard
+              name="business"
+              tagline="freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
+              href="/products/business-automation"
+              badge="運営基盤"
+              size="medium"
+              number="03"
+            />
+            <ProductCard
+              name="brand"
+              tagline="ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
+              href="/products/brand"
+              badge="公開ブランド・広報"
+              size="medium"
+              number="04"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-rule" aria-hidden="true"><span class="ornament-rule__glyph">❦   ❦   ❦</span></div>
+
+  <!-- ==========================================================
+       § 03 About
+       ========================================================== -->
+  <section id="about" class="section reveal">
+    <div class="col-wrap">
+      <div class="editorial-grid">
+        <aside class="section__aside">
+          <p class="section-num">§ 03</p>
+          <p class="marginalia">About</p>
+        </aside>
+
+        <div class="section__body">
+          <p class="eyebrow">事業概要</p>
+          <h2 class="section__title">テクノロジーで実現する、<br />静けさのある営み。</h2>
+
+          <div class="mission-frame">
+            <p class="mission-frame__label">Mission Statement</p>
+            <p class="mission-frame__text">
+              テクノロジーとアナログの間に、 <br />静かな時間を置く。
+            </p>
+            <p class="mission-frame__body">
+              デジタルは便利を運んできた一方で、 ゆっくり考える時間・紙のような手触り・人と人の小さな縁を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+            </p>
+            <p class="mission-frame__body">
+              単に古き良きを保存するのではなく、 <strong>テクノロジーで運営しなければ実現できない静けさ</strong> を、 設計の段階から組み込みます。 すべての活動 — 主力プロダクトの開発も、 それを支える事業基盤の整備も — がこの基準のうえに立ちます。
+            </p>
+          </div>
+
+          <h3 class="section__subtitle">事業の概要。</h3>
+          <p class="section__paragraph">
+            ChatteLapin の業種は <strong>ソフトウェア開発業</strong> です。 ソフトウェアという一つの道具で、 <strong>文化・教育・コミュニティ運営</strong> の領域に静かな時間を置く — それが事業の中核です。
+          </p>
+          <p class="section__paragraph">
+            主力は新規ゲーム事業『<a href="/products/talent">Talent</a>』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム)。 これを軸として、 周辺の活動 (= AI 活用コミュニティ運営の実証実験、 事業運営を支える AI 駆動 会計自動化基盤、 ブランド・広報資産を一元化する公開基盤) を内製で並行展開しています。
+          </p>
+          <p class="section__paragraph section__paragraph--quiet">
+            いずれも独立した「製品ライン」 ではなく、 ひとつのミッションから派生した手段の集合として位置づけています。
+          </p>
+
+          <h3 class="section__subtitle">前史 — 音楽劇団シャラパンからの継承。</h3>
+          <p class="section__paragraph">
+            事業者は過去に「音楽劇団シャラパン」 を立ち上げ、 主宰として「空想音楽劇 真昼の銀河」 等の公演を行ってきました。 当時の主宰メッセージには以下の理念が掲げられていました:
+          </p>
+
+          <blockquote class="legacy-quote">
+            <p class="legacy-quote__text">
+              経済的なゆとりだけでなく、 精神的なゆとりまでもが社会から失われがちな時代に — 観る人の心にゆとりが生まれ、 自身と隣の人々の心の豊かさを取り戻すこと。 質と量の高いステージを提供して社会に貢献すること。
+            </p>
+            <footer class="legacy-quote__attribution">
+              <span class="legacy-quote__divider" aria-hidden="true"></span>
+              <span>音楽劇団シャラパン 主宰</span>
+            </footer>
+          </blockquote>
+
+          <p class="section__paragraph">
+            音楽劇団シャラパンの理念は、 メディアを変えて現在も継承しています。 演劇というアナログメディアで実現してきた <strong>「心のゆとり」</strong> を、 デジタル時代の手法 (= ゲーム / AI / コミュニティ運営) で再実装する — それが現在の ChatteLapin の活動です。 『シャラパン』 の名を継続しているのも、 この理念の連続性を象徴しています。
+          </p>
+
+          <h3 class="section__subtitle">事業者プロフィール。</h3>
+          <p class="section__paragraph">
+            1984 年 (= 昭和 59 年) 生まれ。 就職氷河期末期に社会に出て、 続く <strong>ゆとり世代</strong> を一歩前から見つめてきた世代です。 世間で「悪名」 のように扱われた『ゆとり』 という言葉の用法とは別に、 <strong>本当の意味でのゆとり</strong> — 経済の余裕だけでなく、 時間と精神の余白 — を意識し続けてきました。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 は、 個人的な実感とも地続きの取り組みです。
+          </p>
+
+          <ul class="bio-list">
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>米国アリゾナ大学 Eller 経営学部卒業 (= 情報システム経営学・起業学・国際経営学 三重専攻)</span>
+            </li>
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>過去に Web ベンチャーを設立</span>
+            </li>
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>音楽劇団シャラパン主宰として「空想音楽劇 真昼の銀河」 等の舞台公演を企画・制作</span>
+            </li>
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>並行して芸能・舞台・モデル業の活動経験 (= ダンス / 2.5 次元舞台プロデュース 等)</span>
+            </li>
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>現職: 東京を拠点とする FA 機器メーカーで IT エンジニア・経営企画 (= 正社員、 副業公認)</span>
+            </li>
+            <li class="bio-list__item">
+              <span class="bio-list__bullet" aria-hidden="true"></span>
+              <span>2026-05-19 シャラパン (ChatteLapin) を個人事業として開業</span>
+            </li>
+          </ul>
+
+          <p class="section__paragraph section__paragraph--lift">
+            <strong>国際経営学の学術背景</strong>・ <strong>20 年超の IT エンジニアと経営企画の実装力</strong>・ <strong>音楽劇団主宰として培った文化事業の現場経験</strong> — この 3 つが交差する立場から、 単なる技術プロダクトではなく <strong>文化・教育・経営の交差点に位置する作品</strong> を生み出すことを事業の中核に据えています。
+          </p>
+
+          <h3 class="section__subtitle">基本情報。</h3>
+          <dl class="info-grid">
+            <div class="info-grid__row">
+              <dt>事業者名</dt>
+              <dd>シャラパン (ブランド表記: ChatteLapin)</dd>
+            </div>
+            <div class="info-grid__row">
+              <dt>開業日</dt>
+              <dd>2026-05-19</dd>
+            </div>
+            <div class="info-grid__row">
+              <dt>事業形態</dt>
+              <dd>個人事業主</dd>
+            </div>
+            <div class="info-grid__row">
+              <dt>業種</dt>
+              <dd>ソフトウェア開発業</dd>
+            </div>
+            <div class="info-grid__row">
+              <dt>管轄税務署</dt>
+              <dd>熱海税務署</dd>
+            </div>
+            <div class="info-grid__row">
+              <dt>GitHub Org</dt>
+              <dd><a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">github.com/ChatteLapin</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-rule" aria-hidden="true"><span class="ornament-rule__glyph">❦   ❦   ❦</span></div>
+
+  <!-- ==========================================================
+       § 04 Contact
+       ========================================================== -->
+  <section id="contact" class="section reveal">
+    <div class="col-wrap">
+      <div class="editorial-grid">
+        <aside class="section__aside">
+          <p class="section-num">§ 04</p>
+          <p class="marginalia">Contact</p>
+        </aside>
+
+        <div class="section__body">
+          <p class="eyebrow">お問合せ</p>
+          <h2 class="section__title">声をかけてください。</h2>
+          <p class="section__lede">
+            業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。
+          </p>
+
+          <div class="contact-cta">
+            <a
+              href="https://github.com/ChatteLapin/brand/issues/new"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--arrow"
+            >
+              GitHub Issues でお問合せ
+            </a>
+            <p class="contact-cta__hint">
+              新規タブで GitHub.com の Issue 作成画面が開きます
+            </p>
+          </div>
+
+          <p class="section__paragraph section__paragraph--quiet">
+            お問合せは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
+
+<style>
+  /* ============================================================
+   * Hero
+   * ============================================================ */
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(4rem, 10vw, 7rem);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(154, 165, 112, 0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(201, 149, 155, 0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  @media (min-width: 880px) {
+    .hero__grid {
+      grid-template-columns: 1.05fr 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+  }
+
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-olive);
+    margin: 0 0 1.5rem;
+    font-weight: 500;
+  }
+
+  .hero__eyebrow-num {
+    color: var(--color-olive-deep);
+  }
+
+  .hero__eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background-color: var(--color-olive);
+  }
+
+  .hero__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(2rem, 5.5vw, 3.75rem);
+    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: 0.06em;
+    color: var(--color-ink-deep);
+    margin: 0;
+  }
+
+  .hero__title-line {
+    display: block;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+
+  .hero__title-line--emphasis {
+    color: var(--color-olive-deep);
+  }
+
+  .hero__lede {
+    margin: 2rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.9;
+    color: var(--color-ink-soft);
+    letter-spacing: 0.025em;
+    max-width: 52ch;
+  }
+
+  .hero__meta {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-paper-fold);
+    max-width: 32rem;
+  }
+
+  .hero__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .hero__meta-label {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.22em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .hero__meta-value {
+    font-family: var(--font-serif-jp);
+    font-size: 0.875rem;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.08em;
+  }
+
+  .hero__figure {
+    margin: 0 auto;
+    position: relative;
+    order: -1;
+    width: 100%;
+    max-width: clamp(200px, 50vw, 320px);
+  }
+
+  @media (min-width: 880px) {
+    .hero__figure {
+      order: 0;
+      margin: 0;
+      max-width: none;
+    }
+  }
+
+  .hero__figure-frame {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-paper-warm);
+    border: 1px solid var(--color-paper-fold);
+    padding: 0.75rem;
+    box-shadow:
+      0 1px 0 var(--color-paper-warm),
+      0 12px 32px -8px rgba(58, 44, 31, 0.18),
+      0 24px 48px -16px rgba(58, 44, 31, 0.12);
+  }
+
+  .hero__figure-frame::before {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    border: 1px solid var(--color-paper-fold);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero__figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+
+  .hero__figure-caption {
+    margin-top: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0 0.125rem;
+  }
+
+  @media (min-width: 880px) {
+    .hero__figure-caption {
+      margin-top: 1rem;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 0.25rem;
+    }
+  }
+
+  .hero__figure-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--color-olive);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .hero__figure-desc {
+    font-family: var(--font-serif-jp);
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-soft);
+    font-style: italic;
+  }
+
+  .hero__scroll {
+    display: none;
+    margin-top: 4rem;
+    text-decoration: none;
+    color: var(--color-ink-faint);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+  }
+
+  @media (min-width: 880px) {
+    .hero__scroll {
+      display: inline-flex;
+    }
+  }
+
+  .hero__scroll-line {
+    width: 4rem;
+    height: 1px;
+    background: linear-gradient(to right, var(--color-ink-faint), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__scroll-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    background-color: var(--color-olive-deep);
+    animation: scrollDot 2.5s ease-in-out infinite;
+  }
+
+  @keyframes scrollDot {
+    0% { left: -30%; }
+    60% { left: 100%; }
+    100% { left: 100%; }
+  }
+
+  .hero__scroll:hover {
+    color: var(--color-ink-deep);
+    text-decoration: none;
+  }
+
+  /* ============================================================
+   * Section base
+   * ============================================================ */
+
+  .section {
+    padding: clamp(3.5rem, 8vw, 6rem) 0;
+    position: relative;
+  }
+
+  .section__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-top: 0.5rem;
+  }
+
+  @media (min-width: 960px) {
+    .section__aside {
+      position: sticky;
+      top: 6rem;
+      align-self: flex-start;
+      padding-top: 1rem;
+    }
+  }
+
+  .section__body {
+    min-width: 0;
+  }
+
+  .section__title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.875rem, 4.5vw, 2.75rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.32;
+    color: var(--color-ink-deep);
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .section__subtitle {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    color: var(--color-ink-deep);
+    margin: 4rem 0 1.25rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid var(--color-paper-fold);
+    position: relative;
+  }
+
+  .section__subtitle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 4rem;
+    height: 1px;
+    background-color: var(--color-olive);
+  }
+
+  .section__lede {
+    font-family: var(--font-sans-jp);
+    font-size: 1rem;
+    line-height: 1.95;
+    color: var(--color-ink-soft);
+    margin: 0 0 2rem;
+    max-width: 60ch;
+  }
+
+  .section__lede--small {
+    font-size: 0.9375rem;
+  }
+
+  .section__paragraph {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.95;
+    color: var(--color-ink-deep);
+    margin: 0 0 1.25rem;
+    max-width: 62ch;
+  }
+
+  .section__paragraph--quiet {
+    color: var(--color-ink-soft);
+    font-size: 0.875rem;
+  }
+
+  .section__paragraph--lift {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-paper-fold);
+    color: var(--color-ink-soft);
+  }
+
+  /* ============================================================
+   * Mission — bridge-list
+   * ============================================================ */
+
+  .bridge-list {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    counter-reset: bridge;
+  }
+
+  .bridge-list__item {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-paper-fold);
+    align-items: baseline;
+  }
+
+  .bridge-list__num {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.16em;
+    color: var(--color-olive);
+    font-weight: 500;
+  }
+
+  .bridge-list__title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-deep);
+    margin: 0;
+  }
+
+  .bridge-list__text {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.85;
+    color: var(--color-ink-soft);
+    margin: 0.5rem 0 0;
+  }
+
+  /* ============================================================
+   * Products
+   * ============================================================ */
+
+  .products-primary {
+    margin: 2.5rem 0 0;
+  }
+
+  .products-divider {
+    margin: 4rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 28rem;
+    color: var(--color-ink-faint);
+  }
+
+  .products-divider::before,
+  .products-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-paper-fold);
+  }
+
+  .products-divider__label {
+    font-family: var(--font-serif-jp);
+    font-style: italic;
+    font-size: 0.875rem;
+    letter-spacing: 0.12em;
+    color: var(--color-ink-faint);
+  }
+
+  .products-satellite {
+    margin: 2rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 720px) {
+    .products-satellite {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ============================================================
+   * About — mission-frame, blockquote, bio-list, info-grid
+   * ============================================================ */
+
+  .mission-frame {
+    margin: 2rem 0 3rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background-color: rgba(255, 252, 245, 0.55);
+    border: 1px solid var(--color-paper-fold);
+    position: relative;
+  }
+
+  .mission-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0.5rem;
+    border: 1px solid var(--color-paper-fold);
+    pointer-events: none;
+  }
+
+  .mission-frame__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-olive);
+    margin: 0 0 1rem;
+    font-weight: 500;
+  }
+
+  .mission-frame__text {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    color: var(--color-ink-deep);
+    margin: 0 0 1.5rem;
+  }
+
+  .mission-frame__body {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.95;
+    color: var(--color-ink-soft);
+    margin: 0 0 1rem;
+    max-width: 56ch;
+  }
+
+  .mission-frame__body:last-child {
+    margin-bottom: 0;
+  }
+
+  .legacy-quote {
+    margin: 2rem 0 2.5rem;
+    padding: 1.5rem 0 1.5rem 2rem;
+    border-left: 2px solid var(--color-olive);
+    position: relative;
+  }
+
+  .legacy-quote::before {
+    content: none;
+  }
+
+  .legacy-quote__text {
+    font-family: var(--font-serif-jp);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 2.05;
+    color: var(--color-ink-deep);
+    letter-spacing: 0.05em;
+    margin: 0 0 1.25rem;
+  }
+
+  .legacy-quote__attribution {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-family: var(--font-serif-jp);
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.06em;
+  }
+
+  .legacy-quote__divider {
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-ink-faint);
+    display: inline-block;
+  }
+
+  .bio-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .bio-list__item {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-ink-deep);
+  }
+
+  .bio-list__bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-olive);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+  }
+
+  .info-grid {
+    margin: 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .info-grid__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid var(--color-paper-fold);
+    gap: 0.25rem;
+  }
+
+  @media (min-width: 560px) {
+    .info-grid__row {
+      grid-template-columns: 10rem 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .info-grid__row dt {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    font-weight: 500;
+  }
+
+  .info-grid__row dd {
+    font-family: var(--font-sans-jp);
+    font-size: 0.9375rem;
+    color: var(--color-ink-deep);
+    margin: 0;
+  }
+
+  /* ============================================================
+   * Contact
+   * ============================================================ */
+
+  .contact-cta {
+    margin: 2.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .contact-cta__hint {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
+    margin: 0;
+  }
+</style>
