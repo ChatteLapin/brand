@@ -9,6 +9,13 @@ import yaml from '@rollup/plugin-yaml';
 export default defineConfig({
   site: 'https://chattelapin.orz.cc',
   output: 'static',
+  i18n: {
+    defaultLocale: 'ja',
+    locales: ['ja', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   vite: {
     plugins: [tailwindcss(), yaml()],
   },

@@ -7,31 +7,62 @@
 # 「公開可能」 とみなす。 非公開数値 (= 売上想定 / 経費構造 / 営業 pipeline 等) は
 # internal/strategy/master/ に分離する。
 #
+# 多言語対応: 翻訳が必要な値は { ja, en } のネストで保持。 言語不問の固有値
+# (= ブランド名 / 日付 / 数値 / URL) は scalar 維持。
+#
 # 更新時の影響範囲:
-#   - brand/site/src/pages/index.astro (= 公式サイト § 04 基本情報)
+#   - brand/site/src/pages/index.astro (= ja TOP § 04 基本情報)
+#   - brand/site/src/pages/en/index.astro (= en TOP § 04 Basic Info)
 #   - internal/strategy/templates/*.md.j2 (= 銀行 / 教育機関 / 投資家 PDF テンプレ)
-#   - 派生文書を再 build すれば自動反映
 
-name: シャラパン
+# === 屋号 ===
+# 屋号は ja で「シャラパン」、 EN 圏向けでは「ChatteLapin」 一本化。
+# 「Charapin」 のような別ローマ字呼称は立てない。
+# brand_name: 全言語共通の対外ブランド表記 (= フランス語綴り)
+name:
+  ja: シャラパン
+  en: ChatteLapin
 brand_name: ChatteLapin
-brand_display: "シャラパン (ブランド表記: ChatteLapin)"
+brand_display:
+  ja: "シャラパン (ブランド表記: ChatteLapin)"
+  en: "ChatteLapin (Japanese: シャラパン)"
 
+# === 開業 ===
 founded_date: "2026-05-19"
-business_form: 個人事業主
-industry: ソフトウェア開発業
 
+business_form:
+  ja: 個人事業主
+  en: Sole Proprietorship
+
+industry:
+  ja: ソフトウェア開発業
+  en: Software Development
+
+# === 税務 ===
 tax:
-  office: 熱海税務署
-  filing_type: 青色申告
+  office:
+    ja: 熱海税務署
+    en: Atami Tax Office, Japan
+  filing_type:
+    ja: 青色申告
+    en: Blue Form Tax Return
   deduction_jpy: 650000
-  filing_method: e-Tax 提出予定
-  notes: 開業届 / 青色申告承認申請書 提出済
+  filing_method:
+    ja: e-Tax 提出予定
+    en: Filing via e-Tax
+  notes:
+    ja: 開業届 / 青色申告承認申請書 提出済
+    en: Business Opening Notification and Blue Form Application submitted
 
+# === GitHub ===
 github:
   org: ChatteLapin
   url: https://github.com/ChatteLapin
 
+# === Site ===
 site:
   official_url: https://chattelapin.orz.cc/
   contact_url: https://github.com/ChatteLapin/brand/issues/new
-  status: 2026-05 立ち上げ
+  status:
+    ja: 2026-05 立ち上げ
+    en: Launched 2026-05

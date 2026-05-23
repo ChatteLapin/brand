@@ -1,6 +1,38 @@
 ---
 // ChatteLapin Footer — 古典書物のコロフォン (= 末尾発行記録) 風
+
 const year = new Date().getFullYear();
+const locale = Astro.currentLocale || 'ja';
+const isJa = locale === 'ja';
+const homeHref = isJa ? '/' : '/en';
+
+const labels = isJa
+  ? {
+      navAria: 'フッターナビゲーション',
+      nav: [
+        { label: 'ミッション', href: `${homeHref}#mission` },
+        { label: 'プロダクト', href: `${homeHref}#products` },
+        { label: '事業概要', href: `${homeHref}#about` },
+        { label: 'お問合せ', href: `${homeHref}#contact` },
+      ],
+      githubOrg: 'GitHub Organization',
+      issuesLink: 'お問合せ Issues',
+      copyName: 'ChatteLapin · シャラパン',
+      rights: 'All rights reserved.',
+    }
+  : {
+      navAria: 'Footer navigation',
+      nav: [
+        { label: 'Mission', href: `${homeHref}#mission` },
+        { label: 'Products', href: `${homeHref}#products` },
+        { label: 'About', href: `${homeHref}#about` },
+        { label: 'Contact', href: `${homeHref}#contact` },
+      ],
+      githubOrg: 'GitHub Organization',
+      issuesLink: 'Contact via Issues',
+      copyName: 'ChatteLapin',
+      rights: 'All rights reserved.',
+    };
 ---
 
 <footer class="site-footer">
@@ -11,21 +43,29 @@ const year = new Date().getFullYear();
   <div class="site-footer__inner">
     <div class="site-footer__colophon">
       <p class="site-footer__colophon-label">Colophon</p>
-      <p class="site-footer__colophon-text">
-        本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br />
-        2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br />
-        ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br />
-        Astro と Tailwind を用い、 静かに組版されました。
-      </p>
+      {isJa ? (
+        <p class="site-footer__colophon-text">
+          本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br />
+          2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br />
+          ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br />
+          Astro と Tailwind を用い、 静かに組版されました。
+        </p>
+      ) : (
+        <p class="site-footer__colophon-text">
+          The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br />
+          Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br />
+          Operated under blue-form taxation with a 650,000 JPY deduction, <br />
+          and quietly typeset with Astro and Tailwind.
+        </p>
+      )}
     </div>
 
-    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+    <nav class="site-footer__nav" aria-label={labels.navAria}>
       <p class="site-footer__nav-label">Navigation</p>
       <ul class="site-footer__nav-list">
-        <li><a href="/#mission">ミッション</a></li>
-        <li><a href="/#products">プロダクト</a></li>
-        <li><a href="/#about">事業概要</a></li>
-        <li><a href="/#contact">お問合せ</a></li>
+        {labels.nav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
       </ul>
     </nav>
 
@@ -34,12 +74,12 @@ const year = new Date().getFullYear();
       <ul class="site-footer__nav-list">
         <li>
           <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">
-            GitHub Organization
+            {labels.githubOrg}
           </a>
         </li>
         <li>
           <a href="https://github.com/ChatteLapin/brand/issues/new" target="_blank" rel="noopener">
-            お問合せ Issues
+            {labels.issuesLink}
           </a>
         </li>
       </ul>
@@ -50,9 +90,9 @@ const year = new Date().getFullYear();
     <p class="site-footer__copy">
       <span class="site-footer__year">{year}</span>
       <span aria-hidden="true">·</span>
-      <span>ChatteLapin · シャラパン</span>
+      <span>{labels.copyName}</span>
       <span aria-hidden="true">·</span>
-      <span class="site-footer__rights">All rights reserved.</span>
+      <span class="site-footer__rights">{labels.rights}</span>
     </p>
   </div>
 </footer>

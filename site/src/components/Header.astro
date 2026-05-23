@@ -1,10 +1,33 @@
 ---
 // ChatteLapin Header — 古典書物の扉ページ × シャープなナビゲーション
+
+const locale = Astro.currentLocale || 'ja';
+const isJa = locale === 'ja';
+const homeHref = isJa ? '/' : '/en';
+const otherLocaleHref = isJa ? '/en' : '/';
+const otherLocaleLabel = isJa ? 'EN' : 'JA';
+const otherLocaleAria = isJa ? 'Switch to English' : '日本語に切替';
+const navAriaLabel = isJa ? '主要ナビゲーション' : 'Primary navigation';
+const brandAriaLabel = isJa ? 'ChatteLapin トップへ' : 'ChatteLapin home';
+
+const navItems = isJa
+  ? [
+      { num: '01', label: 'ミッション', href: `${homeHref}#mission` },
+      { num: '02', label: 'プロダクト', href: `${homeHref}#products` },
+      { num: '03', label: '事業概要', href: `${homeHref}#about` },
+      { num: '04', label: 'お問合せ', href: `${homeHref}#contact` },
+    ]
+  : [
+      { num: '01', label: 'Mission', href: `${homeHref}#mission` },
+      { num: '02', label: 'Products', href: `${homeHref}#products` },
+      { num: '03', label: 'About', href: `${homeHref}#about` },
+      { num: '04', label: 'Contact', href: `${homeHref}#contact` },
+    ];
 ---
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="/" class="site-header__brand" aria-label="ChatteLapin トップへ">
+    <a href={homeHref} class="site-header__brand" aria-label={brandAriaLabel}>
       <img
         src="/logo.png"
         alt=""
@@ -18,30 +41,19 @@
       </span>
     </a>
 
-    <nav class="site-nav" aria-label="主要ナビゲーション">
+    <nav class="site-nav" aria-label={navAriaLabel}>
       <ol class="site-nav__list">
-        <li class="site-nav__item">
-          <a href="/#mission" class="site-nav__link">
-            <span class="site-nav__num">01</span>
-            <span class="site-nav__label">ミッション</span>
-          </a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/#products" class="site-nav__link">
-            <span class="site-nav__num">02</span>
-            <span class="site-nav__label">プロダクト</span>
-          </a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/#about" class="site-nav__link">
-            <span class="site-nav__num">03</span>
-            <span class="site-nav__label">事業概要</span>
-          </a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/#contact" class="site-nav__link">
-            <span class="site-nav__num">04</span>
-            <span class="site-nav__label">お問合せ</span>
+        {navItems.map((item) => (
+          <li class="site-nav__item">
+            <a href={item.href} class="site-nav__link">
+              <span class="site-nav__num">{item.num}</span>
+              <span class="site-nav__label">{item.label}</span>
+            </a>
+          </li>
+        ))}
+        <li class="site-nav__item site-nav__item--locale">
+          <a href={otherLocaleHref} class="site-nav__link site-nav__link--locale" aria-label={otherLocaleAria}>
+            <span class="site-nav__label">{otherLocaleLabel}</span>
           </a>
         </li>
       </ol>

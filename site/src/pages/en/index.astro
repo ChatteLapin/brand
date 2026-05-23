@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from '../components/Layout.astro';
-import ProductCard from '../components/ProductCard.astro';
-import logotype from '../assets/chattelapin-logotype.png';
-import businessInfo from '../../../data/business-info.yaml';
+import Layout from '../../components/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import logotype from '../../assets/chattelapin-logotype.png';
+import businessInfo from '../../../../data/business-info.yaml';
 ---
 
 <Layout
   title="ChatteLapin"
-  description="シャラパン (ChatteLapin) — テクノロジーとアナログの間に、 静かな時間を置く。 ソフトウェア開発業として、 主力プロダクト『Talent』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム) を軸に活動する個人事業。"
+  description="ChatteLapin (Japanese: シャラパン) — A pause of quiet between technology and the analog. A sole proprietorship operating Talent, a PWA game weaving global cultures, business simulation, and education."
 >
   <!-- ==========================================================
        § 00 Hero
@@ -22,12 +22,12 @@ import businessInfo from '../../../data/business-info.yaml';
             <span class="hero__eyebrow-label">Prologue</span>
           </p>
           <h1 class="hero__title fade-up delay-1">
-            <span class="hero__title-line">テクノロジーと</span>
-            <span class="hero__title-line">アナログの間に、</span>
-            <span class="hero__title-line hero__title-line--emphasis">静かな時間を置く。</span>
+            <span class="hero__title-line">Place a quiet hour</span>
+            <span class="hero__title-line">between technology</span>
+            <span class="hero__title-line hero__title-line--emphasis">and the analog.</span>
           </h1>
           <p class="hero__lede fade-up delay-3">
-            デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、 もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。
+            What the digital quietly took away — the time to read slowly, the time to think at one's own pace, the texture of paper, the small ties between people — we set it back, within the digital. The mission once carried by our musical theatre company, <em>to restore inner ease</em>, is now reimplemented through digital means. This is the work of ChatteLapin.
           </p>
           <div class="hero__meta fade-up delay-4">
             <div class="hero__meta-item">
@@ -49,7 +49,7 @@ import businessInfo from '../../../data/business-info.yaml';
           <div class="hero__figure-frame">
             <Image
               src={logotype}
-              alt="ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
+              alt="ChatteLapin logo. A watercolor figure of a cat-like rabbit, with hand-lettered Chatte Lapin"
               width={600}
               height={600}
               class="hero__figure-img"
@@ -63,12 +63,12 @@ import businessInfo from '../../../data/business-info.yaml';
           </div>
           <figcaption class="hero__figure-caption">
             <span class="hero__figure-num">Fig. 01</span>
-            <span class="hero__figure-desc">銘 — シャラパン</span>
+            <span class="hero__figure-desc">Logotype — ChatteLapin</span>
           </figcaption>
         </figure>
       </div>
 
-      <a href="#mission" class="hero__scroll fade-in delay-5" aria-label="次のセクションへ">
+      <a href="#mission" class="hero__scroll fade-in delay-5" aria-label="To the next section">
         <span class="hero__scroll-label">Scroll</span>
         <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
@@ -76,7 +76,7 @@ import businessInfo from '../../../data/business-info.yaml';
   </section>
 
   <!-- ==========================================================
-       § 01 Mission — どの橋をかけているか
+       § 01 Mission
        ========================================================== -->
   <section id="mission" class="section reveal">
     <div class="col-wrap">
@@ -87,38 +87,38 @@ import businessInfo from '../../../data/business-info.yaml';
         </aside>
 
         <div class="section__body">
-          <h2 class="section__title">どの橋をかけているか。</h2>
+          <h2 class="section__title">Which bridges we build.</h2>
           <p class="section__lede dropcap">
-            デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+            The digital has brought convenience; at the same time, it has quietly pushed aside the time to think at one's own pace, the texture of paper, and the small ties between people. Each activity of ChatteLapin is an attempt to set the receding analog values back, within the digital.
           </p>
 
           <ol class="bridge-list">
             <li class="bridge-list__item">
               <span class="bridge-list__num">01</span>
               <div class="bridge-list__body">
-                <h3 class="bridge-list__title">主力 — Talent</h3>
-                <p class="bridge-list__text">デジタルゲームの中に、 紙の本のような読書の時間を取り戻す。</p>
+                <h3 class="bridge-list__title">Flagship — Talent</h3>
+                <p class="bridge-list__text">Restoring, within a digital game, the time to read as one reads a paper book.</p>
               </div>
             </li>
             <li class="bridge-list__item">
               <span class="bridge-list__num">02</span>
               <div class="bridge-list__body">
-                <h3 class="bridge-list__title">実験 — volt</h3>
-                <p class="bridge-list__text">デジタル空間に、 人と人の縁を AI で結びなおす実証実験。</p>
+                <h3 class="bridge-list__title">Experiment — volt</h3>
+                <p class="bridge-list__text">A proof-of-concept project to rebind, with AI, the small ties between people in a digital space.</p>
               </div>
             </li>
             <li class="bridge-list__item">
               <span class="bridge-list__num">03</span>
               <div class="bridge-list__body">
-                <h3 class="bridge-list__title">運営 — business</h3>
-                <p class="bridge-list__text">紙のレシートと帳簿を、 AI でデジタルに編みなおす。</p>
+                <h3 class="bridge-list__title">Operations — business</h3>
+                <p class="bridge-list__text">Reweaving paper receipts and ledgers, into the digital, through AI.</p>
               </div>
             </li>
             <li class="bridge-list__item">
               <span class="bridge-list__num">04</span>
               <div class="bridge-list__body">
-                <h3 class="bridge-list__title">広報 — brand</h3>
-                <p class="bridge-list__text">印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。</p>
+                <h3 class="bridge-list__title">Brand — brand</h3>
+                <p class="bridge-list__text">An unwavering brand experience across print and screen / the foundation of this official site.</p>
               </div>
             </li>
           </ol>
@@ -141,18 +141,18 @@ import businessInfo from '../../../data/business-info.yaml';
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">事業の中核</p>
-          <h2 class="section__title">主力プロダクト。</h2>
+          <p class="eyebrow">Core of the business</p>
+          <h2 class="section__title">Flagship product.</h2>
           <p class="section__lede">
-            外部に提供する、 事業の長期的な収益と社会的価値の軸を担うプロダクト。
+            The product offered to the outside world, carrying the long-term revenue and social value of the business.
           </p>
 
           <div class="products-primary">
             <ProductCard
               name="Talent"
-              tagline="国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
+              tagline="A PWA game weaving three axes — global cultures × business simulation × education. As a young merchant traveling the world, run shops in many countries, and along the way, take in cultures, languages, economies, and quiet bonds with people."
               href="/products/talent"
-              badge="主力"
+              badge="Flagship"
               size="large"
               number="01"
               variant="primary"
@@ -160,36 +160,36 @@ import businessInfo from '../../../data/business-info.yaml';
           </div>
 
           <div class="products-divider" aria-hidden="true">
-            <span class="products-divider__label">そして、 これを支える</span>
+            <span class="products-divider__label">and supporting it</span>
           </div>
 
-          <h3 class="section__subtitle">主力を支える周辺の取り組み。</h3>
+          <h3 class="section__subtitle">Surrounding work that supports the flagship.</h3>
           <p class="section__lede section__lede--small">
-            主力プロダクトの開発と長期運営を可能にするための、 実証実験プロジェクト・内部運営基盤・公開ブランド広報基盤。
+            Proof-of-concept projects, internal operating infrastructure, and a public brand foundation — together they make the development and long-term operation of the flagship possible.
           </p>
 
           <div class="products-satellite">
             <ProductCard
               name="volt"
-              tagline="AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
+              tagline="A proof-of-concept project for AI-assisted community operations. Also a technical precursor to Talent's B2B school features (= classroom mode / community operation)."
               href="/products/volt"
-              badge="実験"
+              badge="Experiment"
               size="medium"
               number="02"
             />
             <ProductCard
               name="business"
-              tagline="freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
+              tagline="An AI-driven accounting automation platform built on the freee API and Claude Vision. An internal mechanism designed to minimize the operational hours of running a business, so that time can be concentrated on the flagship."
               href="/products/business-automation"
-              badge="運営基盤"
+              badge="Operating base"
               size="medium"
               number="03"
             />
             <ProductCard
               name="brand"
-              tagline="ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
+              tagline="A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
               href="/products/brand"
-              badge="公開ブランド・広報"
+              badge="Public brand"
               size="medium"
               number="04"
             />
@@ -213,109 +213,109 @@ import businessInfo from '../../../data/business-info.yaml';
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">事業概要</p>
-          <h2 class="section__title">テクノロジーで実現する、<br />静けさのある営み。</h2>
+          <p class="eyebrow">About</p>
+          <h2 class="section__title">A quiet practice,<br />made possible by technology.</h2>
 
           <div class="mission-frame">
             <p class="mission-frame__label">Mission Statement</p>
             <p class="mission-frame__text">
-              テクノロジーとアナログの間に、 <br />静かな時間を置く。
+              Place a quiet hour <br />between technology and the analog.
             </p>
             <p class="mission-frame__body">
-              デジタルは便利を運んできた一方で、 ゆっくり考える時間・紙のような手触り・人と人の小さな縁を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+              The digital has brought convenience; at the same time, it has quietly pushed aside the time to think at one's own pace, the texture of paper, and the small ties between people. Each activity of ChatteLapin is an attempt to set the receding analog values back, within the digital.
             </p>
             <p class="mission-frame__body">
-              単に古き良きを保存するのではなく、 <strong>テクノロジーで運営しなければ実現できない静けさ</strong> を、 設計の段階から組み込みます。 すべての活動 — 主力プロダクトの開発も、 それを支える事業基盤の整備も — がこの基準のうえに立ちます。
+              Not a mere preservation of the old; rather, <strong>a quietness that can only be operated through technology</strong> is built in from the design stage. All activities — both the development of the flagship and the operating bases that support it — stand on this principle.
             </p>
           </div>
 
-          <h3 class="section__subtitle">事業の概要。</h3>
+          <h3 class="section__subtitle">Business overview.</h3>
           <p class="section__paragraph">
-            ChatteLapin の業種は <strong>ソフトウェア開発業</strong> です。 ソフトウェアという一つの道具で、 <strong>文化・教育・コミュニティ運営</strong> の領域に静かな時間を置く — それが事業の中核です。
+            ChatteLapin's industry is <strong>Software Development</strong>. With a single tool — software — we place quiet time within the realms of <strong>culture, education, and community operations</strong>. This is the core of the business.
           </p>
           <p class="section__paragraph">
-            主力は新規ゲーム事業『<a href="/products/talent">Talent</a>』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム)。 これを軸として、 周辺の活動 (= AI 活用コミュニティ運営の実証実験、 事業運営を支える AI 駆動 会計自動化基盤、 ブランド・広報資産を一元化する公開基盤) を内製で並行展開しています。
+            The flagship is the new game project <strong>Talent</strong> (a PWA game weaving global cultures × business simulation × education). Around this core, we run in parallel — in-house — the surrounding activities: a proof-of-concept project for AI-assisted community operations, an AI-driven accounting automation platform that supports our operations, and a public foundation consolidating brand and communications assets.
           </p>
           <p class="section__paragraph section__paragraph--quiet">
-            いずれも独立した「製品ライン」 ではなく、 ひとつのミッションから派生した手段の集合として位置づけています。
+            None of these are independent "product lines"; they are a set of means derived from a single mission.
           </p>
 
-          <h3 class="section__subtitle">前史 — 音楽劇団シャラパンからの継承。</h3>
+          <h3 class="section__subtitle">Prelude — inherited from the ChatteLapin musical theatre.</h3>
           <p class="section__paragraph">
-            事業者は過去に「音楽劇団シャラパン」 を立ち上げ、 主宰として「空想音楽劇 真昼の銀河」 等の公演を行ってきました。 当時の主宰メッセージには以下の理念が掲げられていました:
+            The proprietor previously founded a musical theatre company, <em>音楽劇団シャラパン</em> ("ChatteLapin Musical Theatre" in English), and produced stage works including <em>Daydream Musical: Midday Galaxy</em>. The mission statement of that time read as follows:
           </p>
 
           <blockquote class="legacy-quote">
             <p class="legacy-quote__text">
-              経済的なゆとりだけでなく、 精神的なゆとりまでもが社会から失われがちな時代に — 観る人の心にゆとりが生まれ、 自身と隣の人々の心の豊かさを取り戻すこと。 質と量の高いステージを提供して社会に貢献すること。
+              In an age when society loses not only economic ease but also the ease of the heart — that the audience may find a quietness of the heart born within them, and that they and the people beside them may recover an inner richness. To contribute to society through high-quality, high-volume stage works.
             </p>
             <footer class="legacy-quote__attribution">
               <span class="legacy-quote__divider" aria-hidden="true"></span>
-              <span>音楽劇団シャラパン 主宰</span>
+              <span>Director, 音楽劇団シャラパン (ChatteLapin Musical Theatre)</span>
             </footer>
           </blockquote>
 
           <p class="section__paragraph">
-            音楽劇団シャラパンの理念は、 メディアを変えて現在も継承しています。 演劇というアナログメディアで実現してきた <strong>「心のゆとり」</strong> を、 デジタル時代の手法 (= ゲーム / AI / コミュニティ運営) で再実装する — それが現在の ChatteLapin の活動です。 『シャラパン』 の名を継続しているのも、 この理念の連続性を象徴しています。
+            The principle of the ChatteLapin musical theatre has changed its medium, and continues today. The <strong>"inner ease"</strong> once realized through the analog medium of theatre is now reimplemented through digital means — games, AI, community operations. This is the present work of ChatteLapin. Continuing the name <em>シャラパン (ChatteLapin)</em> is a token of this continuity.
           </p>
 
-          <h3 class="section__subtitle">事業者プロフィール。</h3>
+          <h3 class="section__subtitle">About the proprietor.</h3>
           <p class="section__paragraph">
-            1984 年 (= 昭和 59 年) 生まれ。 就職氷河期末期に社会に出て、 続く <strong>ゆとり世代</strong> を一歩前から見つめてきた世代です。 世間で「悪名」 のように扱われた『ゆとり』 という言葉の用法とは別に、 <strong>本当の意味でのゆとり</strong> — 経済の余裕だけでなく、 時間と精神の余白 — を意識し続けてきました。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 は、 個人的な実感とも地続きの取り組みです。
+            Born in 1984 (Shōwa 59). Entered the workforce at the tail end of Japan's Employment Ice Age, and watched the subsequent "yutori generation" from a step ahead. Apart from the popular pejorative usage of the word <em>yutori</em>, the proprietor has long held in mind a different sense — <strong>genuine ease</strong>, meaning not only financial comfort but the margin of time and spirit. The ChatteLapin mission, "Place a quiet hour between technology and the analog," is continuous with that personal conviction.
           </p>
 
           <ul class="bio-list">
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>米国アリゾナ大学 Eller 経営学部卒業 (= 情報システム経営学・起業学・国際経営学 三重専攻)</span>
+              <span>BBA, Eller College of Management, University of Arizona — triple major in Management Information Systems, Entrepreneurship, and International Management</span>
             </li>
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>過去に Web ベンチャーを設立</span>
+              <span>Previously founded a web venture</span>
             </li>
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>音楽劇団シャラパン主宰として「空想音楽劇 真昼の銀河」 等の舞台公演を企画・制作</span>
+              <span>Director of 音楽劇団シャラパン (ChatteLapin Musical Theatre), producing stage works including <em>Daydream Musical: Midday Galaxy</em></span>
             </li>
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>並行して芸能・舞台・モデル業の活動経験 (= ダンス / 2.5 次元舞台プロデュース 等)</span>
+              <span>Parallel experience in performing arts and modeling (dance, 2.5D stage production, etc.)</span>
             </li>
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>現職: 東京を拠点とする FA 機器メーカーで IT エンジニア・経営企画 (= 正社員、 副業公認)</span>
+              <span>Day job: IT engineer / business planning at a Tokyo-based factory automation manufacturer (full-time, with side-work permitted)</span>
             </li>
             <li class="bio-list__item">
               <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>2026-05-19 シャラパン (ChatteLapin) を個人事業として開業</span>
+              <span>2026-05-19, opened ChatteLapin (Japanese: シャラパン) as a sole proprietorship</span>
             </li>
           </ul>
 
           <p class="section__paragraph section__paragraph--lift">
-            <strong>国際経営学の学術背景</strong>・ <strong>20 年超の IT エンジニアと経営企画の実装力</strong>・ <strong>音楽劇団主宰として培った文化事業の現場経験</strong> — この 3 つが交差する立場から、 単なる技術プロダクトではなく <strong>文化・教育・経営の交差点に位置する作品</strong> を生み出すことを事業の中核に据えています。
+            <strong>An academic grounding in International Management</strong>, <strong>over 20 years of practice as an IT engineer and business planner</strong>, and <strong>field experience in cultural enterprise as director of a musical theatre company</strong> — from the intersection of these three, the business places at its core not mere technical products but <strong>works at the crossroads of culture, education, and management</strong>.
           </p>
 
-          <h3 class="section__subtitle">基本情報。</h3>
+          <h3 class="section__subtitle">Basic information.</h3>
           <dl class="info-grid">
             <div class="info-grid__row">
-              <dt>事業者名</dt>
-              <dd>{businessInfo.brand_display.ja}</dd>
+              <dt>Name</dt>
+              <dd>{businessInfo.brand_display.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>開業日</dt>
+              <dt>Founded</dt>
               <dd>{businessInfo.founded_date}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>事業形態</dt>
-              <dd>{businessInfo.business_form.ja}</dd>
+              <dt>Form</dt>
+              <dd>{businessInfo.business_form.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>業種</dt>
-              <dd>{businessInfo.industry.ja}</dd>
+              <dt>Industry</dt>
+              <dd>{businessInfo.industry.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>管轄税務署</dt>
-              <dd>{businessInfo.tax.office.ja}</dd>
+              <dt>Tax office</dt>
+              <dd>{businessInfo.tax.office.en}</dd>
             </div>
             <div class="info-grid__row">
               <dt>GitHub Org</dt>
@@ -341,10 +341,10 @@ import businessInfo from '../../../data/business-info.yaml';
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">お問合せ</p>
-          <h2 class="section__title">声をかけてください。</h2>
+          <p class="eyebrow">Contact</p>
+          <h2 class="section__title">Get in touch.</h2>
           <p class="section__lede">
-            業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。
+            Business inquiries are received via <strong>GitHub Issues</strong>. The button below opens the Issue form directly (a free GitHub account is required; sign-up takes only a few minutes).
           </p>
 
           <div class="contact-cta">
@@ -354,15 +354,15 @@ import businessInfo from '../../../data/business-info.yaml';
               rel="noopener"
               class="btn btn--arrow"
             >
-              GitHub Issues でお問合せ
+              Contact via GitHub Issues
             </a>
             <p class="contact-cta__hint">
-              新規タブで GitHub.com の Issue 作成画面が開きます
+              Opens the GitHub.com Issue form in a new tab
             </p>
           </div>
 
           <p class="section__paragraph section__paragraph--quiet">
-            お問合せは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。
+            Inquiries are received on the <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (the public repository that consolidates the source of this site and ChatteLapin's brand and communications assets). We accept inquiries of any kind, and route them to the appropriate area. An email form will be added in due course.
           </p>
         </div>
       </div>
