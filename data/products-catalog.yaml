@@ -1,0 +1,201 @@
+# ChatteLapin プロダクトカタログ (= master)
+#
+# 4 プロダクト (= talent / volt / business / brand) の基礎情報 SoT。
+# brand site / 銀行 PDF / 教育機関営業 PDF / 投資家説明 PDF 等の派生文書が
+# 本 file を参照する。
+#
+# === 多言語対応 ===
+# 翻訳が必要な値は { ja, en } のネスト。 言語不問の固有値 (= 状態 / 数値 /
+# URL / repo / バージョン番号) は scalar 維持。
+#
+# === 分類 ===
+#   - external: 外部プロダクト (= 一般消費者向け or 公開予定)
+#       → talent / volt
+#   - internal: 事業基盤 (= 商品としての外販なし、 内部運用)
+#       → business / brand
+#
+# === 影響範囲 (= 本 file 更新時に追随すべき派生) ===
+#   - brand/site/src/pages/index.astro      (= TOP #products セクション)
+#   - brand/site/src/pages/products/*.astro  (= 各プロダクト個別ページ)
+#   - internal/strategy/business-plan-public.md.j2 (= 銀行 PDF テンプレ 3.1〜3.4 + 1.2)
+#   - 将来の教育機関営業 / 投資家説明 PDF テンプレ
+#
+# === 充填状況 (= skeleton 段階) ===
+#   - talent: フル充填済 (= デモ実装、 後続の参考)
+#   - volt / business / brand: キー定義のみ、 値 TODO (= 次セッション以降で充填)
+
+# ----------------------------------------------------------------------
+# talent (= 主力プロダクト、 充填済)
+# ----------------------------------------------------------------------
+
+products:
+  talent:
+    kind: external
+    code_name: talent
+    role:
+      ja: 主力プロダクト
+      en: Flagship Product
+    short_description:
+      ja: 国際文化 × 経営シミュレーション × 教育の PWA ゲーム
+      en: International Culture × Business Simulation × Education PWA Game
+    type:
+      ja: PWA (= プログレッシブ Web アプリ) ゲーム
+      en: Progressive Web App (PWA) Game
+    genre:
+      ja: 経営シミュレーション × 国際文化 × 教育 の 3 軸統合
+      en: Business Simulation × International Culture × Education (= 3-axis fusion)
+    target:
+      ja: 8〜12 歳の子どもと保護者 / 教育機関 (= B2B 長期)
+      en: Children aged 8-12 and their guardians / Educational institutions (= long-term B2B)
+    release_plan:
+      ja: PWA 主軸 → itch.io / Steam → App Store / Google Play 段階展開
+      en: PWA primary → itch.io / Steam → App Store / Google Play (= phased rollout)
+    status:
+      ja: v0.0.1 / MVP コアループ実装中 (= 2026-05 開発開始)
+      en: v0.0.1 / MVP core loop in development (= started 2026-05)
+    public_url: https://talent.orz.cc/
+    public_url_note:
+      ja: 限定公開中
+      en: Limited release
+    repo:
+      url: https://github.com/ChatteLapin/talent
+      visibility: private
+      visibility_note:
+        ja: v1.0 後 OSS 化判断
+        en: OSS release to be decided after v1.0
+    features:
+      - ja: 子ども向け本編で 暴力・賭博・性的描写ゼロ / pay-to-win 完全排除
+        en: Zero violence / gambling / sexual content in main story; no pay-to-win
+      - ja: 国際基準準拠 (= COPPA / GDPR-K / APPI / IARC 全年齢) を初日から設計
+        en: International compliance (= COPPA / GDPR-K / APPI / IARC all ages) from day one
+      - ja: 言語切替ボタン常設 で外国語学習を内包
+        en: Persistent language switcher with built-in foreign language learning
+      - ja: 教育的設計 8 領域 (= 国語 / 外国語 / 算数 / 社会 / 経済・商業 / 食育 / 社会性 / 歴史・道徳) を体系化
+        en: Educational design covering 8 domains (= Japanese / Foreign Language / Math / Social Studies / Economics & Commerce / Food Education / Social Skills / History & Ethics)
+      - ja: キャラ縦糸システム でシリーズを通じてキャラと関係が継承
+        en: Character continuity system carrying characters and relationships across the series
+
+  # --------------------------------------------------------------------
+  # volt (= 実験プロダクト、 TODO 充填)
+  # --------------------------------------------------------------------
+  volt:
+    kind: external
+    code_name: volt
+    role:
+      ja: 実験プロダクト
+      en: Experimental Product
+    short_description:
+      ja: AI 活用オンラインコミュニティ運営の実証実験 Discord Bot
+      en: Discord bot for AI-assisted online community operations (= empirical study)
+    type:
+      ja: Discord Bot + AI Proxy + 構造化データ管理
+      en: Discord Bot + AI Proxy + Structured Data Management
+    # TODO: position_purpose (= 銀行 PDF 3.2「位置づけ」 + 「目的」)
+    # TODO: target (= 「特定のオンラインゲームコミュニティ (= 個別契約 / 詳細非公開)」)
+    # TODO: status (= 「既稼働中 (= PM2 namespace=chattelapin で常駐運用)」)
+    repo:
+      url: https://github.com/ChatteLapin/volt
+      visibility: private
+    # TODO: features (= 蓄積知見 4 項目: Bot 運用ノウハウ / AI Proxy / 構造化データ管理 / PM2 プロセス管理)
+
+  # --------------------------------------------------------------------
+  # business (= 事業運営基盤、 TODO 充填)
+  # --------------------------------------------------------------------
+  business:
+    kind: internal
+    code_name: business
+    role:
+      ja: 事業運営基盤
+      en: Business Operations Platform
+    short_description:
+      ja: freee API + Claude Vision + Discord Bot による AI 駆動の会計自動化基盤
+      en: AI-driven accounting automation platform (= freee API + Claude Vision + Discord Bot)
+    type:
+      ja: 内部運用システム (= 商品としての外販なし)
+      en: Internal operations system (= not commercially distributed)
+    # TODO: pipeline_layers (= 3 層パイプライン: 1 銀行・カード自動取込 / 2 レシート OCR / 3 月次レポート)
+    # TODO: status (= Phase 0 完了 (= 2026-05-21) / Phase 1 以降は GMOあおぞら屋号口座開設完了後)
+    repo:
+      url: https://github.com/ChatteLapin/business
+      visibility: public
+      license: MIT
+      license_note:
+        ja: 自己用実装の公開、 fork は参考実装として
+        en: Personal implementation made public; fork as a reference
+
+  # --------------------------------------------------------------------
+  # brand (= ブランド・広報資産基盤、 TODO 充填)
+  # --------------------------------------------------------------------
+  brand:
+    kind: internal
+    code_name: brand
+    role:
+      ja: ブランド・広報資産基盤
+      en: Brand & PR Asset Platform
+    short_description:
+      ja: ロゴ・favicon・OGP 画像・ガイドライン + 公式サイトのソース集約
+      en: Logo / favicon / OGP / guidelines + official site source consolidation
+    type:
+      ja: 公開ブランド・広報資産基盤
+      en: Public brand & PR asset platform
+    # TODO: scope (= 「ロゴ・favicon・OGP・公式サイト + 将来のプレスリリース・取材対応資料」)
+    # TODO: status (= 「2026-05-23 立ち上げ済」)
+    public_url: https://chattelapin.orz.cc/
+    repo:
+      url: https://github.com/ChatteLapin/brand
+      visibility: public
+      license:
+        ja: コード MIT / ブランド資産 All Rights Reserved + 商標 (= デュアル方針)
+        en: Code MIT / Brand assets All Rights Reserved + Trademark (= dual licensing)
+
+# ----------------------------------------------------------------------
+# axes (= プロダクトを横断する分類軸、 brand site §02 ミッションの実装で参照)
+# ----------------------------------------------------------------------
+#
+# 銀行 PDF 2.1 「ミッションの事業構成への実装 — 2 プロダクト + 2 事業基盤」
+# brand site TOP §02 ミッション + §03 プロダクトのカード説明文に対応。
+
+axes:
+  external_products:
+    talent:
+      digital_side:
+        ja: PWA / TypeScript / Phaser
+        en: PWA / TypeScript / Phaser
+      analog_side:
+        ja: 紙の本のような読書 / 暦のリズム / 古めかしい言葉遣い
+        en: Book-like reading experience / seasonal calendar rhythm / archaic language
+      bridge:
+        ja: デジタルゲームの中に「ゆっくり読む時間」 を取り戻す
+        en: Restoring "slow reading time" within a digital game
+    volt:
+      digital_side:
+        ja: Discord Bot / AI Proxy / 構造化データ管理
+        en: Discord Bot / AI Proxy / Structured Data Management
+      analog_side:
+        ja: ゲーム愛好者コミュニティ / 人と人の小さな縁
+        en: Gaming community / small interpersonal connections
+      bridge:
+        ja: デジタル空間に人と人の縁を AI で結びなおす実証実験 (= talent B2B 教育機関向け機能の前段技術検証)
+        en: Empirical study reconnecting people in digital space via AI (= preliminary R&D for talent's B2B educational features)
+
+  internal_platforms:
+    business:
+      digital_side:
+        ja: freee API / Claude Vision
+        en: freee API / Claude Vision
+      analog_side:
+        ja: 紙のレシート / 手書き伝票
+        en: Paper receipts / handwritten ledgers
+      bridge:
+        ja: アナログ書類を AI でデジタル電子帳簿に編みなおす
+        en: Weaving analog documents into digital ledgers via AI
+    brand:
+      digital_side:
+        ja: デザインデータ / SVG / PNG / 公式サイト ソース
+        en: Design data / SVG / PNG / official site source
+      analog_side:
+        ja: 印刷物・名刺・チラシ
+        en: Print materials / business cards / flyers
+      bridge:
+        ja: 印刷とディスプレイの双方で揺らがないブランド体験
+        en: Consistent brand experience across print and display
