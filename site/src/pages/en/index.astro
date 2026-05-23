@@ -186,117 +186,77 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 03</p>
-          <p class="marginalia">About</p>
+          <p class="section-num">{i18n.about.num}</p>
+          <p class="marginalia">{i18n.about.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">About</p>
-          <h2 class="section__title">A quiet practice,<br />made possible by technology.</h2>
+          <p class="eyebrow">{i18n.about.eyebrow}</p>
+          <h2 class="section__title" set:html={i18n.about.title}></h2>
 
           <div class="mission-frame">
-            <p class="mission-frame__label">Mission Statement</p>
-            <p class="mission-frame__text">
-              Place a quiet hour <br />between technology and the analog.
-            </p>
-            <p class="mission-frame__body">
-              The digital has brought convenience; at the same time, it has quietly pushed aside the time to think at one's own pace, the texture of paper, and the small ties between people. Each activity of ChatteLapin is an attempt to set the receding analog values back, within the digital.
-            </p>
-            <p class="mission-frame__body">
-              Not a mere preservation of the old; rather, <strong>a quietness that can only be operated through technology</strong> is built in from the design stage. All activities — both the development of the flagship and the operating bases that support it — stand on this principle.
-            </p>
+            <p class="mission-frame__label">{i18n.about.mission_frame.label}</p>
+            <p class="mission-frame__text" set:html={i18n.about.mission_frame.text}></p>
+            <p class="mission-frame__body" set:html={i18n.about.mission_frame.body_1}></p>
+            <p class="mission-frame__body" set:html={i18n.about.mission_frame.body_2}></p>
           </div>
 
-          <h3 class="section__subtitle">Business overview.</h3>
-          <p class="section__paragraph">
-            ChatteLapin's industry is <strong>Software Development</strong>. With a single tool — software — we place quiet time within the realms of <strong>culture, education, and community operations</strong>. This is the core of the business.
-          </p>
-          <p class="section__paragraph">
-            The flagship is the new game project <strong>Talent</strong> (a PWA game weaving global cultures × business simulation × education). Around this core, we run in parallel — in-house — the surrounding activities: a proof-of-concept project for AI-assisted community operations, an AI-driven accounting automation platform that supports our operations, and a public foundation consolidating brand and communications assets.
-          </p>
-          <p class="section__paragraph section__paragraph--quiet">
-            None of these are independent "product lines"; they are a set of means derived from a single mission.
-          </p>
+          <h3 class="section__subtitle">{i18n.about.overview.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.overview.paragraph_1}></p>
+          <p class="section__paragraph" set:html={i18n.about.overview.paragraph_2}></p>
+          <p class="section__paragraph section__paragraph--quiet" set:html={i18n.about.overview.paragraph_3}></p>
 
-          <h3 class="section__subtitle">Prelude — inherited from the ChatteLapin musical theatre.</h3>
-          <p class="section__paragraph">
-            The proprietor previously founded a musical theatre company, <em>音楽劇団シャラパン</em> ("ChatteLapin Musical Theatre" in English), and produced stage works including <em>Daydream Musical: Midday Galaxy</em>. The mission statement of that time read as follows:
-          </p>
+          <h3 class="section__subtitle">{i18n.about.legacy.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.legacy.intro}></p>
 
           <blockquote class="legacy-quote">
-            <p class="legacy-quote__text">
-              In an age when society loses not only economic ease but also the ease of the heart — that the audience may find a quietness of the heart born within them, and that they and the people beside them may recover an inner richness. To contribute to society through high-quality, high-volume stage works.
-            </p>
+            <p class="legacy-quote__text">{i18n.about.legacy.quote_text}</p>
             <footer class="legacy-quote__attribution">
               <span class="legacy-quote__divider" aria-hidden="true"></span>
-              <span>Director, 音楽劇団シャラパン (ChatteLapin Musical Theatre)</span>
+              <span>{i18n.about.legacy.quote_attribution}</span>
             </footer>
           </blockquote>
 
-          <p class="section__paragraph">
-            The principle of the ChatteLapin musical theatre has changed its medium, and continues today. The <strong>"inner ease"</strong> once realized through the analog medium of theatre is now reimplemented through digital means — games, AI, community operations. This is the present work of ChatteLapin. Continuing the name <em>シャラパン (ChatteLapin)</em> is a token of this continuity.
-          </p>
+          <p class="section__paragraph" set:html={i18n.about.legacy.inheritance}></p>
 
-          <h3 class="section__subtitle">About the proprietor.</h3>
-          <p class="section__paragraph">
-            Born in 1984 (Shōwa 59). Entered the workforce at the tail end of Japan's Employment Ice Age, and watched the subsequent "yutori generation" from a step ahead. Apart from the popular pejorative usage of the word <em>yutori</em>, the proprietor has long held in mind a different sense — <strong>genuine ease</strong>, meaning not only financial comfort but the margin of time and spirit. The ChatteLapin mission, "Place a quiet hour between technology and the analog," is continuous with that personal conviction.
-          </p>
+          <h3 class="section__subtitle">{i18n.about.profile.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.profile.intro}></p>
 
           <ul class="bio-list">
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>BBA, Eller College of Management, University of Arizona — triple major in Management Information Systems, Entrepreneurship, and International Management</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>Previously founded a web venture</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>Director of 音楽劇団シャラパン (ChatteLapin Musical Theatre), producing stage works including <em>Daydream Musical: Midday Galaxy</em></span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>Parallel experience in performing arts and modeling (dance, 2.5D stage production, etc.)</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>Day job: IT engineer / business planning at a Tokyo-based factory automation manufacturer (full-time, with side-work permitted)</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>2026-05-19, opened ChatteLapin (Japanese: シャラパン) as a sole proprietorship</span>
-            </li>
+            {i18n.about.profile.bio.map((item: string) => (
+              <li class="bio-list__item">
+                <span class="bio-list__bullet" aria-hidden="true"></span>
+                <span set:html={item}></span>
+              </li>
+            ))}
           </ul>
 
-          <p class="section__paragraph section__paragraph--lift">
-            <strong>An academic grounding in International Management</strong>, <strong>over 20 years of practice as an IT engineer and business planner</strong>, and <strong>field experience in cultural enterprise as director of a musical theatre company</strong> — from the intersection of these three, the business places at its core not mere technical products but <strong>works at the crossroads of culture, education, and management</strong>.
-          </p>
+          <p class="section__paragraph section__paragraph--lift" set:html={i18n.about.profile.lift}></p>
 
-          <h3 class="section__subtitle">Basic information.</h3>
+          <h3 class="section__subtitle">{i18n.about.info.subtitle}</h3>
           <dl class="info-grid">
             <div class="info-grid__row">
-              <dt>Name</dt>
+              <dt>{i18n.about.info.labels.name}</dt>
               <dd>{businessInfo.brand_display.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>Founded</dt>
+              <dt>{i18n.about.info.labels.founded}</dt>
               <dd>{businessInfo.founded_date}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>Form</dt>
+              <dt>{i18n.about.info.labels.form}</dt>
               <dd>{businessInfo.business_form.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>Industry</dt>
+              <dt>{i18n.about.info.labels.industry}</dt>
               <dd>{businessInfo.industry.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>Tax office</dt>
+              <dt>{i18n.about.info.labels.tax_office}</dt>
               <dd>{businessInfo.tax.office.en}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>GitHub Org</dt>
+              <dt>{i18n.about.info.labels.github_org}</dt>
               <dd><a href={businessInfo.github.url} target="_blank" rel="noopener">{businessInfo.github.url.replace('https://', '')}</a></dd>
             </div>
           </dl>

@@ -186,117 +186,77 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 03</p>
-          <p class="marginalia">About</p>
+          <p class="section-num">{i18n.about.num}</p>
+          <p class="marginalia">{i18n.about.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">事業概要</p>
-          <h2 class="section__title">テクノロジーで実現する、<br />静けさのある営み。</h2>
+          <p class="eyebrow">{i18n.about.eyebrow}</p>
+          <h2 class="section__title" set:html={i18n.about.title}></h2>
 
           <div class="mission-frame">
-            <p class="mission-frame__label">Mission Statement</p>
-            <p class="mission-frame__text">
-              テクノロジーとアナログの間に、 <br />静かな時間を置く。
-            </p>
-            <p class="mission-frame__body">
-              デジタルは便利を運んできた一方で、 ゆっくり考える時間・紙のような手触り・人と人の小さな縁を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
-            </p>
-            <p class="mission-frame__body">
-              単に古き良きを保存するのではなく、 <strong>テクノロジーで運営しなければ実現できない静けさ</strong> を、 設計の段階から組み込みます。 すべての活動 — 主力プロダクトの開発も、 それを支える事業基盤の整備も — がこの基準のうえに立ちます。
-            </p>
+            <p class="mission-frame__label">{i18n.about.mission_frame.label}</p>
+            <p class="mission-frame__text" set:html={i18n.about.mission_frame.text}></p>
+            <p class="mission-frame__body" set:html={i18n.about.mission_frame.body_1}></p>
+            <p class="mission-frame__body" set:html={i18n.about.mission_frame.body_2}></p>
           </div>
 
-          <h3 class="section__subtitle">事業の概要。</h3>
-          <p class="section__paragraph">
-            ChatteLapin の業種は <strong>ソフトウェア開発業</strong> です。 ソフトウェアという一つの道具で、 <strong>文化・教育・コミュニティ運営</strong> の領域に静かな時間を置く — それが事業の中核です。
-          </p>
-          <p class="section__paragraph">
-            主力は新規ゲーム事業『<a href="/products/talent">Talent</a>』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム)。 これを軸として、 周辺の活動 (= AI 活用コミュニティ運営の実証実験、 事業運営を支える AI 駆動 会計自動化基盤、 ブランド・広報資産を一元化する公開基盤) を内製で並行展開しています。
-          </p>
-          <p class="section__paragraph section__paragraph--quiet">
-            いずれも独立した「製品ライン」 ではなく、 ひとつのミッションから派生した手段の集合として位置づけています。
-          </p>
+          <h3 class="section__subtitle">{i18n.about.overview.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.overview.paragraph_1}></p>
+          <p class="section__paragraph" set:html={i18n.about.overview.paragraph_2}></p>
+          <p class="section__paragraph section__paragraph--quiet" set:html={i18n.about.overview.paragraph_3}></p>
 
-          <h3 class="section__subtitle">前史 — 音楽劇団シャラパンからの継承。</h3>
-          <p class="section__paragraph">
-            事業者は過去に「音楽劇団シャラパン」 を立ち上げ、 主宰として「空想音楽劇 真昼の銀河」 等の公演を行ってきました。 当時の主宰メッセージには以下の理念が掲げられていました:
-          </p>
+          <h3 class="section__subtitle">{i18n.about.legacy.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.legacy.intro}></p>
 
           <blockquote class="legacy-quote">
-            <p class="legacy-quote__text">
-              経済的なゆとりだけでなく、 精神的なゆとりまでもが社会から失われがちな時代に — 観る人の心にゆとりが生まれ、 自身と隣の人々の心の豊かさを取り戻すこと。 質と量の高いステージを提供して社会に貢献すること。
-            </p>
+            <p class="legacy-quote__text">{i18n.about.legacy.quote_text}</p>
             <footer class="legacy-quote__attribution">
               <span class="legacy-quote__divider" aria-hidden="true"></span>
-              <span>音楽劇団シャラパン 主宰</span>
+              <span>{i18n.about.legacy.quote_attribution}</span>
             </footer>
           </blockquote>
 
-          <p class="section__paragraph">
-            音楽劇団シャラパンの理念は、 メディアを変えて現在も継承しています。 演劇というアナログメディアで実現してきた <strong>「心のゆとり」</strong> を、 デジタル時代の手法 (= ゲーム / AI / コミュニティ運営) で再実装する — それが現在の ChatteLapin の活動です。 『シャラパン』 の名を継続しているのも、 この理念の連続性を象徴しています。
-          </p>
+          <p class="section__paragraph" set:html={i18n.about.legacy.inheritance}></p>
 
-          <h3 class="section__subtitle">事業者プロフィール。</h3>
-          <p class="section__paragraph">
-            1984 年 (= 昭和 59 年) 生まれ。 就職氷河期末期に社会に出て、 続く <strong>ゆとり世代</strong> を一歩前から見つめてきた世代です。 世間で「悪名」 のように扱われた『ゆとり』 という言葉の用法とは別に、 <strong>本当の意味でのゆとり</strong> — 経済の余裕だけでなく、 時間と精神の余白 — を意識し続けてきました。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 は、 個人的な実感とも地続きの取り組みです。
-          </p>
+          <h3 class="section__subtitle">{i18n.about.profile.subtitle}</h3>
+          <p class="section__paragraph" set:html={i18n.about.profile.intro}></p>
 
           <ul class="bio-list">
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>米国アリゾナ大学 Eller 経営学部卒業 (= 情報システム経営学・起業学・国際経営学 三重専攻)</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>過去に Web ベンチャーを設立</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>音楽劇団シャラパン主宰として「空想音楽劇 真昼の銀河」 等の舞台公演を企画・制作</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>並行して芸能・舞台・モデル業の活動経験 (= ダンス / 2.5 次元舞台プロデュース 等)</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>現職: 東京を拠点とする FA 機器メーカーで IT エンジニア・経営企画 (= 正社員、 副業公認)</span>
-            </li>
-            <li class="bio-list__item">
-              <span class="bio-list__bullet" aria-hidden="true"></span>
-              <span>2026-05-19 シャラパン (ChatteLapin) を個人事業として開業</span>
-            </li>
+            {i18n.about.profile.bio.map((item: string) => (
+              <li class="bio-list__item">
+                <span class="bio-list__bullet" aria-hidden="true"></span>
+                <span set:html={item}></span>
+              </li>
+            ))}
           </ul>
 
-          <p class="section__paragraph section__paragraph--lift">
-            <strong>国際経営学の学術背景</strong>・ <strong>20 年超の IT エンジニアと経営企画の実装力</strong>・ <strong>音楽劇団主宰として培った文化事業の現場経験</strong> — この 3 つが交差する立場から、 単なる技術プロダクトではなく <strong>文化・教育・経営の交差点に位置する作品</strong> を生み出すことを事業の中核に据えています。
-          </p>
+          <p class="section__paragraph section__paragraph--lift" set:html={i18n.about.profile.lift}></p>
 
-          <h3 class="section__subtitle">基本情報。</h3>
+          <h3 class="section__subtitle">{i18n.about.info.subtitle}</h3>
           <dl class="info-grid">
             <div class="info-grid__row">
-              <dt>事業者名</dt>
+              <dt>{i18n.about.info.labels.name}</dt>
               <dd>{businessInfo.brand_display.ja}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>開業日</dt>
+              <dt>{i18n.about.info.labels.founded}</dt>
               <dd>{businessInfo.founded_date}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>事業形態</dt>
+              <dt>{i18n.about.info.labels.form}</dt>
               <dd>{businessInfo.business_form.ja}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>業種</dt>
+              <dt>{i18n.about.info.labels.industry}</dt>
               <dd>{businessInfo.industry.ja}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>管轄税務署</dt>
+              <dt>{i18n.about.info.labels.tax_office}</dt>
               <dd>{businessInfo.tax.office.ja}</dd>
             </div>
             <div class="info-grid__row">
-              <dt>GitHub Org</dt>
+              <dt>{i18n.about.info.labels.github_org}</dt>
               <dd><a href={businessInfo.github.url} target="_blank" rel="noopener">{businessInfo.github.url.replace('https://', '')}</a></dd>
             </div>
           </dl>

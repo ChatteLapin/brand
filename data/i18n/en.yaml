@@ -72,6 +72,48 @@ mission:
       title: "Brand — brand"
       text: "An unwavering brand experience across print and screen / the foundation of this official site."
 
+about:
+  num: "§ 03"
+  marginalia: "About"
+  eyebrow: "About"
+  title: 'A quiet practice,<br />made possible by technology.'
+  mission_frame:
+    label: "Mission Statement"
+    text: 'Place a quiet hour <br />between technology and the analog.'
+    body_1: "The digital has brought convenience; at the same time, it has quietly pushed aside the time to think at one's own pace, the texture of paper, and the small ties between people. Each activity of ChatteLapin is an attempt to set the receding analog values back, within the digital."
+    body_2: 'Not a mere preservation of the old; rather, <strong>a quietness that can only be operated through technology</strong> is built in from the design stage. All activities — both the development of the flagship and the operating bases that support it — stand on this principle.'
+  overview:
+    subtitle: "Business overview."
+    paragraph_1: "ChatteLapin's industry is <strong>Software Development</strong>. With a single tool — software — we place quiet time within the realms of <strong>culture, education, and community operations</strong>. This is the core of the business."
+    paragraph_2: "The flagship is the new game project <strong>Talent</strong> (a PWA game weaving global cultures × business simulation × education). Around this core, we run in parallel — in-house — the surrounding activities: a proof-of-concept project for AI-assisted community operations, an AI-driven accounting automation platform that supports our operations, and a public foundation consolidating brand and communications assets."
+    paragraph_3: 'None of these are independent "product lines"; they are a set of means derived from a single mission.'
+  legacy:
+    subtitle: "Prelude — inherited from the ChatteLapin musical theatre."
+    intro: 'The proprietor previously founded a musical theatre company, <em>音楽劇団シャラパン</em> ("ChatteLapin Musical Theatre" in English), and produced stage works including <em>Daydream Musical: Midday Galaxy</em>. The mission statement of that time read as follows:'
+    quote_text: "In an age when society loses not only economic ease but also the ease of the heart — that the audience may find a quietness of the heart born within them, and that they and the people beside them may recover an inner richness. To contribute to society through high-quality, high-volume stage works."
+    quote_attribution: "Director, 音楽劇団シャラパン (ChatteLapin Musical Theatre)"
+    inheritance: 'The principle of the ChatteLapin musical theatre has changed its medium, and continues today. The <strong>"inner ease"</strong> once realized through the analog medium of theatre is now reimplemented through digital means — games, AI, community operations. This is the present work of ChatteLapin. Continuing the name <em>シャラパン (ChatteLapin)</em> is a token of this continuity.'
+  profile:
+    subtitle: "About the proprietor."
+    intro: "Born in 1984 (Shōwa 59). Entered the workforce at the tail end of Japan's Employment Ice Age, and watched the subsequent \"yutori generation\" from a step ahead. Apart from the popular pejorative usage of the word <em>yutori</em>, the proprietor has long held in mind a different sense — <strong>genuine ease</strong>, meaning not only financial comfort but the margin of time and spirit. The ChatteLapin mission, \"Place a quiet hour between technology and the analog,\" is continuous with that personal conviction."
+    bio:
+      - "BBA, Eller College of Management, University of Arizona — triple major in Management Information Systems, Entrepreneurship, and International Management"
+      - "Previously founded a web venture"
+      - 'Director of 音楽劇団シャラパン (ChatteLapin Musical Theatre), producing stage works including <em>Daydream Musical: Midday Galaxy</em>'
+      - "Parallel experience in performing arts and modeling (dance, 2.5D stage production, etc.)"
+      - "Day job: IT engineer / business planning at a Tokyo-based factory automation manufacturer (full-time, with side-work permitted)"
+      - "2026-05-19, opened ChatteLapin (Japanese: シャラパン) as a sole proprietorship"
+    lift: '<strong>An academic grounding in International Management</strong>, <strong>over 20 years of practice as an IT engineer and business planner</strong>, and <strong>field experience in cultural enterprise as director of a musical theatre company</strong> — from the intersection of these three, the business places at its core not mere technical products but <strong>works at the crossroads of culture, education, and management</strong>.'
+  info:
+    subtitle: "Basic information."
+    labels:
+      name: "Name"
+      founded: "Founded"
+      form: "Form"
+      industry: "Industry"
+      tax_office: "Tax office"
+      github_org: "GitHub Org"
+
 products:
   num: "§ 02"
   marginalia: "Products"
