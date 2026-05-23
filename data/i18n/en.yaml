@@ -141,6 +141,80 @@ products:
       tagline: "A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
       badge: "Public brand"
 
+products_brand:
+  layout:
+    title: "brand — Brand & Communications foundation"
+    description: "A public foundation that consolidates ChatteLapin's logo, favicon, and guidelines along with the official site source and future communications materials (= business cards, leaflets, press releases)."
+  breadcrumb_label: "Products"
+  header:
+    eyebrow: "Public brand"
+    title: "brand"
+    tagline: "Brand & Communications foundation (= public)."
+    meta:
+      field_label: "Field"
+      field_value: "Brand × Communications"
+      status_label: "Status"
+      status_value: "Live (= includes this site)"
+      access_label: "Access"
+      access_value: "public repo"
+  position:
+    num: "§ 01"
+    marginalia: "Position"
+    title: "Positioning."
+    paragraph_1: 'brand is the <strong>source of truth for ChatteLapin''s outward-facing brand expression</strong>. Alongside design assets such as the logo and favicon, it consolidates the source code of the official site (= this site <a href="/en">chattelapin.orz.cc</a>) and, in time, communications materials such as business cards, leaflets, and press releases — all in a single public repo.'
+    paragraph_2: 'It implements the mission "Place a quiet hour between technology and the analog" on the side of brand expression. The same sense of quietness and warmth is consolidated across both screen (= digital) and print (= analog).'
+    paragraph_3: 'It is not sold as a product, but by publishing the logo guidelines and the source of the official site, it provides a reference point for coverage, collaboration, and brand citation.'
+  assets:
+    num: "§ 02"
+    marginalia: "Assets"
+    title: "Asset composition."
+    items:
+      - title: "Master logo"
+        text: "2048×2048 RGB — the editing source for all derivatives"
+      - title: "Logo derivatives"
+        text: "64px / 400px / 600px (= transparent, for web embed / og image / business cards, etc.)"
+      - title: "favicon"
+        text: "16px / 32px / favicon.ico (= browser tab)"
+      - title: "Icons"
+        text: "PWA 192px / 512px / Apple Touch Icon (= OS integrations)"
+      - title: "Guidelines"
+        text: "Usage policy / naming conventions / derivative re-generation commands"
+      - title: "Official site"
+        text: 'This site (= <code>brand/site/</code>) — Astro v5 + Cloudflare Pages'
+      - title: "Planned additions"
+        text: 'Business cards, leaflets, brochures (<code>brand/print/</code>) / press releases, media kits (<code>brand/pr/</code>)'
+        future: true
+  operation:
+    num: "§ 03"
+    marginalia: "Operation"
+    title: "Operating policy."
+    paragraph: 'The master logo is the source of truth; derivative files are regenerated through commands such as ImageMagick. Each product pulls in assets from the brand repo via <code>cp</code>, minimizing the cost of following brand changes. The official site is deployed directly to Cloudflare Pages from this repo.'
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "Related links."
+    items:
+      - label: "repo"
+        href: "https://github.com/ChatteLapin/brand"
+        text: "github.com/ChatteLapin/brand"
+        note: "(= public)"
+        external: true
+      - label: "Official site"
+        href: "/en"
+        text: "chattelapin.orz.cc"
+        note: "(= this site)"
+        external: false
+      - label: "Guidelines"
+        href: "https://github.com/ChatteLapin/brand/blob/main/guidelines.md"
+        text: "guidelines.md"
+        note: ""
+        external: true
+      - label: "Contact"
+        href: "/en#contact"
+        text: "Contact section on the front page"
+        note: ""
+        external: false
+
 contact:
   num: "§ 04"
   marginalia: "Contact"

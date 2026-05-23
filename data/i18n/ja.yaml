@@ -141,6 +141,80 @@ products:
       tagline: "ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
       badge: "公開ブランド・広報"
 
+products_brand:
+  layout:
+    title: "brand — ブランド・広報資産基盤"
+    description: "ChatteLapin のロゴ・favicon・ガイドラインに加え、 公式サイトのソースコードや将来の広報物 (= 名刺・チラシ・プレスリリース) を集約する公開ブランド・広報資産基盤。"
+  breadcrumb_label: "プロダクト"
+  header:
+    eyebrow: "公開ブランド・広報"
+    title: "brand"
+    tagline: "ブランド・広報資産基盤 (= 公開)。"
+    meta:
+      field_label: "分野"
+      field_value: "Brand × Communications"
+      status_label: "状態"
+      status_value: "稼働中 (= 本サイトを内包)"
+      access_label: "公開"
+      access_value: "public repo"
+  position:
+    num: "§ 01"
+    marginalia: "Position"
+    title: "位置づけ。"
+    paragraph_1: 'brand は、 ChatteLapin の <strong>対外的なブランド表現の source of truth</strong> です。 ロゴ・favicon 等のデザイン資産に加え、 公式サイト (= 本サイト <a href="/">chattelapin.orz.cc</a>) のソースコード、 将来的に名刺・チラシ・プレスリリース等の広報物までを公開 repo として一元管理します。'
+    paragraph_2: 'ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 ブランド表現の側面で実装。 画面 (= デジタル) と印刷物 (= アナログ) の双方で同じ「静けさ」 「温かみ」 が感じられる意匠を一元管理します。'
+    paragraph_3: '商品として外販はしませんが、 ロゴガイドライン・公式サイトのソースを公開することで、 取材・コラボ・ブランド引用時の参照先を提供します。'
+  assets:
+    num: "§ 02"
+    marginalia: "Assets"
+    title: "資産構成。"
+    items:
+      - title: "マスターロゴ"
+        text: "2048x2048 RGB — 全派生 file の編集元"
+      - title: "ロゴ派生"
+        text: "64px / 400px / 600px (= 透過、 web embed / og image / 名刺等)"
+      - title: "favicon"
+        text: "16px / 32px / favicon.ico (= ブラウザタブ)"
+      - title: "アイコン"
+        text: "PWA 192px / 512px / Apple Touch Icon (= OS インテグレーション)"
+      - title: "ガイドライン"
+        text: "使用方針 / 命名規約 / 派生 file 再生成コマンド"
+      - title: "公式サイト"
+        text: '本サイト (= <code>brand/site/</code>) — Astro v5 + Cloudflare Pages'
+      - title: "将来追加"
+        text: '名刺・チラシ・パンフレット (<code>brand/print/</code>) / プレスリリース・取材対応資料 (<code>brand/pr/</code>)'
+        future: true
+  operation:
+    num: "§ 03"
+    marginalia: "Operation"
+    title: "運用方針。"
+    paragraph: 'マスターロゴを source of truth とし、 派生 file は ImageMagick 等のコマンドで再生成します。 各プロダクトは brand repo から <code>cp</code> で取り込み、 ブランド変更時の追従コストを最小化する設計です。 公式サイトは本 repo から直接 Cloudflare Pages にデプロイされます。'
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "関連リンク。"
+    items:
+      - label: "repo"
+        href: "https://github.com/ChatteLapin/brand"
+        text: "github.com/ChatteLapin/brand"
+        note: "(= public)"
+        external: true
+      - label: "公式サイト"
+        href: "/"
+        text: "chattelapin.orz.cc"
+        note: "(= 本サイト)"
+        external: false
+      - label: "ガイドライン"
+        href: "https://github.com/ChatteLapin/brand/blob/main/guidelines.md"
+        text: "guidelines.md"
+        note: ""
+        external: true
+      - label: "お問合せ"
+        href: "/#contact"
+        text: "トップページのお問合せセクション"
+        note: ""
+        external: false
+
 contact:
   num: "§ 04"
   marginalia: "Contact"
