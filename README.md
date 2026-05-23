@@ -108,9 +108,18 @@ PWA manifest の場合:
 
 `source/chattelapin-master.png` が更新されたら、 全派生 file を再生成する。 詳細は [`guidelines.md`](./guidelines.md) の「再生成コマンド」 セクション参照。
 
-## ブランド使用許諾
+## ライセンス
 
-[`guidelines.md`](./guidelines.md) の「使用許諾」 セクション参照。 外部利用 (= 取材・記事掲載・コラボ・引用等) は本 repo の [Issues](https://github.com/ChatteLapin/brand/issues/new) または公式サイト <https://chattelapin.orz.cc/#contact> から都度ご連絡ください。
+本 repo は **コードとブランド資産で異なるライセンス** が適用される。 詳細は [`LICENSE`](./LICENSE) 参照。
+
+- **ソースコード** (= `site/`, `data/`, `README.md`, `.gitignore`) → [MIT License](./LICENSE)
+- **ブランド資産** (= `source/`, `icons/`, `favicon/`, `logo/`, `guidelines.md`, 将来追加の `print/`, `pr/`, 各種画像・印刷データ) → **All Rights Reserved** + 商標保持 (= 「シャラパン」 / 「ChatteLapin」 / ロゴ)
+
+許可 (= 事前許諾なし): 編集・報道・教育目的の引用 (= 出典明記)、 リンク用途でのロゴ無改変掲載。
+
+禁止 (= 事前許諾必須): ロゴ等の改変 / 商用利用 / 提携・推奨の誤認を招く使用 / 他プロダクトのブランド要素としての利用 / 素材集への再配布。
+
+外部利用 (= 取材・記事掲載・コラボ・素材改変希望等) は本 repo の [Issues](https://github.com/ChatteLapin/brand/issues/new) または公式サイト <https://chattelapin.orz.cc/#contact> から都度ご連絡ください。 詳細な利用条件 (= 再生成可否 / カラー改変可否 / 印刷物への適用方法等) は [`guidelines.md`](./guidelines.md) 参照。
 
 ## ChatteLapin Organization 構成
 

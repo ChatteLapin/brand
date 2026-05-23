@@ -1,0 +1,119 @@
+ChatteLapin Brand Repository License
+====================================
+
+This repository contains a mix of source code and brand assets. They are
+governed by different licenses. Read both sections before any use.
+
+本リポジトリにはソースコードとブランド資産が混在しており、 それぞれ異なる
+ライセンスが適用される。 利用前に両セクションを確認のこと。
+
+======================================================================
+Section 1 - Source Code (MIT License)
+======================================================================
+
+Scope (= MIT License 適用範囲):
+  - site/**          (= 公式サイト Astro source)
+  - data/**          (= 事業情報 master yaml)
+  - README.md        (= 本 repo 利用方法説明)
+  - .gitignore
+
+Copyright (c) 2026 ChatteLapin / シャラパン
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+======================================================================
+Section 2 - Brand Assets (All Rights Reserved + Trademark Notice)
+======================================================================
+
+Scope (= 著作権・商標により保護される範囲):
+  - source/**        (= ロゴ編集元 master)
+  - icons/**         (= PWA / OS アイコン)
+  - favicon/**       (= ブラウザタブ favicon)
+  - logo/**          (= ロゴ派生画像)
+  - guidelines.md    (= ブランド使用方針文書)
+  - print/**         (= 将来追加: 名刺・チラシ・パンフレット)
+  - pr/**            (= 将来追加: プレスリリース・取材対応資料)
+  - Any image, icon, font, or print-ready file regardless of location
+    (e.g. *.png, *.svg, *.ico, *.pdf, *.eps, *.ai, *.psd, *.indd)
+
+Copyright (c) 2026 ChatteLapin / シャラパン.
+All Rights Reserved.
+
+Trademarks:
+  "ChatteLapin", "シャラパン", and the ChatteLapin logo are trademarks
+  of シャラパン (= 個人事業 / Sole Proprietorship, Japan). Trademark
+  rights are reserved regardless of registration status under the
+  Japanese Trademark Act and applicable international law.
+
+The MIT License in Section 1 does NOT apply to these brand assets.
+
+----------------------------------------------------------------------
+Permitted without prior written permission (= 事前許諾なしで可)
+----------------------------------------------------------------------
+
+  - Quoting or displaying brand assets in editorial, journalistic, or
+    educational contexts with clear attribution (= name and source URL).
+  - Linking to https://chattelapin.orz.cc/ using the official logo
+    without modification, when describing or referencing ChatteLapin.
+
+----------------------------------------------------------------------
+Prohibited without prior written permission (= 事前許諾必須)
+----------------------------------------------------------------------
+
+  - Modification, recoloring, cropping, or creating derivative works of
+    any logo or brand visual.
+  - Commercial use including merchandise, advertisements, packaging, or
+    product branding.
+  - Use that suggests endorsement, affiliation, or sponsorship by
+    ChatteLapin where none exists.
+  - Use as part of another product's brand identity, logo, or trademark
+    filing.
+  - Redistribution of brand assets as part of design template
+    collections, asset packs, or stock libraries.
+
+For brand asset usage inquiries, contact via:
+  https://github.com/ChatteLapin/brand/issues/new
+
+======================================================================
+日本語要約 (= 法的拘束力は上記英語本文)
+======================================================================
+
+セクション 1: ソースコード (= site/ / data/ / README.md / .gitignore)
+  → MIT ライセンス。 利用・改変・再配布自由 (= 著作権表示と本ライセンス
+  本文の同梱が条件)。
+
+セクション 2: ブランド資産 (= source/ / icons/ / favicon/ / logo/ /
+  guidelines.md / 将来の print/ / pr/ / 各種画像・印刷データ全般)
+  → 著作権およびすべての権利を ChatteLapin (= シャラパン) が保有。
+  商標 (= 「シャラパン」、 「ChatteLapin」、 ロゴ) も同様に保有 (=
+  登録の有無を問わない)。
+
+許可 (= 事前許諾なしで可):
+  - 編集・報道・教育目的の引用 (= 出典明記が条件)
+  - リンク用途でのロゴ無改変掲載
+
+禁止 (= 事前許諾必須):
+  - ロゴ等の改変 / 商用利用 (= グッズ・広告・パッケージ等)
+  - 提携や推奨の誤認を招く使用
+  - 他プロダクトのブランド構成要素としての利用
+  - 素材集やテンプレ集への再配布
+
+ブランド資産利用のお問い合わせ:
+  https://github.com/ChatteLapin/brand/issues/new
