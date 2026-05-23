@@ -1,5 +1,7 @@
 ---
 // ChatteLapin Header — 古典書物の扉ページ × シャープなナビゲーション
+import { Image } from 'astro:assets';
+import mark from '../assets/chattelapin-mark.png';
 
 const locale = Astro.currentLocale || 'ja';
 const isJa = locale === 'ja';
@@ -28,11 +30,15 @@ const navItems = isJa
 <header class="site-header">
   <div class="site-header__inner">
     <a href={homeHref} class="site-header__brand" aria-label={brandAriaLabel}>
-      <img
-        src="/logo.png"
+      <Image
+        src={mark}
         alt=""
-        width="44"
-        height="44"
+        width={44}
+        height={44}
+        densities={[1, 2, 3]}
+        format="webp"
+        quality={85}
+        loading="eager"
         class="site-header__mark"
       />
       <span class="site-header__wordmark">
