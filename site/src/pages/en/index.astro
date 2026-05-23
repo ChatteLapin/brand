@@ -118,23 +118,21 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 02</p>
-          <p class="marginalia">Products</p>
+          <p class="section-num">{i18n.products.num}</p>
+          <p class="marginalia">{i18n.products.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">Core of the business</p>
-          <h2 class="section__title">Flagship product.</h2>
-          <p class="section__lede">
-            The product offered to the outside world, carrying the long-term revenue and social value of the business.
-          </p>
+          <p class="eyebrow">{i18n.products.eyebrow}</p>
+          <h2 class="section__title">{i18n.products.title}</h2>
+          <p class="section__lede">{i18n.products.lede}</p>
 
           <div class="products-primary">
             <ProductCard
-              name="Talent"
-              tagline="A PWA game weaving three axes — global cultures × business simulation × education. As a young merchant traveling the world, run shops in many countries, and along the way, take in cultures, languages, economies, and quiet bonds with people."
+              name={i18n.products.cards.talent.name}
+              tagline={i18n.products.cards.talent.tagline}
               href="/products/talent"
-              badge="Flagship"
+              badge={i18n.products.cards.talent.badge}
               size="large"
               number="01"
               variant="primary"
@@ -142,36 +140,34 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
           </div>
 
           <div class="products-divider" aria-hidden="true">
-            <span class="products-divider__label">and supporting it</span>
+            <span class="products-divider__label">{i18n.products.divider_label}</span>
           </div>
 
-          <h3 class="section__subtitle">Surrounding work that supports the flagship.</h3>
-          <p class="section__lede section__lede--small">
-            Proof-of-concept projects, internal operating infrastructure, and a public brand foundation — together they make the development and long-term operation of the flagship possible.
-          </p>
+          <h3 class="section__subtitle">{i18n.products.subtitle}</h3>
+          <p class="section__lede section__lede--small">{i18n.products.satellite_lede}</p>
 
           <div class="products-satellite">
             <ProductCard
-              name="volt"
-              tagline="A proof-of-concept project for AI-assisted community operations. Also a technical precursor to Talent's B2B school features (= classroom mode / community operation)."
+              name={i18n.products.cards.volt.name}
+              tagline={i18n.products.cards.volt.tagline}
               href="/products/volt"
-              badge="Experiment"
+              badge={i18n.products.cards.volt.badge}
               size="medium"
               number="02"
             />
             <ProductCard
-              name="business"
-              tagline="An AI-driven accounting automation platform built on the freee API and Claude Vision. An internal mechanism designed to minimize the operational hours of running a business, so that time can be concentrated on the flagship."
+              name={i18n.products.cards.business.name}
+              tagline={i18n.products.cards.business.tagline}
               href="/products/business-automation"
-              badge="Operating base"
+              badge={i18n.products.cards.business.badge}
               size="medium"
               number="03"
             />
             <ProductCard
-              name="brand"
-              tagline="A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
+              name={i18n.products.cards.brand.name}
+              tagline={i18n.products.cards.brand.tagline}
               href="/products/brand"
-              badge="Public brand"
+              badge={i18n.products.cards.brand.badge}
               size="medium"
               number="04"
             />

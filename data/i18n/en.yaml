@@ -72,6 +72,33 @@ mission:
       title: "Brand — brand"
       text: "An unwavering brand experience across print and screen / the foundation of this official site."
 
+products:
+  num: "§ 02"
+  marginalia: "Products"
+  eyebrow: "Core of the business"
+  title: "Flagship product."
+  lede: "The product offered to the outside world, carrying the long-term revenue and social value of the business."
+  divider_label: "and supporting it"
+  subtitle: "Surrounding work that supports the flagship."
+  satellite_lede: "Proof-of-concept projects, internal operating infrastructure, and a public brand foundation — together they make the development and long-term operation of the flagship possible."
+  cards:
+    talent:
+      name: "Talent"
+      tagline: "A PWA game weaving three axes — global cultures × business simulation × education. As a young merchant traveling the world, run shops in many countries, and along the way, take in cultures, languages, economies, and quiet bonds with people."
+      badge: "Flagship"
+    volt:
+      name: "volt"
+      tagline: "A proof-of-concept project for AI-assisted community operations. Also a technical precursor to Talent's B2B school features (= classroom mode / community operation)."
+      badge: "Experiment"
+    business:
+      name: "business"
+      tagline: "An AI-driven accounting automation platform built on the freee API and Claude Vision. An internal mechanism designed to minimize the operational hours of running a business, so that time can be concentrated on the flagship."
+      badge: "Operating base"
+    brand:
+      name: "brand"
+      tagline: "A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
+      badge: "Public brand"
+
 contact:
   num: "§ 04"
   marginalia: "Contact"

@@ -72,6 +72,33 @@ mission:
       title: "広報 — brand"
       text: "印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台。"
 
+products:
+  num: "§ 02"
+  marginalia: "Products"
+  eyebrow: "事業の中核"
+  title: "主力プロダクト。"
+  lede: "外部に提供する、 事業の長期的な収益と社会的価値の軸を担うプロダクト。"
+  divider_label: "そして、 これを支える"
+  subtitle: "主力を支える周辺の取り組み。"
+  satellite_lede: "主力プロダクトの開発と長期運営を可能にするための、 実証実験プロジェクト・内部運営基盤・公開ブランド広報基盤。"
+  cards:
+    talent:
+      name: "Talent"
+      tagline: "国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
+      badge: "主力"
+    volt:
+      name: "volt"
+      tagline: "AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
+      badge: "実験"
+    business:
+      name: "business"
+      tagline: "freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
+      badge: "運営基盤"
+    brand:
+      name: "brand"
+      tagline: "ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
+      badge: "公開ブランド・広報"
+
 contact:
   num: "§ 04"
   marginalia: "Contact"

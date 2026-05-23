@@ -118,23 +118,21 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
     <div class="col-wrap">
       <div class="editorial-grid">
         <aside class="section__aside">
-          <p class="section-num">§ 02</p>
-          <p class="marginalia">Products</p>
+          <p class="section-num">{i18n.products.num}</p>
+          <p class="marginalia">{i18n.products.marginalia}</p>
         </aside>
 
         <div class="section__body">
-          <p class="eyebrow">事業の中核</p>
-          <h2 class="section__title">主力プロダクト。</h2>
-          <p class="section__lede">
-            外部に提供する、 事業の長期的な収益と社会的価値の軸を担うプロダクト。
-          </p>
+          <p class="eyebrow">{i18n.products.eyebrow}</p>
+          <h2 class="section__title">{i18n.products.title}</h2>
+          <p class="section__lede">{i18n.products.lede}</p>
 
           <div class="products-primary">
             <ProductCard
-              name="Talent"
-              tagline="国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
+              name={i18n.products.cards.talent.name}
+              tagline={i18n.products.cards.talent.tagline}
               href="/products/talent"
-              badge="主力"
+              badge={i18n.products.cards.talent.badge}
               size="large"
               number="01"
               variant="primary"
@@ -142,36 +140,34 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
           </div>
 
           <div class="products-divider" aria-hidden="true">
-            <span class="products-divider__label">そして、 これを支える</span>
+            <span class="products-divider__label">{i18n.products.divider_label}</span>
           </div>
 
-          <h3 class="section__subtitle">主力を支える周辺の取り組み。</h3>
-          <p class="section__lede section__lede--small">
-            主力プロダクトの開発と長期運営を可能にするための、 実証実験プロジェクト・内部運営基盤・公開ブランド広報基盤。
-          </p>
+          <h3 class="section__subtitle">{i18n.products.subtitle}</h3>
+          <p class="section__lede section__lede--small">{i18n.products.satellite_lede}</p>
 
           <div class="products-satellite">
             <ProductCard
-              name="volt"
-              tagline="AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
+              name={i18n.products.cards.volt.name}
+              tagline={i18n.products.cards.volt.tagline}
               href="/products/volt"
-              badge="実験"
+              badge={i18n.products.cards.volt.badge}
               size="medium"
               number="02"
             />
             <ProductCard
-              name="business"
-              tagline="freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
+              name={i18n.products.cards.business.name}
+              tagline={i18n.products.cards.business.tagline}
               href="/products/business-automation"
-              badge="運営基盤"
+              badge={i18n.products.cards.business.badge}
               size="medium"
               number="03"
             />
             <ProductCard
-              name="brand"
-              tagline="ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
+              name={i18n.products.cards.brand.name}
+              tagline={i18n.products.cards.brand.tagline}
               href="/products/brand"
-              badge="公開ブランド・広報"
+              badge={i18n.products.cards.brand.badge}
               size="medium"
               number="04"
             />
