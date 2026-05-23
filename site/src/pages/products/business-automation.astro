@@ -1,0 +1,80 @@
+---
+import Layout from '../../components/Layout.astro';
+---
+
+<Layout
+  title="business — AI 会計自動化"
+  description="freee API + Claude Vision による会計自動化基盤。 紙のレシートと帳簿を AI でデジタルに編みなおす ChatteLapin 内部運用基盤。"
+>
+  <article>
+    <h1 class="font-serif text-3xl md:text-4xl">business</h1>
+    <p class="mt-2 text-lg italic text-[color:var(--color-ink-soft)]">
+      AI 駆動 会計自動化 — 事業運営基盤
+    </p>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">位置づけ</h2>
+      <p class="mt-4 leading-relaxed">
+        business は、 ChatteLapin の <strong>内部運用基盤</strong> です。 商品として外販はせず、 事業運営の実務時間を最小化するための仕組みです。 ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 会計実務という最も「手間と時間を奪う領域」 で実装しています。
+      </p>
+      <p class="mt-4 leading-relaxed">
+        個人事業を選んだ動機自体が「会計のかなりの部分を AI で自動化できそうだから」 でした。 自動化基盤を内製することで、 事業者本人の時間をプロダクト開発・創造活動に振り向けられる構造を作ります。
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">3 層パイプライン</h2>
+
+      <div class="mt-6 space-y-4">
+        <div class="rounded border border-[color:var(--color-line)] bg-white/40 p-5">
+          <h3 class="font-serif text-xl">階層 1: 銀行 / カードの自動取り込み</h3>
+          <p class="mt-2 text-sm leading-relaxed">
+            GMOあおぞらネット銀行 (= 屋号口座) と各種カードからの取引を freee 自動同期で取り込み、 自動仕訳ルールエンジンが摘要 → 勘定科目をマッピング。 信頼度しきい値で「自動確定」 と「レビュー待ち」 を分岐。
+          </p>
+        </div>
+        <div class="rounded border border-[color:var(--color-line)] bg-white/40 p-5">
+          <h3 class="font-serif text-xl">階層 2: 紙のレシートを AI で編みなおす</h3>
+          <p class="mt-2 text-sm leading-relaxed">
+            スマートフォンで撮影した紙のレシートを Discord 経由で受信 → Claude Vision (= マルチモーダル LLM) で OCR + 勘定科目推論を一発実行 → freee API で仕訳登録 + 画像添付 (= 電子帳簿保存法対応)。 アナログな紙の確かさを、 デジタルの帳簿に橋渡しします。
+          </p>
+        </div>
+        <div class="rounded border border-[color:var(--color-line)] bg-white/40 p-5">
+          <h3 class="font-serif text-xl">階層 3: 月次自動チェック / レポート</h3>
+          <p class="mt-2 text-sm leading-relaxed">
+            残高合致チェック、 異常検知、 月次収支 PDF レポートの自動生成と通知。 節税スキーム適用シミュレーションも統合し、 確定申告期の集計コストを最小化します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">開発状況</h2>
+      <p class="mt-4 leading-relaxed">
+        <strong>2026-05-21 に Phase 0 骨格完了</strong>。 freee 開発者ポータルでアプリ登録 / OAuth 2.0 認可フロー実装 / 取引取得 API 接続動作確認まで到達済。
+      </p>
+      <p class="mt-4 leading-relaxed">
+        Phase 1 (= 自動仕訳ルールエンジン + 家事按分 + 節税シミュレーション) は屋号口座開設完了後に着手予定。 Phase 2 (= Discord Bot + Claude Vision レシート OCR) は Phase 1 安定後。
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">技術スタック</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li>TypeScript + tsx (= ビルド不要)</li>
+        <li>freee 会計 API (= OAuth 2.0)</li>
+        <li>Anthropic Claude Vision (= Claude 4.x / マルチモーダル)</li>
+        <li>discord.js (= Bot 受付チャネル)</li>
+        <li>zod (= API レスポンス validation)</li>
+      </ul>
+    </section>
+
+    <section class="mt-10 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6">
+      <h2 class="font-serif text-2xl">関連リンク</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-6">
+        <li>コード: <a href="https://github.com/ChatteLapin/business" target="_blank" rel="noopener">github.com/ChatteLapin/business</a></li>
+        <li>運用ドキュメント: <a href="https://github.com/ChatteLapin/business/blob/main/CLAUDE.md" target="_blank" rel="noopener">CLAUDE.md</a></li>
+        <li>セキュリティ運用: <a href="https://github.com/ChatteLapin/business/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a></li>
+      </ul>
+    </section>
+  </article>
+</Layout>

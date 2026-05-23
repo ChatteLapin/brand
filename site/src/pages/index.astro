@@ -1,0 +1,184 @@
+---
+import Layout from '../components/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<Layout
+  title="ChatteLapin"
+  description="シャラパン (ChatteLapin) - テクノロジーとアナログの間に、 静かな時間を置く。 ソフトウェア開発業として、 主力プロダクト『Talent』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム) を軸に活動する個人事業。"
+>
+  <section id="top" class="text-center">
+    <h1 class="font-serif text-4xl md:text-5xl">ChatteLapin</h1>
+    <p class="mt-4 text-lg text-[color:var(--color-ink-soft)]">シャラパン</p>
+    <p class="mt-10 font-serif text-2xl md:text-3xl leading-snug">
+      テクノロジーとアナログの間に、
+      <br class="md:hidden" />
+      静かな時間を置く。
+    </p>
+    <p class="mt-6 text-sm md:text-base text-[color:var(--color-ink-soft)] leading-relaxed">
+      デジタルが急ぎ足で奪ったもの — ゆっくり読む時間、 自分のペースで考える時間、 紙のような手触り、 人と人の小さな縁 — を、
+      <br class="hidden md:inline" />
+      もう一度デジタルの中に置きなおす。 かつて音楽劇団として掲げた「心のゆとりを取り戻す」 ミッションを、 デジタル時代の手段で再実装することが、 ChatteLapin の仕事です。
+    </p>
+  </section>
+
+  <section id="mission" class="mt-16 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6 md:p-8">
+    <h2 class="font-serif text-2xl">どの橋をかけているか</h2>
+    <p class="mt-4 leading-relaxed">
+      デジタルは便利を運んできましたが、 同時に「ゆっくり考える時間」 「紙のような手触り」 「人と人の小さな縁」 を、 そっと脇に追いやってきました。
+    </p>
+    <p class="mt-4 leading-relaxed">
+      ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+    </p>
+    <ul class="mt-6 grid gap-3 text-sm md:text-base">
+      <li><strong class="font-serif">主力 Talent</strong> — デジタルゲームの中に、 紙の本のような読書の時間を取り戻す</li>
+      <li>volt (= 実験) — デジタル空間に、 人と人の縁を AI で結びなおす実証実験</li>
+      <li>business (= 内部運用) — 紙のレシートと帳簿を、 AI でデジタルに編みなおす</li>
+      <li>brand (= 公開ブランド・広報) — 印刷物と画面の双方で揺るがないブランド体験 / 公式サイトの土台</li>
+    </ul>
+  </section>
+
+  <section id="products" class="mt-20">
+    <h2 class="font-serif text-3xl md:text-4xl">主力プロダクト</h2>
+    <p class="mt-2 text-sm text-[color:var(--color-ink-soft)]">
+      事業の中核を担う、 外部提供のプロダクト。
+    </p>
+    <div class="mt-8 grid gap-5">
+      <ProductCard
+        name="Talent"
+        tagline="国際文化 × 経営シミュレーション × 教育 の 3 軸を統合する PWA ゲーム。 世界を旅する若き商人として、 各国の店を切り盛りしながら、 文化・言葉・経済・人との縁を、 いつの間にか身につけていく。"
+        href="/products/talent"
+        badge="主力"
+        size="large"
+      />
+    </div>
+
+    <h3 class="mt-12 font-serif text-2xl">主力を支える周辺の取り組み</h3>
+    <p class="mt-2 text-sm text-[color:var(--color-ink-soft)]">
+      主力プロダクトの開発と長期運営を可能にするための、 実験プロジェクト・内部運営基盤・公開ブランド広報基盤。
+    </p>
+    <div class="mt-8 grid gap-5 md:grid-cols-2">
+      <ProductCard
+        name="volt"
+        tagline="AI 活用 コミュニティ運営の実証実験。 talent の B2B 教育機関向け機能 (= 教室モード / コミュニティ運営) の前段技術検証を兼ねます。"
+        href="/products/volt"
+        badge="実験"
+        size="medium"
+      />
+      <ProductCard
+        name="business"
+        tagline="freee API + Claude Vision による AI 駆動 会計自動化基盤。 事業運営の実務時間を最小化し、 主力プロダクト開発に時間を集中投下するための内部仕組み。"
+        href="/products/business-automation"
+        badge="運営基盤"
+        size="medium"
+      />
+      <ProductCard
+        name="brand"
+        tagline="ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
+        href="/products/brand"
+        badge="公開ブランド・広報"
+        size="medium"
+      />
+    </div>
+  </section>
+
+  <section id="about" class="mt-20">
+    <h2 class="font-serif text-3xl md:text-4xl">事業概要</h2>
+
+    <div class="mt-8 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6 md:p-8">
+      <p class="text-sm uppercase tracking-widest text-[color:var(--color-accent)]">Mission</p>
+      <p class="mt-3 font-serif text-2xl md:text-3xl leading-snug">
+        テクノロジーとアナログの間に、 静かな時間を置く。
+      </p>
+      <p class="mt-4 leading-relaxed">
+        デジタルは便利を運んできた一方で、 ゆっくり考える時間・紙のような手触り・人と人の小さな縁を、 そっと脇に追いやってきました。 ChatteLapin の各活動は、 失われがちなアナログの価値を、 デジタルの中にもう一度置きなおす試みです。
+      </p>
+      <p class="mt-4 leading-relaxed">
+        単に古き良きを保存するのではなく、 <strong>テクノロジーで運営しなければ実現できない静けさ</strong> を、 設計の段階から組み込みます。 すべての活動 — 主力プロダクトの開発も、 それを支える事業基盤の整備も — がこの基準のうえに立ちます。
+      </p>
+    </div>
+
+    <h3 class="mt-12 font-serif text-2xl">事業の概要</h3>
+    <p class="mt-4 leading-relaxed">
+      ChatteLapin の業種は <strong>ソフトウェア開発業</strong> です。 ソフトウェアという一つの道具で、 <strong>文化・教育・コミュニティ運営</strong> の領域に静かな時間を置く — それが事業の中核です。
+    </p>
+    <p class="mt-4 leading-relaxed">
+      主力は新規ゲーム事業『<a href="/products/talent">Talent</a>』 (= 国際文化 × 経営シミュレーション × 教育の PWA ゲーム)。 これを軸として、 周辺の活動 (= AI 活用コミュニティ運営の実証実験、 事業運営を支える AI 駆動 会計自動化基盤、 ブランド・広報資産を一元化する公開基盤) を内製で並行展開しています。
+    </p>
+    <p class="mt-4 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
+      いずれも独立した「製品ライン」 ではなく、 ひとつのミッションから派生した手段の集合として位置づけています。
+    </p>
+
+    <h3 class="mt-12 font-serif text-2xl">前史 — 音楽劇団シャラパンからの継承</h3>
+    <p class="mt-4 leading-relaxed">
+      事業者は過去に「音楽劇団シャラパン」 を立ち上げ、 主宰として「空想音楽劇 真昼の銀河」 等の公演を行ってきました。 当時の主宰メッセージには以下の理念が掲げられていました:
+    </p>
+    <blockquote class="mt-4 rounded border-l-4 border-[color:var(--color-accent)] bg-white/40 p-5">
+      <p class="leading-relaxed italic">
+        経済的なゆとりだけでなく、 精神的なゆとりまでもが社会から失われがちな時代に — 観る人の心にゆとりが生まれ、 自身と隣の人々の心の豊かさを取り戻すこと。 質と量の高いステージを提供して社会に貢献すること。
+      </p>
+      <footer class="mt-3 text-right text-sm text-[color:var(--color-ink-soft)]">— 音楽劇団シャラパン 主宰</footer>
+    </blockquote>
+    <p class="mt-6 leading-relaxed">
+      音楽劇団シャラパンの理念は、 メディアを変えて現在も継承しています。 演劇というアナログメディアで実現してきた <strong>「心のゆとり」</strong> を、 デジタル時代の手法 (= ゲーム / AI / コミュニティ運営) で再実装する — それが現在の ChatteLapin の活動です。
+    </p>
+    <p class="mt-4 leading-relaxed">
+      屋号「シャラパン」 を継続しているのも、 この理念の連続性を象徴しています。 「テクノロジーとアナログの間に、 静かな時間を置く」 という現在のミッションは、 音楽劇団時代の「心のゆとりを取り戻す」 を、 現代の手段で言い換えたものです。
+    </p>
+
+    <h3 class="mt-12 font-serif text-2xl">事業者プロフィール</h3>
+    <p class="mt-4 leading-relaxed">
+      1984 年 (= 昭和 59 年) 生まれ。 就職氷河期末期に社会に出て、 続く <strong>ゆとり世代</strong> を一歩前から見つめてきた世代です。 世間で「悪名」 のように扱われた『ゆとり』 という言葉の用法とは別に、 <strong>本当の意味でのゆとり</strong> — 経済の余裕だけでなく、 時間と精神の余白 — を意識し続けてきました。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 は、 個人的な実感とも地続きの取り組みです。
+    </p>
+    <ul class="mt-6 list-disc space-y-2 pl-6 leading-relaxed">
+      <li>米国アリゾナ大学 Eller 経営学部卒業 (= 情報システム経営 / 起業学 / 国際経営)</li>
+      <li>過去に Web ベンチャーを設立</li>
+      <li>音楽劇団シャラパン主宰として「空想音楽劇 真昼の銀河」 等の舞台公演を企画・制作</li>
+      <li>並行して芸能・舞台・モデル業の活動経験 (= ダンス / 2.5 次元舞台プロデュース 等)</li>
+      <li>現職: 東京を拠点とする FA 機器メーカーで IT エンジニア・経営企画 (= 正社員、 副業公認)</li>
+      <li>2026-05-19 シャラパン (ChatteLapin) を個人事業として開業</li>
+    </ul>
+    <p class="mt-6 leading-relaxed">
+      <strong>国際経営学の学術背景</strong>・ <strong>20 年超の IT エンジニアと経営企画の実装力</strong>・ <strong>音楽劇団主宰として培った文化事業の現場経験</strong> — この 3 つが交差する立場から、 単なる技術プロダクトではなく <strong>文化・教育・経営の交差点に位置する作品</strong> を生み出すことを事業の中核に据えています。
+    </p>
+
+    <h3 class="mt-12 font-serif text-2xl">基本情報</h3>
+    <dl class="mt-4 grid grid-cols-1 gap-y-3 md:grid-cols-[max-content_1fr] md:gap-x-6">
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">屋号</dt>
+      <dd>シャラパン (ブランド表記: ChatteLapin)</dd>
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">開業日</dt>
+      <dd>2026-05-19</dd>
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">事業形態</dt>
+      <dd>個人事業主</dd>
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">業種</dt>
+      <dd>ソフトウェア開発業</dd>
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">管轄税務署</dt>
+      <dd>熱海税務署</dd>
+      <dt class="font-semibold text-[color:var(--color-ink-soft)]">GitHub Org</dt>
+      <dd><a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">github.com/ChatteLapin</a></dd>
+    </dl>
+  </section>
+
+  <section id="contact" class="mt-20">
+    <h2 class="font-serif text-3xl md:text-4xl">お問い合わせ</h2>
+
+    <p class="mt-6 leading-relaxed">
+      業務関連のご連絡は <strong>GitHub Issues</strong> でお受けしています。 下のボタンから Issue 作成画面が直接開きます (= 入力には GitHub アカウントが必要です。 無料、 数分で作成可能)。
+    </p>
+
+    <p class="mt-6">
+      <a
+        href="https://github.com/ChatteLapin/brand/issues/new"
+        target="_blank"
+        rel="noopener"
+        class="inline-block rounded-md border border-[color:var(--color-ink)] bg-white/60 px-6 py-3 font-serif text-base no-underline hover:bg-[color:var(--color-ink)] hover:text-white"
+      >
+        → GitHub Issues でお問い合わせ
+      </a>
+    </p>
+
+    <p class="mt-6 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
+      お問い合わせは <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">brand</a> repo (= 本サイトのソースとブランド・広報資産を集約する公開 repo) の Issues でお受けします。 ご用件に関わらずお受けし、 適切な担当領域へ振り分けます。 メールフォームは順次整備します。
+    </p>
+  </section>
+</Layout>

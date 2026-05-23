@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* ChatteLapin ブランドカラー (= brand/guidelines.md の方針に整合)
+ * 主色: 温かい白 #fdf6ec (= 紙のような背景)
+ * 副色: 落ち着いたインク #2a2a2a (= 本文)
+ * アクセント: 茶系 #8b6f47 (= ロゴと調和) */
+
+:root {
+  --color-paper: #fdf6ec;
+  --color-ink: #2a2a2a;
+  --color-ink-soft: #4a4a4a;
+  --color-accent: #8b6f47;
+  --color-accent-soft: #c9b48a;
+  --color-line: #e0d6c2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* やや古めかしい雰囲気を意識 (= talent コンセプトと整合) */
+h1, h2, h3, h4 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Times New Roman', serif;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--color-ink);
+}

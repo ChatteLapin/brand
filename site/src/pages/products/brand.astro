@@ -1,0 +1,57 @@
+---
+import Layout from '../../components/Layout.astro';
+---
+
+<Layout
+  title="brand — ブランド・広報資産基盤"
+  description="ChatteLapin のロゴ・favicon・ガイドラインに加え、 公式サイトのソースコードや将来の広報物 (= 名刺・チラシ・プレスリリース) を集約する公開ブランド・広報資産基盤。"
+>
+  <article>
+    <h1 class="font-serif text-3xl md:text-4xl">brand</h1>
+    <p class="mt-2 text-lg italic text-[color:var(--color-ink-soft)]">
+      ブランド・広報資産基盤 (= 公開)
+    </p>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">位置づけ</h2>
+      <p class="mt-4 leading-relaxed">
+        brand は、 ChatteLapin の <strong>対外的なブランド表現の source of truth</strong> です。 ロゴ・favicon 等のデザイン資産に加え、 公式サイト (= 本サイト <a href="/">chattelapin.orz.cc</a>) のソースコード、 将来的に名刺・チラシ・プレスリリース等の広報物までを公開 repo として一元管理します。
+      </p>
+      <p class="mt-4 leading-relaxed">
+        ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 ブランド表現の側面で実装。 画面 (= デジタル) と印刷物 (= アナログ) の双方で同じ「静けさ」 「温かみ」 が感じられる意匠を一元管理します。
+      </p>
+      <p class="mt-4 leading-relaxed text-sm text-[color:var(--color-ink-soft)]">
+        商品として外販はしませんが、 ロゴガイドライン・公式サイトのソースを公開することで、 取材・コラボ・ブランド引用時の参照先を提供します。
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">資産構成</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><strong>マスターロゴ</strong>: 2048x2048 RGB / 編集元</li>
+        <li><strong>ロゴ派生</strong>: 64px / 400px / 600px (= 透過)</li>
+        <li><strong>favicon</strong>: 16px / 32px / favicon.ico</li>
+        <li><strong>アイコン</strong>: PWA 192px / 512px / Apple Touch Icon</li>
+        <li><strong>ガイドライン</strong>: 使用方針 / 命名規約 / 再生成コマンド</li>
+        <li><strong>公式サイト</strong> (= `brand/site/`): Astro + Cloudflare Pages デプロイ元</li>
+        <li><strong>将来追加</strong>: 名刺・チラシ・パンフレット (`brand/print/`) / プレスリリース・取材対応資料 (`brand/pr/`)</li>
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-2xl">運用方針</h2>
+      <p class="mt-4 leading-relaxed">
+        マスターロゴを source of truth とし、 派生 file は ImageMagick 等のコマンドで再生成します。 各プロダクトは brand repo から `cp` で取り込み、 ブランド変更時の追従コストを最小化する設計です。 公式サイトは本 repo から直接 Cloudflare Pages にデプロイされます。
+      </p>
+    </section>
+
+    <section class="mt-10 rounded-lg border border-[color:var(--color-line)] bg-white/40 p-6">
+      <h2 class="font-serif text-2xl">関連リンク</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-6">
+        <li>repo: <a href="https://github.com/ChatteLapin/brand" target="_blank" rel="noopener">github.com/ChatteLapin/brand</a> (= public)</li>
+        <li>公式サイト: <a href="/">chattelapin.orz.cc</a> (= 本サイト)</li>
+        <li>ブランド使用ガイドライン: <a href="https://github.com/ChatteLapin/brand/blob/main/guidelines.md" target="_blank" rel="noopener">guidelines.md</a></li>
+      </ul>
+    </section>
+  </article>
+</Layout>

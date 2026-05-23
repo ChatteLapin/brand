@@ -1,0 +1,21 @@
+---
+// ChatteLapin フッタ
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-[color:var(--color-line)] bg-white/40">
+  <div class="mx-auto max-w-3xl px-6 py-10 text-sm text-[color:var(--color-ink-soft)]">
+    <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
+      <div>
+        <p class="font-serif text-base text-[color:var(--color-ink)]">シャラパン (ChatteLapin)</p>
+        <p>個人事業 / 2026-05-19 開業 / 青色申告 65 万円控除</p>
+        <p>業種: ソフトウェア開発業 / 管轄: 熱海税務署</p>
+      </div>
+      <div class="flex flex-col gap-1 sm:items-end">
+        <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener" class="no-underline hover:underline">GitHub: ChatteLapin</a>
+        <a href="/#contact" class="no-underline hover:underline">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="mt-6 text-center text-xs">© {year} ChatteLapin. All rights reserved.</p>
+  </div>
+</footer>

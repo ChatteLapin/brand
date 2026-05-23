@@ -58,8 +58,8 @@ convert favicon/favicon-16.png favicon/favicon-32.png favicon/favicon.ico
 
 ## 使用許諾
 
-- ChatteLapin org 配下の prj は自由に使用可 (= talent / business / volt / internal / brand)
-- 外部利用 (= 取材・記事掲載等) はユーザー (= 金井大延) に都度連絡
+- ChatteLapin org 配下の各 prj は自由に使用可 (= talent / business / volt / internal / brand)
+- 外部利用 (= 取材・記事掲載・コラボ・引用等) はシャラパン (ChatteLapin) 事業者に都度ご連絡ください。 窓口は本 repo の [Issues](https://github.com/ChatteLapin/brand/issues/new) または公式サイト <https://chattelapin.orz.cc/#contact> をご利用ください
 
 ## 配色 (= 将来確立、 暫定)
 
