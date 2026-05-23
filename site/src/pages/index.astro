@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import logotype from '../assets/chattelapin-logotype.png';
 ---
 
 <Layout
@@ -44,13 +46,18 @@ import ProductCard from '../components/ProductCard.astro';
 
         <figure class="hero__figure fade-up delay-2">
           <div class="hero__figure-frame">
-            <img
-              src="/chattelapin-logotype.png"
+            <Image
+              src={logotype}
               alt="ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
-              width="600"
-              height="600"
+              width={600}
+              height={600}
               class="hero__figure-img"
+              loading="eager"
               fetchpriority="high"
+              format="webp"
+              quality={82}
+              widths={[280, 400, 600, 800]}
+              sizes="(max-width: 879px) min(50vw, 320px), 600px"
             />
           </div>
           <figcaption class="hero__figure-caption">
