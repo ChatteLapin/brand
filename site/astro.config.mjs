@@ -13,6 +13,7 @@ export default defineConfig({
   },
   build: {
     inlineStylesheets: 'auto',
+    format: 'file',
   },
-  trailingSlash: 'always',
+  trailingSlash: 'never',
 });
