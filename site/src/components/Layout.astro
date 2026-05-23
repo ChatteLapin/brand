@@ -1,6 +1,9 @@
 ---
 // 共通レイアウト
-// usage: <Layout title="..." description="..."><slot /></Layout>
+// usage: <Layout title="..." description="..." locale="ja|en"><slot /></Layout>
+//
+// locale prop で <html lang> / <meta og:locale> / skip-link 文言 / og:locale:alternate を切替。
+// 未指定の場合は URL path から推定 (= /en/* なら 'en'、 それ以外は 'ja')。
 
 import Header from './Header.astro';
 import Footer from './Footer.astro';
@@ -10,20 +13,31 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  locale?: 'ja' | 'en';
 }
+
+const inferredLocale: 'ja' | 'en' = Astro.url.pathname.startsWith('/en') ? 'en' : 'ja';
 
 const {
   title,
-  description = 'テクノロジーとアナログの間に、 静かな時間を置く。 シャラパン (ChatteLapin) はソフトウェア開発業として、 文化・教育・コミュニティ運営の領域でデジタルとアナログを橋渡しする個人事業です。',
+  description = inferredLocale === 'en'
+    ? 'A pause of quiet between technology and the analog. ChatteLapin is a sole proprietorship bridging the digital and the analog across culture, education, and community.'
+    : 'テクノロジーとアナログの間に、 静かな時間を置く。 シャラパン (ChatteLapin) はソフトウェア開発業として、 文化・教育・コミュニティ運営の領域でデジタルとアナログを橋渡しする個人事業です。',
   ogImage = '/og-image.png',
+  locale = inferredLocale,
 } = Astro.props;
 
 const fullTitle = title === 'ChatteLapin' ? title : `${title} | ChatteLapin`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+const htmlLang = locale === 'en' ? 'en' : 'ja';
+const ogLocale = locale === 'en' ? 'en_US' : 'ja_JP';
+const ogLocaleAlternate = locale === 'en' ? 'ja_JP' : 'en_US';
+const skipLinkText = locale === 'en' ? 'Skip to main content' : 'メインコンテンツへ';
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +59,8 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
     <meta property="og:site_name" content="ChatteLapin" />
-    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
@@ -56,7 +71,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
-    <a href="#main" class="skip-link">メインコンテンツへ</a>
+    <a href="#main" class="skip-link">{skipLinkText}</a>
     <Header />
     <main id="main">
       <slot />
