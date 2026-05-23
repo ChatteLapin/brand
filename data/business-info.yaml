@@ -1,0 +1,37 @@
+# ChatteLapin 事業者基本情報 (master)
+#
+# brand site (= chattelapin.orz.cc) と銀行提出 PDF / 教育機関営業 PDF / 投資家説明 PDF 等の
+# 派生文書すべてが本ファイルを source of truth として参照する。
+#
+# 本ファイルは brand repo (= public) に配置するので、 ここに書く値はすべて
+# 「公開可能」 とみなす。 非公開数値 (= 売上想定 / 経費構造 / 営業 pipeline 等) は
+# internal/strategy/master/ に分離する。
+#
+# 更新時の影響範囲:
+#   - brand/site/src/pages/index.astro (= 公式サイト § 04 基本情報)
+#   - internal/strategy/templates/*.md.j2 (= 銀行 / 教育機関 / 投資家 PDF テンプレ)
+#   - 派生文書を再 build すれば自動反映
+
+name: シャラパン
+brand_name: ChatteLapin
+brand_display: "シャラパン (ブランド表記: ChatteLapin)"
+
+founded_date: "2026-05-19"
+business_form: 個人事業主
+industry: ソフトウェア開発業
+
+tax:
+  office: 熱海税務署
+  filing_type: 青色申告
+  deduction_jpy: 650000
+  filing_method: e-Tax 提出予定
+  notes: 開業届 / 青色申告承認申請書 提出済
+
+github:
+  org: ChatteLapin
+  url: https://github.com/ChatteLapin
+
+site:
+  official_url: https://chattelapin.orz.cc/
+  contact_url: https://github.com/ChatteLapin/brand/issues/new
+  status: 2026-05 立ち上げ

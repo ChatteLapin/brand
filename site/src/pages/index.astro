@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import logotype from '../assets/chattelapin-logotype.png';
+import businessInfo from '../../../data/business-info.yaml';
 ---
 
 <Layout
@@ -298,27 +299,27 @@ import logotype from '../assets/chattelapin-logotype.png';
           <dl class="info-grid">
             <div class="info-grid__row">
               <dt>事業者名</dt>
-              <dd>シャラパン (ブランド表記: ChatteLapin)</dd>
+              <dd>{businessInfo.brand_display}</dd>
             </div>
             <div class="info-grid__row">
               <dt>開業日</dt>
-              <dd>2026-05-19</dd>
+              <dd>{businessInfo.founded_date}</dd>
             </div>
             <div class="info-grid__row">
               <dt>事業形態</dt>
-              <dd>個人事業主</dd>
+              <dd>{businessInfo.business_form}</dd>
             </div>
             <div class="info-grid__row">
               <dt>業種</dt>
-              <dd>ソフトウェア開発業</dd>
+              <dd>{businessInfo.industry}</dd>
             </div>
             <div class="info-grid__row">
               <dt>管轄税務署</dt>
-              <dd>熱海税務署</dd>
+              <dd>{businessInfo.tax.office}</dd>
             </div>
             <div class="info-grid__row">
               <dt>GitHub Org</dt>
-              <dd><a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">github.com/ChatteLapin</a></dd>
+              <dd><a href={businessInfo.github.url} target="_blank" rel="noopener">{businessInfo.github.url.replace('https://', '')}</a></dd>
             </div>
           </dl>
         </div>
