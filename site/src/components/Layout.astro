@@ -28,11 +28,16 @@ const {
 } = Astro.props;
 
 const fullTitle = title === 'ChatteLapin' ? title : `${title} | ChatteLapin`;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Astro v5 + `format: 'file'` 設定下では Astro.url.pathname に `.html` 拡張子が含まれる
+// (= build output が flat file)。 ユーザーアクセス URL は拡張子なしで通るので、 canonical /
+// hreflang / og:url で参照する pathname からは `.html` を除去して URL の見え方と一致させる。
+const rawPath = Astro.url.pathname;
+const pathname = rawPath.replace(/\.html$/, '').replace(/\/index$/, '') || '/';
+const canonicalUrl = new URL(pathname, Astro.site).toString();
 
 // hreflang annotation 用 — 現在 path から ja/en の URL ペアを算出
 // (= Google i18n SEO ガイドライン準拠、 各 page 自動算出)
-const pathname = Astro.url.pathname;
 const jaPath = pathname.startsWith('/en')
   ? pathname.replace(/^\/en/, '') || '/'
   : pathname;
