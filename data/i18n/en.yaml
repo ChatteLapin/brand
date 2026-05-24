@@ -32,6 +32,7 @@ header:
   nav_aria: "Primary navigation"
   switch_locale_aria: "日本語に切替"
   switch_locale_label: "JA"
+  switch_locale_suggested_tooltip: "ブラウザ言語に基づくおすすめ"
   nav:
     mission: "Mission"
     products: "Products"

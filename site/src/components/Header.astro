@@ -11,6 +11,13 @@ const isJa = locale === 'ja';
 const i18n = isJa ? jaDict : enDict;
 const homeHref = isJa ? '/' : '/en';
 
+// 現在 page の言語切替先 URL を算出 (= /products/talent <-> /en/products/talent 等)
+// 切替ボタンを押したら現在 page を維持して言語だけ切り替わる
+const pathname = Astro.url.pathname;
+const altLocalePath = isJa
+  ? (pathname === '/' ? '/en' : `/en${pathname}`)
+  : (pathname.replace(/^\/en/, '') || '/');
+
 const navItems = [
   { num: '01', label: i18n.header.nav.mission, href: `${homeHref}#mission` },
   { num: '02', label: i18n.header.nav.products, href: `${homeHref}#products` },
@@ -50,7 +57,15 @@ const navItems = [
           </li>
         ))}
         <li class="site-nav__item site-nav__item--locale">
-          <a href={isJa ? '/en' : '/'} class="site-nav__link site-nav__link--locale" aria-label={i18n.header.switch_locale_aria}>
+          <a
+            href={altLocalePath}
+            id="locale-switch"
+            class="site-nav__link site-nav__link--locale"
+            data-current-locale={locale}
+            data-suggested-title={i18n.header.switch_locale_suggested_tooltip}
+            aria-label={i18n.header.switch_locale_aria}
+          >
+            <span class="site-nav__locale-dot" aria-hidden="true"></span>
             <span class="site-nav__label">{i18n.header.switch_locale_label}</span>
           </a>
         </li>
@@ -58,6 +73,21 @@ const navItems = [
     </nav>
   </div>
 </header>
+
+<script>
+  // ブラウザ言語が現在表示中の言語と違う時、 切替ボタンを軽く強調
+  // (= dot 表示 + title tooltip 設定)。 自動 redirect は行わない (= UX 阻害回避)
+  const link = document.getElementById('locale-switch');
+  if (link) {
+    const current = link.dataset.currentLocale;
+    const browserLang = (navigator.language || '').split('-')[0];
+    if (browserLang && current && browserLang !== current && (browserLang === 'ja' || browserLang === 'en')) {
+      link.setAttribute('data-suggested', 'true');
+      const tooltip = link.dataset.suggestedTitle;
+      if (tooltip) link.setAttribute('title', tooltip);
+    }
+  }
+</script>
 
 <style>
   .site-header {
@@ -176,6 +206,38 @@ const navItems = [
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.1em;
+  }
+
+  /* locale switch link — Accept-Language ヒント装飾 (= dot は通常非表示、 suggested 時のみ可視) */
+  .site-nav__locale-dot {
+    display: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-olive);
+    margin-right: 0.45rem;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .site-nav__link--locale {
+    align-items: center;
+  }
+  .site-nav__link--locale[data-suggested="true"] {
+    color: var(--color-ink-deep);
+  }
+  .site-nav__link--locale[data-suggested="true"] .site-nav__locale-dot {
+    display: inline-block;
+    animation: locale-dot-pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes locale-dot-pulse {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50%      { opacity: 1;    transform: scale(1.2); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .site-nav__link--locale[data-suggested="true"] .site-nav__locale-dot {
+      animation: none;
+      opacity: 0.85;
+    }
   }
 
   /* モバイル — 番号は隠す、 ラベルは短縮 */

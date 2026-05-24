@@ -32,6 +32,7 @@ header:
   nav_aria: "主要ナビゲーション"
   switch_locale_aria: "Switch to English"
   switch_locale_label: "EN"
+  switch_locale_suggested_tooltip: "Based on your browser language"
   nav:
     mission: "ミッション"
     products: "プロダクト"

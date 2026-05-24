@@ -30,6 +30,18 @@ const {
 const fullTitle = title === 'ChatteLapin' ? title : `${title} | ChatteLapin`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
+// hreflang annotation 用 — 現在 path から ja/en の URL ペアを算出
+// (= Google i18n SEO ガイドライン準拠、 各 page 自動算出)
+const pathname = Astro.url.pathname;
+const jaPath = pathname.startsWith('/en')
+  ? pathname.replace(/^\/en/, '') || '/'
+  : pathname;
+const enPath = pathname.startsWith('/en')
+  ? pathname
+  : pathname === '/' ? '/en' : `/en${pathname}`;
+const jaAlternateUrl = new URL(jaPath, Astro.site).toString();
+const enAlternateUrl = new URL(enPath, Astro.site).toString();
+
 const htmlLang = locale === 'en' ? 'en' : 'ja';
 const ogLocale = locale === 'en' ? 'en_US' : 'ja_JP';
 const ogLocaleAlternate = locale === 'en' ? 'ja_JP' : 'en_US';
@@ -44,6 +56,9 @@ const skipLinkText = locale === 'en' ? 'Skip to main content' : 'メインコン
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="ja" href={jaAlternateUrl} />
+    <link rel="alternate" hreflang="en" href={enAlternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={jaAlternateUrl} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
