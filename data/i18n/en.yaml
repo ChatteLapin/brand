@@ -141,6 +141,85 @@ products:
       tagline: "A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
       badge: "Public brand"
 
+products_business:
+  layout:
+    title: "business — AI accounting automation"
+    description: "An accounting automation platform built on the freee API and Claude Vision. ChatteLapin's internal operating foundation that reweaves paper receipts and ledgers into the digital, through AI."
+  breadcrumb_label: "Products"
+  header:
+    eyebrow: "Operating base"
+    title: "business"
+    tagline: "AI-driven accounting automation — an operating foundation."
+    meta:
+      field_label: "Field"
+      field_value: "freee × Claude Vision"
+      status_label: "Status"
+      status_value: "Phase 0 completed (2026-05-21)"
+      policy_label: "Policy"
+      policy_value: "Developed with OSS publication in mind"
+  position:
+    num: "§ 01"
+    marginalia: "Position"
+    title: "Positioning."
+    paragraph_1: 'business is ChatteLapin''s <strong>operating foundation</strong>. It is not sold as a product; it is a mechanism to minimize the operational hours of running the business. It implements the mission "Place a quiet hour between technology and the analog" in the realm of accounting — perhaps the one that most aggressively steals time and attention.'
+    paragraph_2: 'The motivation for choosing sole proprietorship was itself "much of accounting looks automatable with AI." By building the automation foundation in-house, the proprietor''s own time is redirected toward product development and creative work.'
+    paragraph_3: 'With future open-sourcing in mind, the project is maintained as an implementation record that can serve as a reference for sole proprietors and developers in a similar position.'
+  pipeline:
+    num: "§ 02"
+    marginalia: "Pipeline"
+    title: "Three-layer pipeline."
+    layers:
+      - num: "01"
+        title: "Automatic ingestion from banks / cards"
+        text: 'Transactions from the trade-name bank account and various cards are pulled in via freee''s auto-sync; a rules engine maps each description to an account item. A confidence threshold splits "auto-confirm" from "awaits review".'
+      - num: "02"
+        title: "Reweaving paper receipts with AI"
+        text: "Paper receipts photographed on a smartphone arrive via Discord → Claude Vision (= a multimodal LLM) performs OCR and account-item inference in a single shot → the freee API registers the journal entry and attaches the image (= compliant with Japan's e-Document Preservation Act). The certainty of analog paper is bridged into the digital ledger."
+      - num: "03"
+        title: "Monthly automatic checks / reports"
+        text: "Balance reconciliation, anomaly detection, automatic generation and delivery of a monthly P&L PDF. A tax-saving scheme simulation is also integrated, minimizing the aggregation cost at tax-filing time."
+  progress:
+    num: "§ 03"
+    marginalia: "Progress"
+    title: "Development status."
+    paragraph_1: '<strong>Phase 0 scaffolding was completed on 2026-05-21.</strong> App registration on the freee developer portal, implementation of the OAuth 2.0 authorization flow, and a working connection to the transactions API have all been reached.'
+    paragraph_2: 'Phase 1 (= rules engine + home-business allocation + tax-saving simulation) will start once the trade-name bank account is opened. Phase 2 (= Discord Bot + Claude Vision receipt OCR) follows the stabilization of Phase 1.'
+  stack:
+    num: "§ 04"
+    marginalia: "Stack"
+    title: "Technical stack."
+    items:
+      - "TypeScript + tsx (= no build step)"
+      - "freee Accounting API (= OAuth 2.0)"
+      - "Anthropic Claude Vision (= Claude 4.x / multimodal)"
+      - "discord.js (= Bot intake channel)"
+      - "zod (= API response validation)"
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "Related links."
+    items:
+      - label: "Code"
+        href: "https://github.com/ChatteLapin/business"
+        text: "github.com/ChatteLapin/business"
+        note: ""
+        external: true
+      - label: "Operations doc"
+        href: "https://github.com/ChatteLapin/business/blob/main/CLAUDE.md"
+        text: "CLAUDE.md"
+        note: ""
+        external: true
+      - label: "Security"
+        href: "https://github.com/ChatteLapin/business/blob/main/SECURITY.md"
+        text: "SECURITY.md"
+        note: ""
+        external: true
+      - label: "Contact"
+        href: "/en#contact"
+        text: "Contact section on the front page"
+        note: ""
+        external: false
+
 products_volt:
   layout:
     title: "volt"

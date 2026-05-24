@@ -141,6 +141,85 @@ products:
       tagline: "ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
       badge: "公開ブランド・広報"
 
+products_business:
+  layout:
+    title: "business — AI 会計自動化"
+    description: "freee API + Claude Vision による会計自動化基盤。 紙のレシートと帳簿を AI でデジタルに編みなおす ChatteLapin 内部運用基盤。"
+  breadcrumb_label: "プロダクト"
+  header:
+    eyebrow: "運営基盤"
+    title: "business"
+    tagline: "AI 駆動 会計自動化 — 事業運営基盤。"
+    meta:
+      field_label: "分野"
+      field_value: "freee × Claude Vision"
+      status_label: "状態"
+      status_value: "Phase 0 完了 (2026-05-21)"
+      policy_label: "方針"
+      policy_value: "OSS 化前提で開発進行"
+  position:
+    num: "§ 01"
+    marginalia: "Position"
+    title: "位置づけ。"
+    paragraph_1: 'business は、 ChatteLapin の <strong>事業運営基盤</strong> です。 商品として外販はせず、 事業運営の実務時間を最小化するための仕組みです。 ミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 会計実務という最も「手間と時間を奪う領域」 で実装しています。'
+    paragraph_2: '個人事業を選んだ動機自体が「会計のかなりの部分を AI で自動化できそうだから」 でした。 自動化基盤を内製することで、 事業者本人の時間をプロダクト開発・創造活動に振り向けられる構造を作ります。'
+    paragraph_3: '将来的なオープンソース公開を視野に入れ、 同じ立場の個人事業者・開発者の参考となる実装記録として整備していきます。'
+  pipeline:
+    num: "§ 02"
+    marginalia: "Pipeline"
+    title: "3 層パイプライン。"
+    layers:
+      - num: "01"
+        title: "銀行 / カードの自動取り込み"
+        text: "屋号口座と各種カードからの取引を freee 自動同期で取り込み、 自動仕訳ルールエンジンが摘要 → 勘定科目をマッピング。 信頼度しきい値で「自動確定」 と「レビュー待ち」 を分岐します。"
+      - num: "02"
+        title: "紙のレシートを AI で編みなおす"
+        text: "スマートフォンで撮影した紙のレシートを Discord 経由で受信 → Claude Vision (= マルチモーダル LLM) で OCR + 勘定科目推論を一発実行 → freee API で仕訳登録 + 画像添付 (= 電子帳簿保存法対応)。 アナログな紙の確かさを、 デジタルの帳簿に橋渡しします。"
+      - num: "03"
+        title: "月次自動チェック / レポート"
+        text: "残高合致チェック、 異常検知、 月次収支 PDF レポートの自動生成と通知。 節税スキーム適用シミュレーションも統合し、 確定申告期の集計コストを最小化します。"
+  progress:
+    num: "§ 03"
+    marginalia: "Progress"
+    title: "開発状況。"
+    paragraph_1: '<strong>2026-05-21 に Phase 0 骨格完了</strong>。 freee 開発者ポータルでアプリ登録 / OAuth 2.0 認可フロー実装 / 取引取得 API 接続動作確認まで到達済です。'
+    paragraph_2: 'Phase 1 (= 自動仕訳ルールエンジン + 家事按分 + 節税シミュレーション) は屋号口座開設完了後に着手予定。 Phase 2 (= Discord Bot + Claude Vision レシート OCR) は Phase 1 安定後。'
+  stack:
+    num: "§ 04"
+    marginalia: "Stack"
+    title: "技術スタック。"
+    items:
+      - "TypeScript + tsx (= ビルド不要)"
+      - "freee 会計 API (= OAuth 2.0)"
+      - "Anthropic Claude Vision (= Claude 4.x / マルチモーダル)"
+      - "discord.js (= Bot 受付チャネル)"
+      - "zod (= API レスポンス validation)"
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "関連リンク。"
+    items:
+      - label: "コード"
+        href: "https://github.com/ChatteLapin/business"
+        text: "github.com/ChatteLapin/business"
+        note: ""
+        external: true
+      - label: "運用ドキュメント"
+        href: "https://github.com/ChatteLapin/business/blob/main/CLAUDE.md"
+        text: "CLAUDE.md"
+        note: ""
+        external: true
+      - label: "セキュリティ運用"
+        href: "https://github.com/ChatteLapin/business/blob/main/SECURITY.md"
+        text: "SECURITY.md"
+        note: ""
+        external: true
+      - label: "お問合せ"
+        href: "/#contact"
+        text: "トップページのお問合せセクション"
+        note: ""
+        external: false
+
 products_volt:
   layout:
     title: "volt"
