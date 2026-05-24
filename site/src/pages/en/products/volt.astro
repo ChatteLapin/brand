@@ -1,16 +1,16 @@
 ---
-import Layout from '../../components/Layout.astro';
-import i18n from '../../../../data/i18n/ja.yaml';
+import Layout from '../../../components/Layout.astro';
+import i18n from '../../../../../data/i18n/en.yaml';
 
 const p = i18n.products_volt;
 ---
 
-<Layout title={p.layout.title} description={p.layout.description}>
+<Layout title={p.layout.title} description={p.layout.description} locale="en">
   <article class="product-article">
     <header class="product-header reveal">
       <div class="col-wrap">
         <p class="product-header__breadcrumb">
-          <a href="/#products">{p.breadcrumb_label}</a>
+          <a href="/en#products">{p.breadcrumb_label}</a>
           <span aria-hidden="true">/</span>
           <span>{p.header.title}</span>
         </p>

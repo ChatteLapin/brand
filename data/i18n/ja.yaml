@@ -141,6 +141,79 @@ products:
       tagline: "ロゴ・ガイドライン・公式サイトのソース・将来の広報物を集約する公開ブランド・広報資産基盤。 印刷物と画面の双方で揺らがないブランド体験の source of truth。"
       badge: "公開ブランド・広報"
 
+products_volt:
+  layout:
+    title: "volt"
+    description: "ChatteLapin の実験プロダクト。 AI Proxy + Discord Bot + 構造化データ管理によるオンラインコミュニティ運営の実証実験プロジェクト。"
+  breadcrumb_label: "プロダクト"
+  header:
+    eyebrow: "実験プロダクト"
+    title: "volt"
+    tagline: "AI 活用 コミュニティ運営の実証実験。"
+    meta:
+      field_label: "分野"
+      field_value: "AI Proxy × Bot 運用"
+      status_label: "状態"
+      status_value: "稼働中 / 知見蓄積"
+      bridge_label: "接続先"
+      bridge_value: "Talent B2B 機能の前段検証"
+  purpose:
+    num: "§ 01"
+    marginalia: "Purpose"
+    title: "プロジェクトの目的。"
+    paragraph_1: 'volt は <strong>AI Proxy + Discord Bot + 構造化データ管理</strong> を組み合わせた、 オンラインコミュニティ運営の実証実験プロジェクトです。 ChatteLapin のミッション「テクノロジーとアナログの間に、 静かな時間を置く」 を、 デジタル空間の人と人の小さな縁という観点で実装しています。'
+    paragraph_2: '現代のオンラインコミュニティは、 短文・即時応答・通知の連鎖で疲弊しがちです。 volt は、 AI を介して情報を整理・要約・提示することで、 メンバーが必要なときだけ深く関わり、 普段は穏やかに繋がれる運営モデルを検証しています。'
+  bridge:
+    num: "§ 02"
+    marginalia: "Bridge to Talent"
+    title: "主力プロダクト『Talent』 への接続。"
+    paragraph: 'volt は単独で完結する実験ではなく、 主力プロダクト <a href="/products/talent">Talent</a> の長期ロードマップにある <strong>B2B 教育機関向け機能</strong> (= マルチプレイヤー教室モード / コミュニティ運営機能) の前段技術検証を兼ねています。'
+    relays:
+      - from: "Bot 運用ノウハウ"
+        to: "Talent の教師ダッシュボード / クラス運営の基盤として転用"
+      - from: "AI Proxy"
+        to: "LLM API キーをクライアントに露出させない安全設計"
+      - from: "構造化データ管理"
+        to: "学習履歴・進捗トラッキングの設計知見"
+      - from: "PM2 プロセス管理"
+        to: "ChatteLapin 全プロダクトの統一運用方針"
+  stack:
+    num: "§ 03"
+    marginalia: "Stack"
+    title: "技術スタック。"
+    items:
+      - "TypeScript + tsx (= ビルド不要の TS 直接実行)"
+      - "discord.js v14 (= Components V2 含む最新仕様)"
+      - "外部 AI API (= Google Cloud Function 経由の Proxy 構成)"
+      - "構造化データストア (= Google Sheets API)"
+      - "PM2 (= namespace=chattelapin で統一管理)"
+  operation:
+    num: "§ 04"
+    marginalia: "Operation"
+    title: "運用実績と検証。"
+    paragraph_1: '本プロジェクトは特定のオンラインゲームコミュニティを対象に運用中で、 メンバーへの情報提供・予定調整・データ集計の AI 支援を実装しています。 運用データから「どのタイミングで人は AI 支援を求めるか」 「Bot が静かに在ることの効果」 等の知見を蓄積しています。'
+    paragraph_2: '※ 運用対象コミュニティは個別契約。 公開・非公開を含め本ページでの詳細記載は控えます。'
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "関連リンク。"
+    items:
+      - label: "repo"
+        href: "https://github.com/ChatteLapin/volt"
+        text: "github.com/ChatteLapin/volt"
+        note: "(= private)"
+        external: true
+      - label: "関連プロダクト"
+        href: "/products/talent"
+        text: "Talent"
+        note: "(= B2B 教育機関向け機能の前段検証先)"
+        external: false
+      - label: "お問合せ"
+        href: "/#contact"
+        text: "トップページのお問合せセクション"
+        note: ""
+        external: false
+
 products_brand:
   layout:
     title: "brand — ブランド・広報資産基盤"

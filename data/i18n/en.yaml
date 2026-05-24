@@ -141,6 +141,79 @@ products:
       tagline: "A public brand and communications foundation that consolidates the logo, guidelines, official site source, and future printed materials. The source of truth for a brand experience that does not waver between print and screen."
       badge: "Public brand"
 
+products_volt:
+  layout:
+    title: "volt"
+    description: "ChatteLapin's experimental product. A proof-of-concept project for online community operations, combining AI Proxy, a Discord Bot, and structured data management."
+  breadcrumb_label: "Products"
+  header:
+    eyebrow: "Experimental product"
+    title: "volt"
+    tagline: "A proof-of-concept for AI-assisted community operations."
+    meta:
+      field_label: "Field"
+      field_value: "AI Proxy × Bot operations"
+      status_label: "Status"
+      status_value: "Live / accumulating insight"
+      bridge_label: "Connects to"
+      bridge_value: "Precursor to Talent's B2B features"
+  purpose:
+    num: "§ 01"
+    marginalia: "Purpose"
+    title: "Project goals."
+    paragraph_1: 'volt combines <strong>an AI Proxy, a Discord Bot, and structured data management</strong> into a proof-of-concept project for online community operations. It implements the ChatteLapin mission "Place a quiet hour between technology and the analog" from the perspective of small ties between people in a digital space.'
+    paragraph_2: "Today's online communities tend to wear thin under chains of short messages, instant replies, and notifications. volt explores an operating model in which AI organizes, summarizes, and presents information — so members engage deeply only when needed, and otherwise stay quietly connected."
+  bridge:
+    num: "§ 02"
+    marginalia: "Bridge to Talent"
+    title: "Connection to the flagship — Talent."
+    paragraph: 'volt is not a standalone experiment; it doubles as technical precursor work for the <strong>B2B school features</strong> (= multiplayer classroom mode / community operations) on the long-term roadmap of <a href="/en/products/talent">Talent</a>.'
+    relays:
+      - from: "Bot operations expertise"
+        to: "Reused as the foundation for Talent's teacher dashboard and class operations"
+      - from: "AI Proxy"
+        to: "A safer design that never exposes LLM API keys to the client"
+      - from: "Structured data management"
+        to: "Design insight for learning history and progress tracking"
+      - from: "PM2 process management"
+        to: "A unified operating policy across all ChatteLapin products"
+  stack:
+    num: "§ 03"
+    marginalia: "Stack"
+    title: "Technical stack."
+    items:
+      - "TypeScript + tsx (= TypeScript executed directly, no build step)"
+      - "discord.js v14 (= the latest spec, including Components V2)"
+      - "External AI API (= Proxy configuration via a Google Cloud Function)"
+      - "Structured data store (= Google Sheets API)"
+      - "PM2 (= managed under namespace=chattelapin)"
+  operation:
+    num: "§ 04"
+    marginalia: "Operation"
+    title: "Operating record and validation."
+    paragraph_1: 'The project is currently operated for a specific online game community, providing AI-assisted information delivery, scheduling, and data aggregation. From operating data we accumulate insight into questions such as "when do people ask AI for help?" and "what is the effect of a Bot that simply, quietly exists?"'
+    paragraph_2: '※ The operating community is under individual agreement. We refrain from detailing here whether the engagement is public or private.'
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "Related links."
+    items:
+      - label: "repo"
+        href: "https://github.com/ChatteLapin/volt"
+        text: "github.com/ChatteLapin/volt"
+        note: "(= private)"
+        external: true
+      - label: "Related product"
+        href: "/en/products/talent"
+        text: "Talent"
+        note: "(= the precursor target for B2B school features)"
+        external: false
+      - label: "Contact"
+        href: "/en#contact"
+        text: "Contact section on the front page"
+        note: ""
+        external: false
+
 products_brand:
   layout:
     title: "brand — Brand & Communications foundation"
