@@ -367,6 +367,264 @@ products_brand:
         note: ""
         external: false
 
+products_talent:
+  layout:
+    title: "Talent"
+    description: "国際文化 × 経営シミュレーション × 教育の PWA ゲーム『Talent』。 子どもがひとりで遊んでも、 大人がそっと推せる経営シミュレーション。"
+  breadcrumb_label: "プロダクト"
+  header:
+    eyebrow: "主力プロダクト"
+    title: "Talent"
+    tagline: "子どもがひとりで遊んでも、 大人がそっと推せる経営シミュレーション。"
+    meta:
+      field_label: "分野"
+      field_value: "経営シミュレーション × 国際文化 × 教育"
+      distribution_label: "配信"
+      distribution_value: "PWA (Cloudflare Access)"
+      status_label: "状態"
+      status_value: "v0.x 初期版 開発中"
+  overview:
+    num: "§ 01"
+    marginalia: "Overview"
+    title: "作品の概要。"
+    paragraph_1: '<strong>Talent</strong> は、 PWA (= プログレッシブ Web アプリ) として配信される、 経営シミュレーションゲームです。 プレイヤーは、 海辺の小さな商業町で店を構え、 朝の市場で材料を求め、 自らの手で品を仕上げ、 お客さまをお迎えし、 夜には町の人々と短いひとときを過ごす — その一日一日を、 暦のように静かに重ねていきます。'
+    paragraph_2: '特筆すべきは、 本作が <strong>「ゲームをすること自体が、 ゆるやかな学習体験になる」</strong> よう設計されている点です。 算数 (= 商売の収支)、 社会 (= 国際文化・地理、 そしてシリーズを通じた <strong>多様な職業との出会い</strong>)、 国語 (= 日本語の読み書きと言い回し)、 <strong>外国語</strong> (= 画面右上に常設された言語切替ボタンで、 同じ場面を母語と他言語で並べて見る)、 経済 (= 価格と需要の関係)、 食 (= 食材と季節)、 人との関わり方 (= 親密度と別れと文通) が、 説教や強制ではなく、 毎日のリズムのなかに織り込まれています。'
+    callout:
+      label: "Design Principle"
+      text: '本作に <strong>ゲームオーバーは存在しません</strong>。 在庫を切らした翌日は「もう少し多く焼いてみよう」、 売れ残った翌日は「次は何を変えようか」 — 失敗が、 そのまま <strong>翌日の工夫</strong> と <strong>やりがい</strong> の入口に変わるよう設計されています。 苦痛と絶望でプレイヤーを縛るのではなく、 工夫の余地と「次の一手」 を促す作品です。'
+  etymology:
+    num: "§ 02"
+    marginalia: "Etymology"
+    title: "タイトルについて。"
+    paragraph_1: '古代ギリシャ・ローマ時代、 「タレント (talent)」 は重量と通貨の単位として用いられていました。 やがて新約聖書の「タラントのたとえ話」 を経て、 中世以降のヨーロッパ諸言語では「神から与えられた才能」 を意味する言葉として広がっていきます。 経済的な価値の単位と、 人がもつ可能性 — その二重の意味が、 ひとつの語に静かに重ねられているのです。'
+    paragraph_2: '本作のタイトル <strong>『Talent』</strong> は、 この二重性を意図的に引き受けています。 ゲーム内では、 プレイヤーが日々の商いで得る通貨の単位もまた <strong>「タレント」 (Ŧ)</strong> と呼ばれます。 商売の収支を積み重ねることは、 そのまま <strong>才能の蓄積</strong> でもある — タイトルと通貨が同じ語を共有することで、 経営シミュレーションでありながら教育性を備えた本作の構造を、 通貨記号ひとつが静かに体現しています。'
+    callout:
+      label: "Etymology"
+      text: '<strong>talent</strong> (英) / <strong>τάλαντον</strong> (古ギ) / <strong>talentum</strong> (羅) — 元来は天秤に乗せて量る重さの単位であり、 そこから秤量された貴金属の量、 ひいては通貨単位を指すようになりました。 通貨記号 <strong>Ŧ</strong> (U+0166) は、 ラテン文字 T に横線を加えた字形で、 「秤の梁を載せた T」 という視覚的記号性も兼ねます。'
+  principles:
+    num: "§ 03"
+    marginalia: "Principles"
+    title: "設計原則。<br />押しつけない、 教えない、 隠さない。"
+    lede: "Talent の教育設計には、 一貫した三つの原則があります。 ゲーム内体験のなかに学習が織り込まれていますが、 プレイヤーに「いま勉強している」 と感じさせる演出は徹底して避けます。"
+    items:
+      - num: "i"
+        title: "押しつけない"
+        text: '「ためになる」 演出や教科書的注釈は出さない。 学びは結果として後から気づくものとして設計します。'
+      - num: "ii"
+        title: "教えない"
+        text: '説明的なテキスト・チュートリアル過剰演出は避ける。 ゲーム世界の住人たちが体験を <em>実演</em> します。'
+      - num: "iii"
+        title: "隠さない"
+        text: '子どもが意味を取りにくい言葉や概念には、 文脈で自然に意味が伝わる工夫を入れる。 ふりがな (= ルビ) は初出時に必ず付けます。'
+  axes:
+    num: "§ 04"
+    marginalia: "Three Axes"
+    title: "3 軸統合の独自性。"
+    items:
+      - num: "01"
+        title: "経営シミュレーション"
+        text: "仕入・製造・値付け・接客の毎日サイクル。 収支感覚を自然に。"
+      - num: "02"
+        title: "国際文化"
+        text: "第 1 篇から始まり、 シリーズを通じて多国モチーフを展開。 各国文化の魅力的・肯定的側面を意図的に描写。"
+      - num: "03"
+        title: "教育"
+        text: "国語 / 外国語 / 算数 / 社会 / 経済・商業 / 食育 / 社会性 / 歴史・道徳 の 8 領域を体系化。"
+    lift_text: '既存ゲーム市場では、 これら 3 軸を同時に高水準で統合した作品は <strong>ほぼ存在しません</strong>。 Talent はこの空白地帯を占有することで、 子どもと保護者・教育機関に新しい選択肢を提供します。'
+  curriculum:
+    num: "§ 05"
+    marginalia: "Curriculum"
+    title: "教育設計 — 8 領域の体系化。"
+    paragraph: "本作は、 学校の教科に対応する <strong>8 領域</strong> をゲーム内体験のなかに意図的に内包しています。 教育機関への導入を視野に入れた、 説明可能な根拠資料として体系化しています。"
+    table:
+      head_area: "領域"
+      head_body: "ゲーム内での学習体験"
+    rows:
+      - area: "国語"
+        body: "古めかしい言葉遣い・体言止め・読解力。 短文中心メディアへの避難所として「読み続ける筋肉」 を育てる。 ふりがな初出必須"
+      - area: "外国語"
+        body: "画面右上に常設された言語切替ボタンで、 同じ場面を母語と他言語で並べて見る。 「他言語で同じことが言える」 という気づきが言語学習の入口に"
+      - area: "算数"
+        body: "加減算・乗除算・割合・概算 (= 仕入・売上・利益・利益率の毎日サイクル)。 「身近な場面で使う」 経験で定着"
+      - area: "社会"
+        body: "地理・異文化理解・国際交流。 加えて、 多種多様な職業の存在と社会構造への気づき (= 業種拡張、 次セクション参照)"
+      - area: "経済・商業"
+        body: "価格と需要・在庫リスクと機会損失・原価率の感覚。 「お金の話」 を家庭でしにくい風土への代替的体験"
+      - area: "食育"
+        body: "食材の種類・組み合わせ・原産地・季節。 食育基本法 (= 2005) の理念に沿った「食を通じた人格形成」"
+      - area: "社会性"
+        body: "親密度の積み重ね・別れの受容・非同期コミュニケーション (= 文通)。 「常時接続疲れ」 への対案"
+      - area: "歴史・道徳"
+        body: "語源・食の伝播史・暦のリズム。 失敗との付き合い方、 ものを大切にする態度、 他者への配慮を住人たちが実演"
+  vocations:
+    num: "§ 06"
+    marginalia: "Vocations"
+    title: "業種拡張による社会科の補強。"
+    paragraph: '従来の経営シミュレーションは、 カフェ・コンビニ・住宅街など華やかな職種に偏ることが多い分野です。 Talent はこれと異なり、 シリーズを通じて <strong>社会を支える多様な職業</strong> を意図的に取り上げます。 これは社会科 (= 職業観・労働観・社会構造の理解) を担う本作の中核差別化軸です。'
+    items:
+      - tag: "A"
+        title: "親しみやすい入口"
+        text: "パン屋・ケーキ屋・木工房・園芸・ファミレス等。 既存経営シミュレーション枠の延長線として、 子どもが入りやすい題材。"
+      - tag: "B"
+        title: "成り手不足の伝統職業"
+        text: "農業・漁業・林業・伝統工芸等。 日本特有の社会課題を、 やりがいと美しさとともにゲーム体験に。"
+      - tag: "C"
+        title: "夜間に働く職業"
+        text: '物流・警備・鉄道保線・印刷等。 「自分の見ていない時間にも社会は動いている」 気づきの提供。'
+      - tag: "D"
+        title: "地味だが社会必須のインフラ職業"
+        text: "電気・水道・ガス・郵便・ゴミ収集等。 「当たり前を支える人々」 への気づきと感謝。"
+    lift_text: 'この拡張により、 将来の進路選択時に <strong>「思い出される選択肢」</strong> を増やし、 「華やかな職業 = 良い職業」 という単純化された価値観を、 ゲーム体験のなかで自然に解体することを目指します。'
+  safety:
+    num: "§ 07"
+    marginalia: "Safety"
+    title: "親が安心して子に渡せる設計。"
+    check_items:
+      - "<strong>暴力・流血・残酷描写ゼロ</strong>"
+      - "<strong>性的描写 / 恋愛強要 / セクハラ要素ゼロ</strong>"
+      - "<strong>賭博 / ガチャ / 確率課金ゼロ</strong> — pay-to-win 要素を構造的に排除"
+      - "<strong>リアルタイム multi / 知らない人とのチャットなし</strong> — 非同期の文通・レシピ共有のみ"
+      - "<strong>ゲームオーバーなし</strong> — 失敗を翌日の工夫に変える設計"
+      - "<strong>各国モチーフは敬意ある描写に限定</strong> — 差別的・卑下的・揶揄的描写は一切なし。 政治・宗教・戦争・植民地はシリーズ全体の方針として扱わない"
+    subtitle: "国際基準への準拠。<br />初日から設計に組み込む。"
+    subtitle_paragraph: "各国・各地域の子ども保護法規・年齢区分制度に、 開発の初日から準拠する設計です。 後付けではなく、 構造的に組み込むことで国際展開と教育機関導入の障壁を最小化します。"
+    table:
+      head_standard: "規格"
+      head_area: "対応領域"
+    standards:
+      - name: "COPPA"
+        href: "https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act"
+        text: "米国 児童オンラインプライバシー保護法 (= 13 歳未満児童の個人情報収集規制)"
+      - name: "GDPR-K"
+        href: "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"
+        text: "EU 一般データ保護規則の児童特例 (= 16 歳未満児童の保護者同意)"
+      - name: "APPI"
+        href: "https://www.ppc.go.jp/personalinfo/legal/"
+        text: "日本 個人情報保護法 (= 個人情報保護委員会 公式)"
+      - name: "IARC 全年齢"
+        href: "https://www.globalratings.com/"
+        text: "国際年齢評価連合の全年齢区分 (= 全プラットフォームで統一年齢ガイド)"
+      - name: "PEGI 3"
+        href: "https://pegi.info/page/pegi-age-ratings"
+        text: "欧州ゲーム情報 3 歳以上対象 (= 暴力・性的描写・恐怖要素なし)"
+      - name: "ESRB E"
+        href: "https://www.esrb.org/ratings-guide/"
+        text: "北米娯楽ソフトウェア審議会 Everyone 全年齢 (= 全年代向け)"
+  language:
+    num: "§ 08"
+    marginalia: "Language"
+    title: "言語切替で外国語学習を内包。"
+    paragraph_1: "多くのゲームが「設定 → 言語選択 → 再起動」 という重い手順で言語切替を隠す結果、 プレイヤーが第 1 言語のまま終わってしまう現状があります。"
+    paragraph_2: "Talent は <strong>言語切替ボタンを画面右上に常設</strong> し、 ゲーム進行を保ったままワンクリックで JA ↔ EN を切り替えられます。 同じ場面の同じ意味を、 母語と他言語で並べて見比べる — これが、 子どもにとって最初の外国語接触の入口になります。"
+    table:
+      head_scene: "場面"
+      head_ja: "日本語"
+      head_en: "英語"
+    samples:
+      - scene: "朝の仕入"
+        ja: "朝の市場へ"
+        en: "To the morning market"
+      - scene: "接客"
+        ja: "ドアベルが鳴る。 お客さまをお迎えします"
+        en: "The doorbell rings. You greet your guest"
+      - scene: "翌朝"
+        ja: "灯りを消して、 明日に備えましょう"
+        en: "Turn off the lamp. Tomorrow is another day"
+    paragraph_quiet: "翻訳は機械翻訳の素通しではなく、 各言語の素朴さを尊重した人の手による調整。 初期版は JA / EN の 2 言語、 シリーズ進行とともにフランス語・ドイツ語等を篇に対応して段階追加できる構造です。"
+  market:
+    num: "§ 09"
+    marginalia: "Market"
+    title: "ゲーム市場での位置づけ。<br />3 軸統合の空白地帯。"
+    paragraph: "既存の経営シミュレーション・教育系ゲーム・歴史商業ゲームのいずれも、 <strong>「経営シミュレーション × 国際文化 × 教育」 の 3 軸を同時に高水準で揃えていません</strong>。 Talent はこの空白地帯に位置します。"
+    table:
+      head_area: "領域"
+      head_titles: "代表作"
+      head_gap: "不足している軸"
+    rows:
+      - area: "商店経営シミュレーション"
+        titles: "Recettear 等"
+        gap: "国際文化展開なし / 教育設計なし"
+      - area: "中世商業ゲーム"
+        titles: "Patrician / Spice and Wolf 等"
+        gap: "大人向け / 子ども向け配慮なし"
+      - area: "教育系創造ゲーム"
+        titles: "Minecraft Education / Roblox Education"
+        gap: "経済・経営の体系学習が空白"
+      - area: "農業 / 食育系"
+        titles: "Stardew Valley / Sakuna 等"
+        gap: "国際文化展開なし / 学習主眼ではない"
+    lift_text: 'Talent は、 Minecraft / Roblox のような大企業教育プロダクトと直接競合せず、 <strong>「Minecraft の隣の選択肢」</strong> として、 経済・経営・国際文化の体系学習を担う位置を狙います。'
+  continuity:
+    num: "§ 10"
+    marginalia: "Continuity"
+    title: "シリーズ縦糸 — 篇を超える継承。"
+    paragraph: "Talent は第 1 篇単独で完結する作品ではなく、 シリーズを通じて世界が広がっていく構造を持ちます。 各篇で出会った人物・身につけた言葉・蓄積した関係性が、 次の篇でも生き続けます。"
+    items:
+      - '<strong>キャラの縦糸</strong> — 各章で出会う人物が、 別の篇でも文通や再会の形で再登場。 一度きりの「すれ違い」 ではなく、 長く愛される関係を構築。'
+      - '<strong>言語の縦糸</strong> — 第 1 篇では JA / EN、 第 2 篇以降は各篇のモチーフ国に対応する言語が、 物語の自然な流れで段階追加。'
+      - '<strong>業種の縦糸</strong> — 第 1 篇のパン屋から始まり、 篇ごとに新業種を扱いつつ、 「商売の基本サイクル」 という共通文法は維持。'
+  roadmap:
+    num: "§ 11"
+    marginalia: "Roadmap"
+    title: "ロードマップ。"
+    table:
+      head_version: "バージョン"
+      head_content: "内容"
+      head_time: "時期"
+    rows:
+      - version: "v0.x (初期版)"
+        content: "第 1 篇 第 1 章「パン屋の朝」 / 30 日通しプレイ可"
+        time: "開発進行中"
+      - version: "v1.0"
+        content: "エピローグ完成、 アカウント・セーブ同期、 ストア配信"
+        time: "初期版 評価後"
+      - version: "v1.x"
+        content: "B2B 教育機関ライセンス / 学校向け管理画面 / 多言語追加"
+        time: "v1.0 後"
+      - version: "v2.0"
+        content: "第 2 篇 / 業種転用"
+        time: "2027 想定"
+      - version: "シリーズ"
+        content: "第 3 篇以降、 各国を巡る縦糸キャラの旅"
+        time: "長期"
+  distribution:
+    num: "§ 12"
+    marginalia: "Distribution"
+    title: "配信プラットフォーム。"
+    items:
+      - num: "01"
+        title: "第 1 段階"
+        text: "PWA (= talent.orz.cc で配信、 ホーム画面追加対応)。 インストール不要。"
+      - num: "02"
+        title: "第 2 段階"
+        text: "itch.io / Steam (= ブラウザゲームカテゴリ) / Epic Games Store。"
+      - num: "03"
+        title: "第 3 段階"
+        text: "App Store / Google Play (= Capacitor 等で wrapping)。"
+      - num: "B2B"
+        title: "教育機関向け"
+        text: "別途 B2B チャネルで提供。"
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "関連リンク。"
+    items:
+      - label: "開発状況・進捗"
+        href: "https://github.com/ChatteLapin/talent"
+        text: "github.com/ChatteLapin/talent"
+        note: ""
+        external: true
+      - label: "限定公開デモ"
+        href: "https://talent.orz.cc"
+        text: "talent.orz.cc"
+        note: "(= Cloudflare Access ゲート)"
+        external: true
+      - label: "お問合せ"
+        href: "/#contact"
+        text: "トップページのお問合せセクション"
+        note: ""
+        external: false
+
 contact:
   num: "§ 04"
   marginalia: "Contact"

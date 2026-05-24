@@ -367,6 +367,264 @@ products_brand:
         note: ""
         external: false
 
+products_talent:
+  layout:
+    title: "Talent"
+    description: "Talent — a PWA game that weaves global cultures × business simulation × education. A business simulation a child can play alone, and a parent can quietly recommend."
+  breadcrumb_label: "Products"
+  header:
+    eyebrow: "Flagship product"
+    title: "Talent"
+    tagline: "A business simulation a child can play alone, and a parent can quietly recommend."
+    meta:
+      field_label: "Field"
+      field_value: "Business simulation × Global culture × Education"
+      distribution_label: "Distribution"
+      distribution_value: "PWA (Cloudflare Access)"
+      status_label: "Status"
+      status_value: "v0.x initial build in development"
+  overview:
+    num: "§ 01"
+    marginalia: "Overview"
+    title: "About the work."
+    paragraph_1: '<strong>Talent</strong> is a business simulation game delivered as a PWA (= Progressive Web App). The player opens a small shop in a seaside trading town, finds materials at the morning market, finishes the goods by hand, welcomes guests through the day, and spends a brief moment with the townspeople at night — quietly layering one day upon the next, like leaves of a calendar.'
+    paragraph_2: 'What deserves emphasis is that the work is designed so that <strong>playing the game itself becomes a gentle learning experience</strong>. Arithmetic (= the ledger of trade), social studies (= global cultures and geography, and through the series, <strong>encounters with a wide range of vocations</strong>), national language (= reading, writing, and Japanese phrasing), <strong>foreign language</strong> (= a language-switch button anchored at the top-right of the screen, placing the same scene side by side in the mother tongue and a foreign tongue), economics (= the relation between price and demand), food (= ingredients and seasons), and ways of relating to people (= closeness, parting, and letters) — none of these are preached or imposed; all are woven into the rhythm of the daily round.'
+    callout:
+      label: "Design Principle"
+      text: 'There is <strong>no game over</strong> in this work. The day after stock runs out becomes "let''s bake a little more next time"; the day after goods go unsold becomes "what shall we change tomorrow?" — failure is designed to turn directly into <strong>tomorrow''s ingenuity</strong> and the <strong>delight of trying</strong>. The work does not bind the player with pain and despair; it invites them toward the room for ingenuity and the next move.'
+  etymology:
+    num: "§ 02"
+    marginalia: "Etymology"
+    title: "About the title."
+    paragraph_1: 'In ancient Greece and Rome, "talent" was used as a unit of weight and currency. By way of the New Testament''s Parable of the Talents, the word later spread through medieval European languages to mean "a gift bestowed from above." A unit of economic value, and the possibility a person holds — those two meanings are quietly layered in a single word.'
+    paragraph_2: 'The title <strong>Talent</strong> deliberately takes on this duality. Inside the game, the unit of currency the player earns through daily trade is also called <strong>"Talent" (Ŧ)</strong>. To accumulate the books of trade is, at the same time, to <strong>accumulate one''s talent</strong> — by sharing a single word for the title and the currency, the structure of the work, at once business simulation and educational, is quietly carried by a single currency mark.'
+    callout:
+      label: "Etymology"
+      text: '<strong>talent</strong> (Eng.) / <strong>τάλαντον</strong> (Greek) / <strong>talentum</strong> (Lat.) — originally a unit of weight placed on a balance, and from there a measure of weighed precious metal, and in time a unit of currency. The currency mark <strong>Ŧ</strong> (U+0166) is the Latin letter T with a crossbar, also bearing the visual sign of "a T carrying the beam of a balance."'
+  principles:
+    num: "§ 03"
+    marginalia: "Principles"
+    title: "Design principles.<br />Do not impose, do not lecture, do not hide."
+    lede: 'Talent''s educational design rests on three consistent principles. Learning is woven into the in-game experience, yet any device that would make the player feel "I am studying now" is carefully avoided.'
+    items:
+      - num: "i"
+        title: "Do not impose"
+        text: 'No "improving" devices, no textbook-style footnotes. Learning is designed as something one notices later, as an aftereffect.'
+      - num: "ii"
+        title: "Do not lecture"
+        text: 'Explanatory text and excessive tutorialization are avoided. The townspeople of the game world <em>act out</em> the experience.'
+      - num: "iii"
+        title: "Do not hide"
+        text: 'For words and concepts that may be hard for a child to grasp, the meaning is made to come across naturally through context. Furigana (= phonetic ruby annotations) are always provided on first appearance.'
+  axes:
+    num: "§ 04"
+    marginalia: "Three Axes"
+    title: "The originality of integrating three axes."
+    items:
+      - num: "01"
+        title: "Business simulation"
+        text: "The daily cycle of purchasing, making, pricing, and serving. A natural sense of the ledger."
+      - num: "02"
+        title: "Global culture"
+        text: "Starting with Part I and unfolding through the series, motifs from many nations. The attractive and affirming sides of each culture are depicted with deliberate care."
+      - num: "03"
+        title: "Education"
+        text: "A systematized framework of eight domains: national language / foreign language / arithmetic / social studies / economics & commerce / food education / sociality / history & ethics."
+    lift_text: 'In the existing game market, works that integrate these three axes simultaneously and at a high level <strong>scarcely exist</strong>. By occupying this empty quarter, Talent offers a new option to children, parents, and educational institutions.'
+  curriculum:
+    num: "§ 05"
+    marginalia: "Curriculum"
+    title: "Educational design — a system of eight domains."
+    paragraph: 'This work deliberately weaves <strong>eight domains</strong> corresponding to school subjects into the in-game experience. The framework is systematized as an evidence document that can be presented to educational institutions considering adoption.'
+    table:
+      head_area: "Domain"
+      head_body: "In-game learning experience"
+    rows:
+      - area: "National language"
+        body: 'Old-fashioned turns of phrase, the noun-ending style, reading comprehension. As a refuge from short-form media, it trains "the muscle to keep reading." Furigana required on first appearance.'
+      - area: "Foreign language"
+        body: 'A language-switch button anchored at the top-right of the screen places the same scene side by side in the mother tongue and another tongue. The realization that "the same thing can be said in another language" becomes the doorway to language learning.'
+      - area: "Arithmetic"
+        body: 'Addition, subtraction, multiplication, division, ratios, estimation (= the daily cycle of cost, revenue, profit, and margin). It settles through the experience of being "used in scenes close at hand."'
+      - area: "Social studies"
+        body: 'Geography, cross-cultural understanding, international exchange. And awareness of the existence of a wide range of vocations and the structure of society (= vocational expansion; see the next section).'
+      - area: "Economics & commerce"
+        body: 'A sense of price and demand, inventory risk and opportunity loss, cost ratios. An alternative experience for households where it is hard to talk about money.'
+      - area: "Food education"
+        body: 'Kinds of ingredients, combinations, origins, seasons. "Character formation through food," in line with the spirit of Japan''s Food Education Basic Act (= 2005).'
+      - area: "Sociality"
+        body: 'The accumulation of closeness, the acceptance of parting, asynchronous communication (= letters). A response to "always-on fatigue."'
+      - area: "History & ethics"
+        body: 'Etymology, the history of how foods traveled, the rhythm of the calendar. How to live with failure, an attitude that values things, and consideration for others — all acted out by the townspeople.'
+  vocations:
+    num: "§ 06"
+    marginalia: "Vocations"
+    title: "Strengthening social studies through vocational expansion."
+    paragraph: 'Conventional business simulations have tended to favor showy occupations — cafés, convenience stores, residential districts. Talent departs from this; through the series, it deliberately takes up <strong>the wide range of vocations that support society</strong>. This is the core differentiating axis through which the work carries the social-studies aim of understanding work, labor, and social structure.'
+    items:
+      - tag: "A"
+        title: "Familiar entry points"
+        text: "Bakery, cake shop, woodwork studio, gardening, family restaurant. As an extension of the existing business-simulation frame, themes a child can step into easily."
+      - tag: "B"
+        title: "Traditional vocations short of successors"
+        text: "Agriculture, fishery, forestry, traditional crafts. Social challenges particular to Japan, brought into game experience together with their meaning and their beauty."
+      - tag: "C"
+        title: "Vocations that work through the night"
+        text: 'Logistics, security, railway track maintenance, printing. The realization that "society moves even in the hours one does not see."'
+      - tag: "D"
+        title: "Quiet but essential infrastructure vocations"
+        text: 'Electricity, water, gas, postal service, waste collection. Awareness of, and gratitude toward, "the people who hold up the everyday."'
+    lift_text: 'Through this expansion, the work aims to increase the <strong>options that come to mind</strong> at the moment of future career choice, and to quietly take apart, through game experience, the oversimplified view that "a showy job is a good job."'
+  safety:
+    num: "§ 07"
+    marginalia: "Safety"
+    title: "A design parents can safely hand to their children."
+    check_items:
+      - "<strong>Zero violence, bloodshed, or cruelty</strong>"
+      - "<strong>Zero sexual depiction, no forced romance, no harassment elements</strong>"
+      - "<strong>Zero gambling, gacha, or probability-based monetization</strong> — pay-to-win elements are structurally excluded"
+      - "<strong>No real-time multiplayer, no chat with strangers</strong> — only asynchronous letters and recipe sharing"
+      - "<strong>No game over</strong> — failure is designed to turn into tomorrow's ingenuity"
+      - "<strong>National motifs are kept to respectful depiction</strong> — no discriminatory, demeaning, or mocking portrayal. Politics, religion, war, and colonialism are kept outside the scope of the series as a whole"
+    subtitle: "Conformance to international standards.<br />Built into the design from day one."
+    subtitle_paragraph: "The work is designed to conform, from the very first day of development, with each country's and region's child-protection laws and age-classification systems. Rather than retrofitting, structural integration minimizes the barriers to international rollout and institutional adoption."
+    table:
+      head_standard: "Standard"
+      head_area: "Domain covered"
+    standards:
+      - name: "COPPA"
+        href: "https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act"
+        text: "U.S. Children's Online Privacy Protection Act (= regulation on collecting personal information from children under 13)"
+      - name: "GDPR-K"
+        href: "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"
+        text: "EU General Data Protection Regulation, children's special provisions (= guardian consent for those under 16)"
+      - name: "APPI"
+        href: "https://www.ppc.go.jp/personalinfo/legal/"
+        text: "Japan's Act on the Protection of Personal Information (= Personal Information Protection Commission, official)"
+      - name: "IARC All Ages"
+        href: "https://www.globalratings.com/"
+        text: "International Age Rating Coalition's All Ages classification (= a unified age guide across platforms)"
+      - name: "PEGI 3"
+        href: "https://pegi.info/page/pegi-age-ratings"
+        text: "Pan European Game Information, ages 3 and up (= no violence, sexual content, or scary elements)"
+      - name: "ESRB E"
+        href: "https://www.esrb.org/ratings-guide/"
+        text: "North America's Entertainment Software Rating Board, Everyone (= suitable for all ages)"
+  language:
+    num: "§ 08"
+    marginalia: "Language"
+    title: "Foreign-language learning, embedded through language switching."
+    paragraph_1: 'In many games, language switching is hidden behind the heavy steps of "settings → language selection → restart," and as a result, many players finish in their first language.'
+    paragraph_2: 'Talent <strong>anchors the language-switch button at the top-right of the screen</strong>, so the player can switch JA ↔ EN with a single click while keeping game progress intact. The same meaning in the same scene, placed side by side in the mother tongue and another — for a child, this becomes the doorway to a first contact with a foreign language.'
+    table:
+      head_scene: "Scene"
+      head_ja: "Japanese"
+      head_en: "English"
+    samples:
+      - scene: "Morning purchasing"
+        ja: "朝の市場へ"
+        en: "To the morning market"
+      - scene: "Serving guests"
+        ja: "ドアベルが鳴る。 お客さまをお迎えします"
+        en: "The doorbell rings. You greet your guest"
+      - scene: "Next morning"
+        ja: "灯りを消して、 明日に備えましょう"
+        en: "Turn off the lamp. Tomorrow is another day"
+    paragraph_quiet: "Translation is not the unfiltered output of machine translation; it is adjusted by human hand, with respect for the plainness of each language. The initial build supports two languages — JA and EN — and the structure allows stage-by-stage additions of French, German, and other languages as the series turns to parts themed on each country."
+  market:
+    num: "§ 09"
+    marginalia: "Market"
+    title: "Position within the game market.<br />The empty quarter where three axes meet."
+    paragraph: 'None of the existing business simulations, educational games, or historical-commerce games <strong>line up the three axes — business simulation × global culture × education — simultaneously and at a high level</strong>. Talent sits within this empty quarter.'
+    table:
+      head_area: "Area"
+      head_titles: "Representative works"
+      head_gap: "Missing axes"
+    rows:
+      - area: "Shop-management simulations"
+        titles: "Recettear, etc."
+        gap: "No global-culture rollout / no educational design"
+      - area: "Medieval commerce games"
+        titles: "Patrician / Spice and Wolf, etc."
+        gap: "For adults / no consideration for children"
+      - area: "Educational creative games"
+        titles: "Minecraft Education / Roblox Education"
+        gap: "The systematic learning of economics and management is left blank"
+      - area: "Agriculture / food-education games"
+        titles: "Stardew Valley / Sakuna, etc."
+        gap: "No global-culture rollout / not centered on learning"
+    lift_text: 'Talent does not directly compete with large-scale educational products such as Minecraft and Roblox; it aims to sit, as <strong>"the option next to Minecraft,"</strong> in the place that carries the systematic learning of economics, management, and global culture.'
+  continuity:
+    num: "§ 10"
+    marginalia: "Continuity"
+    title: "Series warp — inheritance across parts."
+    paragraph: 'Talent is not a work that concludes with Part I alone; it has a structure in which the world widens through the series. The people met in each chapter, the words taken in, the relationships accumulated — all continue to live in the next part.'
+    items:
+      - '<strong>The warp of characters</strong> — people met in each chapter return in other parts through letters and reunion. Rather than one-time "passings," the work builds relationships meant to be cherished over the long term.'
+      - '<strong>The warp of languages</strong> — JA / EN in Part I; from Part II onward, languages corresponding to the motif country of each part are added in stages, in the natural flow of the story.'
+      - '<strong>The warp of vocations</strong> — beginning with the bakery in Part I, each part takes up a new vocation, while maintaining the common grammar of "the basic cycle of trade."'
+  roadmap:
+    num: "§ 11"
+    marginalia: "Roadmap"
+    title: "Roadmap."
+    table:
+      head_version: "Version"
+      head_content: "Contents"
+      head_time: "Timing"
+    rows:
+      - version: "v0.x (initial)"
+        content: 'Part I, Chapter 1 "The Baker''s Morning" / 30-day full playthrough'
+        time: "In active development"
+      - version: "v1.0"
+        content: "Epilogue completed, accounts and save sync, store distribution"
+        time: "After initial-build evaluation"
+      - version: "v1.x"
+        content: "B2B educational-institution license / school admin console / additional languages"
+        time: "After v1.0"
+      - version: "v2.0"
+        content: "Part II / vocational transfer"
+        time: "Targeted for 2027"
+      - version: "Series"
+        content: "From Part III onward, the journey of warp characters across many countries"
+        time: "Long term"
+  distribution:
+    num: "§ 12"
+    marginalia: "Distribution"
+    title: "Distribution platforms."
+    items:
+      - num: "01"
+        title: "Stage 1"
+        text: "PWA (= distributed via talent.orz.cc, with home-screen installation supported). No app installation required."
+      - num: "02"
+        title: "Stage 2"
+        text: "itch.io / Steam (= browser-game category) / Epic Games Store."
+      - num: "03"
+        title: "Stage 3"
+        text: "App Store / Google Play (= wrapped with Capacitor or similar)."
+      - num: "B2B"
+        title: "For educational institutions"
+        text: "Offered through a separate B2B channel."
+  links:
+    num: "§ —"
+    marginalia: "Links"
+    title: "Related links."
+    items:
+      - label: "Development status"
+        href: "https://github.com/ChatteLapin/talent"
+        text: "github.com/ChatteLapin/talent"
+        note: ""
+        external: true
+      - label: "Restricted demo"
+        href: "https://talent.orz.cc"
+        text: "talent.orz.cc"
+        note: "(= behind a Cloudflare Access gate)"
+        external: true
+      - label: "Contact"
+        href: "/en#contact"
+        text: "Contact section on the front page"
+        note: ""
+        external: false
+
 contact:
   num: "§ 04"
   marginalia: "Contact"

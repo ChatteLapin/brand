@@ -1,16 +1,16 @@
 ---
-import Layout from '../../components/Layout.astro';
-import i18n from '../../../../data/i18n/ja.yaml';
+import Layout from '../../../components/Layout.astro';
+import i18n from '../../../../../data/i18n/en.yaml';
 
 const p = i18n.products_talent;
 ---
 
-<Layout title={p.layout.title} description={p.layout.description}>
+<Layout title={p.layout.title} description={p.layout.description} locale="en">
   <article class="product-article">
     <header class="product-header reveal">
       <div class="col-wrap">
         <p class="product-header__breadcrumb">
-          <a href="/#products">{p.breadcrumb_label}</a>
+          <a href="/en#products">{p.breadcrumb_label}</a>
           <span aria-hidden="true">/</span>
           <span>{p.header.title}</span>
         </p>
@@ -396,7 +396,7 @@ const p = i18n.products_talent;
   /* page 共通 style (= product-article / product-header / product-section / section__aside,body,title,paragraph,paragraph--quiet / check-list / link-list) は
      global.css の「Product article shared」 セクションに集約済。 本ファイルでは talent 専用 style のみ維持。 */
 
-  /* section__subtitle / section__paragraph--lift / callout / table-wrap / cell-* は他 page で未使用なので talent.astro に残置 */
+  /* section__subtitle / section__paragraph--lift / callout / table-wrap / cell-* は他 page で未使用なので talent.astro / en/talent.astro に残置 */
 
   .section__subtitle {
     font-family: var(--font-serif-jp);
