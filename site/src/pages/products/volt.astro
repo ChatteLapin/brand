@@ -128,131 +128,9 @@ const p = i18n.products_volt;
 </Layout>
 
 <style>
-  .product-article { padding-bottom: 4rem; }
+  /* page 共通 style (= product-article / product-header / product-section / section__* / link-list / check-list) は
+     global.css に集約済。 本ファイルでは volt 専用 bridge-relay (= volt → talent への矢印付き関係表) のみ維持。 */
 
-  .product-header {
-    padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2.5rem, 5vw, 4rem);
-    border-bottom: 1px solid var(--color-paper-fold);
-  }
-
-  .product-header__breadcrumb {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-ink-faint);
-    margin: 0 0 1.5rem;
-    display: flex;
-    gap: 0.625rem;
-    align-items: center;
-  }
-  .product-header__breadcrumb a {
-    color: var(--color-ink-faint);
-    text-decoration: none;
-  }
-  .product-header__breadcrumb a:hover {
-    color: var(--color-olive-deep);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  .product-header__eyebrow { margin: 0 0 0.875rem; }
-
-  .product-header__title {
-    font-family: var(--font-serif-jp);
-    font-size: clamp(3rem, 8vw, 5rem);
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    margin: 0 0 1rem;
-    line-height: 1;
-    color: var(--color-ink-deep);
-  }
-
-  .product-header__tagline {
-    font-family: var(--font-serif-jp);
-    font-style: italic;
-    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-    color: var(--color-ink-soft);
-    letter-spacing: 0.05em;
-    margin: 0 0 2.5rem;
-    max-width: 60ch;
-  }
-
-  .product-header__meta {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-paper-fold);
-    max-width: 48rem;
-  }
-  @media (min-width: 640px) {
-    .product-header__meta { grid-template-columns: repeat(3, 1fr); }
-  }
-  .product-header__meta > div { display: flex; flex-direction: column; gap: 0.35rem; }
-  .product-header__meta span {
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    letter-spacing: 0.22em;
-    color: var(--color-ink-faint);
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .product-header__meta strong {
-    font-family: var(--font-serif-jp);
-    font-size: 0.9375rem;
-    color: var(--color-ink-deep);
-    letter-spacing: 0.06em;
-    font-weight: 500;
-  }
-
-  .product-section {
-    padding: clamp(3rem, 6vw, 4.5rem) 0;
-    border-bottom: 1px solid var(--color-paper-fold);
-  }
-  .product-section:last-of-type { border-bottom: none; }
-
-  .section__aside {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    padding-top: 0.5rem;
-  }
-  @media (min-width: 960px) {
-    .section__aside {
-      position: sticky;
-      top: 6rem;
-      align-self: flex-start;
-      padding-top: 1rem;
-    }
-  }
-
-  .section__body { min-width: 0; }
-
-  .section__title {
-    font-family: var(--font-serif-jp);
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    line-height: 1.4;
-    color: var(--color-ink-deep);
-    margin: 0.5rem 0 1.5rem;
-  }
-
-  .section__paragraph {
-    font-family: var(--font-sans-jp);
-    font-size: 0.9375rem;
-    line-height: 1.95;
-    color: var(--color-ink-deep);
-    margin: 0 0 1.25rem;
-    max-width: 62ch;
-  }
-  .section__paragraph--quiet {
-    color: var(--color-ink-soft);
-    font-size: 0.875rem;
-  }
-
-  /* Bridge relay (= volt → talent への接続) */
   .bridge-relay {
     list-style: none;
     margin: 2rem 0 0;
@@ -260,7 +138,6 @@ const p = i18n.products_volt;
     display: flex;
     flex-direction: column;
   }
-
   .bridge-relay li {
     display: grid;
     grid-template-columns: minmax(10rem, 14rem) 2rem 1fr;
@@ -279,7 +156,6 @@ const p = i18n.products_volt;
     }
     .bridge-relay__arrow { display: none; }
   }
-
   .bridge-relay__from {
     font-family: var(--font-serif-jp);
     font-weight: 600;
@@ -294,69 +170,5 @@ const p = i18n.products_volt;
   }
   .bridge-relay__to {
     color: var(--color-ink-soft);
-  }
-
-  .check-list {
-    list-style: none;
-    margin: 1.5rem 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-  }
-  .check-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-family: var(--font-sans-jp);
-    font-size: 0.9375rem;
-    line-height: 1.85;
-    color: var(--color-ink-deep);
-  }
-  .check-list li::before {
-    content: "✓";
-    flex-shrink: 0;
-    width: 1.25rem;
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    color: var(--color-olive);
-    line-height: 1.85;
-  }
-
-  .link-list {
-    list-style: none;
-    margin: 1.5rem 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-  }
-  .link-list li {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-    padding: 0.875rem 0;
-    border-top: 1px solid var(--color-paper-fold);
-  }
-  @media (min-width: 640px) {
-    .link-list li {
-      grid-template-columns: 10rem 1fr;
-      gap: 1.5rem;
-      align-items: baseline;
-    }
-  }
-  .link-list__label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-ink-faint);
-    font-weight: 500;
-  }
-  .link-list__note {
-    font-family: var(--font-serif-jp);
-    font-size: 0.8125rem;
-    color: var(--color-ink-faint);
-    font-style: italic;
   }
 </style>
