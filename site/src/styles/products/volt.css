@@ -1,0 +1,55 @@
+/* ChatteLapin /products/volt 専用 style
+ *
+ * ja (= /products/volt.astro) と en (= /en/products/volt.astro) で共通使用。
+ * Phase 4e 拡張 (2026-05-24) で両 .astro ファイル内の重複 <style> ブロックを集約。
+ *
+ * 共通 style (= product-article / product-header / product-section / section__* /
+ * check-list / link-list) は global.css に集約済。 本ファイルでは volt 専用
+ * bridge-relay (= volt → talent への矢印付き関係表) のみ管理。
+ */
+
+.bridge-relay {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bridge-relay li {
+  display: grid;
+  grid-template-columns: minmax(10rem, 14rem) 2rem 1fr;
+  gap: 0.875rem;
+  padding: 1.125rem 0;
+  border-top: 1px solid var(--color-paper-fold);
+  align-items: baseline;
+  font-family: var(--font-sans-jp);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .bridge-relay li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .bridge-relay__arrow { display: none; }
+}
+
+.bridge-relay__from {
+  font-family: var(--font-serif-jp);
+  font-weight: 600;
+  color: var(--color-ink-deep);
+  letter-spacing: 0.06em;
+}
+
+.bridge-relay__arrow {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-olive);
+  text-align: center;
+}
+
+.bridge-relay__to {
+  color: var(--color-ink-soft);
+}

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import i18n from '../../../../../data/i18n/en.yaml';
+import '../../../styles/products/volt.css';
 
 const p = i18n.products_volt;
 ---
@@ -126,49 +127,3 @@ const p = i18n.products_volt;
     </section>
   </article>
 </Layout>
-
-<style>
-  /* page 共通 style (= product-article / product-header / product-section / section__* / link-list / check-list) は
-     global.css に集約済。 本ファイルでは volt 専用 bridge-relay (= volt → talent への矢印付き関係表) のみ維持。 */
-
-  .bridge-relay {
-    list-style: none;
-    margin: 2rem 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .bridge-relay li {
-    display: grid;
-    grid-template-columns: minmax(10rem, 14rem) 2rem 1fr;
-    gap: 0.875rem;
-    padding: 1.125rem 0;
-    border-top: 1px solid var(--color-paper-fold);
-    align-items: baseline;
-    font-family: var(--font-sans-jp);
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-  @media (max-width: 640px) {
-    .bridge-relay li {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
-    .bridge-relay__arrow { display: none; }
-  }
-  .bridge-relay__from {
-    font-family: var(--font-serif-jp);
-    font-weight: 600;
-    color: var(--color-ink-deep);
-    letter-spacing: 0.06em;
-  }
-  .bridge-relay__arrow {
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    color: var(--color-olive);
-    text-align: center;
-  }
-  .bridge-relay__to {
-    color: var(--color-ink-soft);
-  }
-</style>

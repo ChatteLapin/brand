@@ -1,6 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
 import i18n from '../../../../data/i18n/ja.yaml';
+import '../../styles/products/brand.css';
 
 const p = i18n.products_brand;
 ---
@@ -107,50 +108,3 @@ const p = i18n.products_brand;
     </section>
   </article>
 </Layout>
-
-<style>
-  /* page 共通 (= product-article / product-header / product-section / section__* / link-list / check-list) は
-     global.css の「Product article shared」 セクションに集約済。 本ファイルでは brand 専用 asset-list のみ維持。 */
-
-  .asset-list {
-    list-style: none;
-    margin: 1.5rem 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .asset-list li {
-    padding: 1.125rem 0;
-    border-top: 1px solid var(--color-paper-fold);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.375rem;
-  }
-  @media (min-width: 560px) {
-    .asset-list li {
-      grid-template-columns: 11rem 1fr;
-      gap: 1.5rem;
-      align-items: baseline;
-    }
-  }
-  .asset-list__title {
-    font-family: var(--font-serif-jp);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--color-ink-deep);
-    letter-spacing: 0.08em;
-    margin: 0;
-  }
-  .asset-list__text {
-    font-family: var(--font-sans-jp);
-    font-size: 0.875rem;
-    line-height: 1.85;
-    color: var(--color-ink-soft);
-    margin: 0;
-  }
-  .asset-list__item--future .asset-list__title {
-    color: var(--color-blush-deep);
-    font-style: italic;
-  }
-</style>

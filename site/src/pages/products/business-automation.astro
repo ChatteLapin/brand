@@ -1,6 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
 import i18n from '../../../../data/i18n/ja.yaml';
+import '../../styles/products/business.css';
 
 const p = i18n.products_business;
 ---
@@ -128,54 +129,3 @@ const p = i18n.products_business;
     </section>
   </article>
 </Layout>
-
-<style>
-  /* page 共通 style (= product-article / product-header / product-section / section__* / link-list / check-list) は
-     global.css に集約済。 本ファイルでは business 専用 layer-list (= 3 層パイプラインの箱型カード) のみ維持。 */
-
-  .layer-list {
-    list-style: none;
-    margin: 1.5rem 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-  }
-  .layer-list__item {
-    display: grid;
-    grid-template-columns: 3.5rem 1fr;
-    gap: 1.25rem;
-    padding: 1.5rem;
-    background-color: rgba(255, 252, 245, 0.55);
-    border: 1px solid var(--color-paper-fold);
-    align-items: start;
-    transition: border-color 200ms ease, background-color 200ms ease;
-  }
-  .layer-list__item:hover {
-    border-color: var(--color-olive);
-    background-color: rgba(255, 252, 245, 0.85);
-  }
-  .layer-list__num {
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
-    color: var(--color-olive);
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding-top: 0.125rem;
-  }
-  .layer-list__title {
-    font-family: var(--font-serif-jp);
-    font-size: 1.0625rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--color-ink-deep);
-    margin: 0 0 0.625rem;
-  }
-  .layer-list__text {
-    font-family: var(--font-sans-jp);
-    font-size: 0.9375rem;
-    line-height: 1.85;
-    color: var(--color-ink-soft);
-    margin: 0;
-  }
-</style>
