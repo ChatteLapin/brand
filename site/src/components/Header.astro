@@ -213,32 +213,28 @@ const navItems = [
     letter-spacing: 0.1em;
   }
 
-  /* locale switch glyph — [A] / [あ] を切替先言語の代表文字として表示。
-     トーンは site-nav__num (= 01/02/03/04) と揃え、 mono + olive + 小サイズ。
-     ja グリフ「あ」 だけは serif-jp に切替えて字形を整える */
+  /* locale switch glyph — IME 切替ボタン風に、 切替先言語の代表文字を
+     正方形・角丸 border で囲って表示。 言語コードのすぐ左に密接配置。
+     色は --color-olive で統一、 主張しすぎない */
   .site-nav__glyph {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.3rem;
+    border: 1px solid var(--color-olive);
+    border-radius: 3px;
     font-family: var(--font-mono);
     font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    color: var(--color-olive);
     font-weight: 500;
-    margin-right: 0.4rem;
-    white-space: nowrap;
+    line-height: 1;
+    color: var(--color-olive);
+    letter-spacing: 0;
   }
   .site-nav__glyph--ja {
     font-family: var(--font-serif-jp);
     font-size: 0.78rem;
-    letter-spacing: 0;
-  }
-  .site-nav__glyph::before {
-    content: "[";
-    opacity: 0.55;
-    margin-right: 0.08em;
-  }
-  .site-nav__glyph::after {
-    content: "]";
-    opacity: 0.55;
-    margin-left: 0.08em;
   }
 
   /* locale switch link — Accept-Language ヒント装飾 (= dot は通常非表示、 suggested 時のみ可視) */
