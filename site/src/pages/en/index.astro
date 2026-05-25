@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../../components/Layout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import logotype from '../../assets/chattelapin-logotype.png';
+import talentLogo1to1 from '../../assets/products/talent-logo-1to1.svg';
 import businessInfo from '../../../../data/business-info.yaml';
 import i18n from '../../../../data/i18n/en.yaml';
 import '../../styles/pages/top.css';
@@ -137,6 +138,7 @@ const bridgeItems = [i18n.mission.bridge.talent, i18n.mission.bridge.volt, i18n.
               size="large"
               number="01"
               variant="primary"
+              logoSrc={talentLogo1to1}
             />
           </div>
 

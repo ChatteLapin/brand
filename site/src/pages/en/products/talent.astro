@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/Layout.astro';
 import i18n from '../../../../../data/i18n/en.yaml';
+import talentLogo3to1 from '../../../assets/products/talent-logo-3to1.svg';
 import '../../../styles/products/talent.css';
 
 const p = i18n.products_talent;
@@ -15,6 +17,12 @@ const p = i18n.products_talent;
           <span aria-hidden="true">/</span>
           <span>{p.header.title}</span>
         </p>
+        <Image
+          src={talentLogo3to1}
+          alt=""
+          class="product-header__logo"
+          loading="eager"
+        />
         <p class="eyebrow product-header__eyebrow">{p.header.eyebrow}</p>
         <h1 class="product-header__title">{p.header.title}</h1>
         <p class="product-header__tagline">{p.header.tagline}</p>

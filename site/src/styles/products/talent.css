@@ -15,6 +15,35 @@
  */
 
 /* ============================================================
+ * Product header — talent 専用 hero ロゴ
+ *
+ * /products/talent (ja/en) page の <header class="product-header"> 直下、
+ * breadcrumb の下に 3:1 ロゴ画像を hero として配置。 site Header の talent
+ * ロゴ pill (= 36px) より大きく、 page の主役として存在感を持たせる。
+ * 配色・border は Header と同調 (= 紙折れ枠 + 紙色背景 + 軽 shadow + pill 角丸)。
+ * ============================================================ */
+
+.product-header__logo {
+  display: block;
+  height: auto;
+  width: clamp(280px, 50vw, 520px);
+  aspect-ratio: 3 / 1;
+  margin: 1.5rem 0 1.75rem;
+  border-radius: clamp(28px, 5vw, 48px);
+  border: 1px solid var(--color-paper-fold);
+  background-color: #fdf6ec;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 14px rgba(74, 90, 47, 0.06);
+}
+
+@media (max-width: 640px) {
+  .product-header__logo {
+    width: 100%;
+    margin: 1rem 0 1.25rem;
+    border-radius: 24px;
+  }
+}
+
+/* ============================================================
  * Section subtitle / lift paragraph
  * ============================================================ */
 
