@@ -215,7 +215,7 @@ const navItems = [
     flex-wrap: wrap;
     justify-content: flex-end;
     column-gap: clamp(1rem, 2.5vw, 2.25rem);
-    row-gap: 0.5rem;
+    row-gap: 0.25rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -410,10 +410,23 @@ const navItems = [
   /* 420px↓ では brand wordmark を隠して左 column を mark のみに絞る帯域。
      旧: talent 項目も hide していたが、 2026-05-26 user fb で nav 全体を flex-wrap
      右寄せ折返し化 → SE 3 (= 375px) でも talent ロゴが 1 行目に収まる設計に変更したため
-     talent 項目 hide は撤去。 wordmark は折返し前提でも左 column を圧迫するため依然 hide。 */
+     talent 項目 hide は撤去。 wordmark は折返し前提でも左 column を圧迫するため依然 hide。
+
+     さらに 2026-05-26 user fb: nav 2 行折返しで header 縦幅が増えた帯域では mark も
+     大きく見せたいため、 brand container を `align-self: stretch` で inner の縦高さに
+     追従させ、 mark-wrap を `height: 100%` + `aspect-ratio: 1` で content 高さに揃う
+     正方形に。 width は固定値撤去で aspect-ratio から intrinsic 算出。 */
   @media (max-width: 420px) {
     .site-header__wordmark {
       display: none;
+    }
+    .site-header__brand {
+      align-self: stretch;
+    }
+    .site-header__mark-wrap {
+      width: auto;
+      height: 100%;
+      aspect-ratio: 1 / 1;
     }
   }
 </style>
