@@ -3,7 +3,8 @@
 // 翻訳テキストは data/i18n/{ja,en}.yaml に集約。 locale は Astro.currentLocale で切替。
 import { Image } from 'astro:assets';
 import mark from '../assets/chattelapin-mark.png';
-import talentLogo from '../assets/products/talent-logo-3to1.svg';
+import talentLogo3to1 from '../assets/products/talent-logo-3to1.svg';
+import talentLogo1to1 from '../assets/products/talent-logo-1to1.svg';
 import jaDict from '../../../data/i18n/ja.yaml';
 import enDict from '../../../data/i18n/en.yaml';
 
@@ -33,17 +34,19 @@ const navItems = [
 <header class="site-header">
   <div class="site-header__inner">
     <a href={homeHref} class="site-header__brand" aria-label={i18n.header.brand_aria}>
-      <Image
-        src={mark}
-        alt=""
-        width={44}
-        height={44}
-        densities={[1, 2, 3]}
-        format="webp"
-        quality={85}
-        loading="eager"
-        class="site-header__mark"
-      />
+      <span class="site-header__mark-wrap" aria-hidden="true">
+        <Image
+          src={mark}
+          alt=""
+          width={44}
+          height={44}
+          densities={[1, 2, 3]}
+          format="webp"
+          quality={85}
+          loading="eager"
+          class="site-header__mark"
+        />
+      </span>
       <span class="site-header__wordmark">
         <span class="site-header__name-ja">シャラパン</span>
         <span class="site-header__name-en">Chatte Lapin</span>
@@ -68,9 +71,15 @@ const navItems = [
                   aria-label={i18n.header.nav.talent_aria}
                 >
                   <Image
-                    src={talentLogo}
+                    src={talentLogo3to1}
                     alt=""
-                    class="site-nav__talent-logo"
+                    class="site-nav__talent-logo site-nav__talent-logo--wide"
+                    loading="eager"
+                  />
+                  <Image
+                    src={talentLogo1to1}
+                    alt=""
+                    class="site-nav__talent-logo site-nav__talent-logo--square"
                     loading="eager"
                   />
                   <span class="site-nav__label site-nav__label--talent" aria-hidden="true">
@@ -149,12 +158,27 @@ const navItems = [
     color: var(--color-ink-deep);
   }
 
-  .site-header__mark {
+  /* brand mark wrapper — 元 PNG が 256x256 で兎猫が中心に小さく描かれており、
+     44x44 円形クリップで余白 (= 四隅) が目立つ。 wrapper を 44px 円形 + overflow:hidden
+     にして、 内部 img を transform: scale で拡大することで円の中身を埋める。
+     wrapper 自体の外形は 44px のまま、 内部だけ拡大される。 */
+  .site-header__mark-wrap {
+    display: inline-block;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     border: 1px solid var(--color-paper-fold);
     background-color: var(--color-paper-warm);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .site-header__mark {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.22);
+    transform-origin: center;
   }
 
   .site-header__wordmark {
@@ -236,26 +260,45 @@ const navItems = [
   }
 
   /* talent ロゴ nav 項目 — 主力プロダクトへの直接導線。
-     古典書物の「巻頭挿絵」 メタファーで番号なし、 ロゴ画像で文字 nav の中に
-     視覚的アクセントを置く。 ロゴ自体に「Talent」 文字を含むため、
-     desktop では label を視覚的に隠す (= screen reader にも aria-hidden で
-     通知しない、 アクセシブル名は aria-label で別途確保)。
-     mobile (640px↓) ではロゴを隠し label テキスト「Talent」 で代替 (= 幅節約)。 */
+     02 プロダクトに密接配置 (= 「products カテゴリの代表 1 つ」 印象)、
+     border-radius pill + 紙折れ色 1px 枠 + 薄 shadow でボタン化、
+     ロゴ自体の白背景 (= #fdf6ec) がサイト paper-warm から浮く問題を
+     角丸ボタンとしてまとめる方向で解決。
+     desktop は 3:1 (= 金貨 + 「Talent」 横書き)、 mobile 640px↓ は
+     1:1 (= 金貨単体に Talent 文字下中央) を 32px で表示。
+     label テキストは常に visually-hidden、 アクセシブル名は <a aria-label> 一本。 */
+  .site-nav__item--talent {
+    /* 02 プロダクトとの距離を詰める。 nav の gap (= clamp(1rem, 2.5vw, 2.25rem))
+       を打ち消し、 talent と前項目の間を 0.5rem に固定 (= 「products の一つ」 印象) */
+    margin-left: calc(-1 * clamp(1rem, 2.5vw, 2.25rem) + 0.5rem);
+  }
   .site-nav__link--talent {
     align-items: center;
-    padding: 0.15rem 0;
+    padding: 0;
   }
   .site-nav__talent-logo {
     display: block;
-    height: 32px;
+    height: 36px;
     width: auto;
-    opacity: 0.92;
-    transition: opacity 200ms ease, transform 200ms ease;
+    border-radius: 18px;
+    border: 1px solid var(--color-paper-fold);
+    background-color: #fdf6ec;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    opacity: 0.94;
+    transition: opacity 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+  }
+  .site-nav__talent-logo--square {
+    /* mobile 切替用、 desktop は隠す。 高さは width 32px に揃える (= 1:1 比率) */
+    display: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
   }
   .site-nav__link--talent:hover .site-nav__talent-logo,
   .site-nav__link--talent:focus-visible .site-nav__talent-logo {
     opacity: 1;
     transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(74, 90, 47, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
   }
   /* hover の下線装飾は logo に被ると視覚ノイズなので無効化 */
   .site-nav__link--talent::after {
@@ -318,7 +361,7 @@ const navItems = [
       padding: 0.75rem 1.25rem;
       gap: 1rem;
     }
-    .site-header__mark {
+    .site-header__mark-wrap {
       width: 36px;
       height: 36px;
     }
@@ -338,21 +381,16 @@ const navItems = [
       font-size: 0.8125rem;
       letter-spacing: 0.06em;
     }
-    /* mobile: talent ロゴを隠し、 label テキストで代替 (= 幅節約) */
-    .site-nav__talent-logo {
+    /* mobile: 3:1 ロゴを隠し、 1:1 ロゴ 32px (= 金貨単体に「Talent」 文字下中央) 表示 */
+    .site-nav__talent-logo--wide {
       display: none;
     }
-    .site-nav__label--talent {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 0;
-      clip-path: none;
-      overflow: visible;
-      white-space: normal;
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-style: italic;
+    .site-nav__talent-logo--square {
+      display: block;
+    }
+    /* 02 プロダクトとの距離詰め — mobile の gap (= 0.875rem) を打ち消し 0.4rem に */
+    .site-nav__item--talent {
+      margin-left: -0.475rem;
     }
   }
 

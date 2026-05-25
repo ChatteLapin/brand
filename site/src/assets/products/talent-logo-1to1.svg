@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Talent ゲームロゴ 1:1 正方形版 (= 2026-05-25、 v14 3:1 を正方形に再配置)。
+  用途: アプリ icon 代わり / Discord avatar / GitHub org アイコン / SNS profile 等。
+
+  構図:
+    - viewBox 1024×1024
+    - 金貨: 中心 (512, 380)、 r=290 (= 直径 580)、 上中央寄り
+    - Talent: x=512 中央、 y=850、 font-size 180
+    - 多言語: 上下左右の縁に散布 (= 金貨と Talent の周囲)
+
+  共通要素 (= 全 SVG で同期):
+    - gold gradient / 暖色 edge / ChatteLapin body v2 / Ŧ 本体 radial / 多言語 20 語 deboss
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="goldFace" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#f0d472"/>
+      <stop offset="45%" stop-color="#c69b18"/>
+      <stop offset="85%" stop-color="#8b6914"/>
+      <stop offset="100%" stop-color="#6a4a08"/>
+    </radialGradient>
+    <radialGradient id="goldEdge" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#6b3a14"/>
+      <stop offset="95%" stop-color="#5a2a0e"/>
+      <stop offset="100%" stop-color="#4a200a"/>
+    </radialGradient>
+    <radialGradient id="glyphMetalBody" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f5d672"/>
+      <stop offset="55%" stop-color="#d4a02a"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </radialGradient>
+
+    <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
+      <feOffset dx="0" dy="8" result="offsetBlur"/>
+      <feComposite in="offsetBlur" in2="SourceAlpha" operator="arithmetic"
+                   k2="-1" k3="1" result="shadowDiff"/>
+      <feFlood flood-color="#5a2a0e" flood-opacity="0.55"/>
+      <feComposite in2="shadowDiff" operator="in"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+
+    <filter id="basRelief" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" result="displaced"/>
+      <feMorphology in="displaced" operator="erode" radius="0.7" result="eroded"/>
+      <feColorMatrix in="eroded" type="matrix"
+        values="0.42 0.30 0.12 0 0.06
+                0.28 0.20 0.08 0 0.03
+                0.14 0.10 0.04 0 0.01
+                0 0 0 1.1 0" result="warmSepia"/>
+      <feComponentTransfer in="warmSepia">
+        <feFuncA type="linear" slope="1.2" intercept="-0.05"/>
+      </feComponentTransfer>
+    </filter>
+
+    <filter id="glyphDeboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="13" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" result="displaced"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="alphaBlur"/>
+      <feSpecularLighting in="alphaBlur" surfaceScale="-5" specularConstant="0.9"
+                          specularExponent="22" lighting-color="#ffffff" result="spec">
+        <feDistantLight azimuth="135" elevation="55"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specMasked"/>
+      <feMerge>
+        <feMergeNode in="displaced"/>
+        <feMergeNode in="specMasked"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textDeboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="1.5" specularConstant="0.45"
+                          specularExponent="30" lighting-color="#ffffff" result="spec">
+        <feDistantLight azimuth="225" elevation="55"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specMasked"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="specMasked"/>
+      </feMerge>
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="coinFaceClip">
+      <circle cx="512" cy="380" r="290"/>
+    </clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="1024" fill="#fdf6ec"/>
+
+  <!-- 多言語 20 語散布 (= 上 / 下 / 左右の周辺、 deboss) -->
+  <g fill="#e8dcb8" stroke="#ccbe98" stroke-width="0.4" font-family="serif" filter="url(#textDeboss)" opacity="0.92">
+    <!-- 上端 5 -->
+    <text x="60"  y="50"  font-size="28" transform="rotate(-12 60 50)">Talent</text>
+    <text x="300" y="35"  font-size="26" transform="rotate(7 300 35)">талант</text>
+    <text x="540" y="55"  font-size="30" transform="rotate(-8 540 55)">才能</text>
+    <text x="780" y="38"  font-size="26"
+          font-family="'Shippori Mincho B1', 'Noto Serif CJK JP', serif"
+          transform="rotate(11 780 38)">タレント</text>
+    <text x="950" y="55"  font-size="24" transform="rotate(-18 950 55)">don</text>
+
+    <!-- 下端 5 (= Talent 下) -->
+    <text x="50"  y="985" font-size="26" transform="rotate(8 50 985)">موهبة</text>
+    <text x="270" y="970" font-size="30" transform="rotate(-10 270 970)">yetenek</text>
+    <text x="510" y="985" font-size="26" transform="rotate(15 510 985)">प्रतिभा</text>
+    <text x="740" y="970" font-size="28" transform="rotate(-7 740 970)">bakat</text>
+    <text x="950" y="985" font-size="28" transform="rotate(12 950 985)">tài năng</text>
+
+    <!-- 左 右 + 中段 10 -->
+    <text x="30"  y="200" font-size="22" transform="rotate(-22 30 200)">ταλέντο</text>
+    <text x="930" y="180" font-size="22" transform="rotate(18 930 180)">재능</text>
+    <text x="20"  y="360" font-size="22" transform="rotate(10 20 360)">talento</text>
+    <text x="950" y="360" font-size="22" transform="rotate(-10 950 360)">תehetség</text>
+    <text x="40"  y="540" font-size="22" transform="rotate(-12 40 540)">lahja</text>
+    <text x="950" y="540" font-size="22" transform="rotate(12 950 540)">天賦</text>
+    <text x="30"  y="700" font-size="22" transform="rotate(8 30 700)">nadanie</text>
+    <text x="940" y="710" font-size="22" transform="rotate(-10 940 710)">kipaji</text>
+    <text x="50"  y="850" font-size="22" transform="rotate(-14 50 850)">פסרסרรค์</text>
+    <text x="930" y="860" font-size="22" transform="rotate(16 930 860)">כישרון</text>
+  </g>
+
+  <!-- ===== 金貨 (= 中心 512, 380、 半径 290) ===== -->
+  <g filter="url(#dropShadow)">
+    <circle cx="512" cy="380" r="300" fill="url(#goldEdge)"/>
+    <circle cx="512" cy="380" r="293" fill="none" stroke="#5a2a0e" stroke-width="2"/>
+    <circle cx="512" cy="380" r="290" fill="url(#goldFace)" filter="url(#innerShadow)"/>
+    <circle cx="512" cy="380" r="265" fill="none" stroke="rgba(107, 58, 20, 0.45)" stroke-width="1.5"/>
+
+    <!-- 24 dot 環状 (= 中心 512,380, r=265) -->
+    <g fill="rgba(107, 58, 20, 0.70)">
+      <circle cx="777" cy="380" r="3.4"/>
+      <circle cx="768.2" cy="447.3" r="3.4"/>
+      <circle cx="742.2" cy="509.9" r="3.4"/>
+      <circle cx="700.2" cy="563.4" r="3.4"/>
+      <circle cx="645.4" cy="605.2" r="3.4"/>
+      <circle cx="581.0" cy="633.0" r="3.4"/>
+      <circle cx="512"   cy="645"   r="3.4"/>
+      <circle cx="443.0" cy="633.0" r="3.4"/>
+      <circle cx="378.6" cy="605.2" r="3.4"/>
+      <circle cx="323.8" cy="563.4" r="3.4"/>
+      <circle cx="281.8" cy="509.9" r="3.4"/>
+      <circle cx="255.8" cy="447.3" r="3.4"/>
+      <circle cx="247"   cy="380"   r="3.4"/>
+      <circle cx="255.8" cy="312.7" r="3.4"/>
+      <circle cx="281.8" cy="250.1" r="3.4"/>
+      <circle cx="323.8" cy="196.6" r="3.4"/>
+      <circle cx="378.6" cy="154.8" r="3.4"/>
+      <circle cx="443.0" cy="127.0" r="3.4"/>
+      <circle cx="512"   cy="115"   r="3.4"/>
+      <circle cx="581.0" cy="127.0" r="3.4"/>
+      <circle cx="645.4" cy="154.8" r="3.4"/>
+      <circle cx="700.2" cy="196.6" r="3.4"/>
+      <circle cx="742.2" cy="250.1" r="3.4"/>
+      <circle cx="768.2" cy="312.7" r="3.4"/>
+    </g>
+
+    <!-- ChatteLapin body v2 (= 3:1 確定値 (0, 0.21*r) を 1:1 r=290 に scale 適用、
+         兎中心 SVG (512, 440.6) = 金貨中心から x=0 y=60.9 下) -->
+    <g clip-path="url(#coinFaceClip)">
+      <image href="chattelapin-body.png" x="162" y="91" width="700" height="700"
+             filter="url(#basRelief)" preserveAspectRatio="xMidYMid slice"
+             opacity="0.88"/>
+    </g>
+
+    <!-- Ŧ 中央、 deboss + 本体 radial -->
+    <text x="512" y="525"
+          text-anchor="middle"
+          font-family="'Shippori Mincho B1', 'Noto Serif CJK JP', 'Hiragino Mincho ProN', serif"
+          font-size="440" font-weight="700"
+          fill="url(#glyphMetalBody)"
+          filter="url(#glyphDeboss)">Ŧ</text>
+
+    <circle cx="512" cy="380" r="300" fill="none"
+            stroke="rgba(255,235,180,0.30)" stroke-width="2"/>
+  </g>
+
+  <!-- メイン Talent (= 下中央) -->
+  <text x="512" y="870" text-anchor="middle" fill="#5b3f10"
+        font-family="'Shippori Mincho B1', 'Noto Serif CJK JP', 'Hiragino Mincho ProN', serif"
+        font-size="170" font-weight="700" letter-spacing="6">Talent</text>
+</svg>
