@@ -394,14 +394,14 @@ const navItems = [
     }
   }
 
-  /* 420px↓ では幅限界、 talent 項目自体を隠す (= brand wordmark も隠れる帯域) */
+  /* 420px↓ では幅限界、 talent 項目 + brand wordmark を隠して
+     mark + nav 項目 + locale switch のみに絞る帯域。
+     2026-05-26 shime レポート #9 で 2 つに分かれていた @media (max-width: 420px)
+     ブロックを 1 つに統合。 */
   @media (max-width: 420px) {
     .site-nav__item--talent {
       display: none;
     }
-  }
-
-  @media (max-width: 420px) {
     .site-header__wordmark {
       display: none;
     }
