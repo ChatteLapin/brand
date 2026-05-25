@@ -38,6 +38,8 @@ header:
     products: "プロダクト"
     about: "事業概要"
     contact: "お問合せ"
+    talent_label: "Talent"
+    talent_aria: "主力プロダクト『Talent』 (= 国際文化 × 経営シム × 教育) の詳細へ"
 
 footer:
   colophon_label: "Colophon"

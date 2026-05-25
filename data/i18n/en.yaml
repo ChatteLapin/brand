@@ -38,6 +38,8 @@ header:
     products: "Products"
     about: "About"
     contact: "Contact"
+    talent_label: "Talent"
+    talent_aria: "Explore Talent — our flagship game (= cross-cultural management sim × education)"
 
 footer:
   colophon_label: "Colophon"

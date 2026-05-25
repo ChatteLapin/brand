@@ -3,6 +3,7 @@
 // 翻訳テキストは data/i18n/{ja,en}.yaml に集約。 locale は Astro.currentLocale で切替。
 import { Image } from 'astro:assets';
 import mark from '../assets/chattelapin-mark.png';
+import talentLogo from '../assets/products/talent-logo-3to1.svg';
 import jaDict from '../../../data/i18n/ja.yaml';
 import enDict from '../../../data/i18n/en.yaml';
 
@@ -10,6 +11,7 @@ const locale = Astro.currentLocale || 'ja';
 const isJa = locale === 'ja';
 const i18n = isJa ? jaDict : enDict;
 const homeHref = isJa ? '/' : '/en';
+const talentHref = isJa ? '/products/talent' : '/en/products/talent';
 
 // 現在 page の言語切替先 URL を算出 (= /products/talent <-> /en/products/talent 等)
 // 切替ボタンを押したら現在 page を維持して言語だけ切り替わる
@@ -21,10 +23,10 @@ const altLocalePath = isJa
   : (pathname.replace(/^\/en/, '') || '/');
 
 const navItems = [
-  { num: '01', label: i18n.header.nav.mission, href: `${homeHref}#mission` },
-  { num: '02', label: i18n.header.nav.products, href: `${homeHref}#products` },
-  { num: '03', label: i18n.header.nav.about, href: `${homeHref}#about` },
-  { num: '04', label: i18n.header.nav.contact, href: `${homeHref}#contact` },
+  { key: 'mission', num: '01', label: i18n.header.nav.mission, href: `${homeHref}#mission` },
+  { key: 'products', num: '02', label: i18n.header.nav.products, href: `${homeHref}#products` },
+  { key: 'about', num: '03', label: i18n.header.nav.about, href: `${homeHref}#about` },
+  { key: 'contact', num: '04', label: i18n.header.nav.contact, href: `${homeHref}#contact` },
 ];
 ---
 
@@ -49,14 +51,35 @@ const navItems = [
     </a>
 
     <nav class="site-nav" aria-label={i18n.header.nav_aria}>
-      <ol class="site-nav__list">
+      <ul class="site-nav__list">
         {navItems.map((item) => (
-          <li class="site-nav__item">
-            <a href={item.href} class="site-nav__link">
-              <span class="site-nav__num">{item.num}</span>
-              <span class="site-nav__label">{item.label}</span>
-            </a>
-          </li>
+          <>
+            <li class="site-nav__item">
+              <a href={item.href} class="site-nav__link">
+                <span class="site-nav__num">{item.num}</span>
+                <span class="site-nav__label">{item.label}</span>
+              </a>
+            </li>
+            {item.key === 'products' && (
+              <li class="site-nav__item site-nav__item--talent">
+                <a
+                  href={talentHref}
+                  class="site-nav__link site-nav__link--talent"
+                  aria-label={i18n.header.nav.talent_aria}
+                >
+                  <Image
+                    src={talentLogo}
+                    alt=""
+                    class="site-nav__talent-logo"
+                    loading="eager"
+                  />
+                  <span class="site-nav__label site-nav__label--talent" aria-hidden="true">
+                    {i18n.header.nav.talent_label}
+                  </span>
+                </a>
+              </li>
+            )}
+          </>
         ))}
         <li class="site-nav__item site-nav__item--locale">
           <a
@@ -73,7 +96,7 @@ const navItems = [
             <span class="site-nav__label">{i18n.header.switch_locale_label}</span>
           </a>
         </li>
-      </ol>
+      </ul>
     </nav>
   </div>
 </header>
@@ -212,6 +235,44 @@ const navItems = [
     letter-spacing: 0.1em;
   }
 
+  /* talent ロゴ nav 項目 — 主力プロダクトへの直接導線。
+     古典書物の「巻頭挿絵」 メタファーで番号なし、 ロゴ画像で文字 nav の中に
+     視覚的アクセントを置く。 ロゴ自体に「Talent」 文字を含むため、
+     desktop では label を視覚的に隠す (= screen reader にも aria-hidden で
+     通知しない、 アクセシブル名は aria-label で別途確保)。
+     mobile (640px↓) ではロゴを隠し label テキスト「Talent」 で代替 (= 幅節約)。 */
+  .site-nav__link--talent {
+    align-items: center;
+    padding: 0.15rem 0;
+  }
+  .site-nav__talent-logo {
+    display: block;
+    height: 32px;
+    width: auto;
+    opacity: 0.92;
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+  .site-nav__link--talent:hover .site-nav__talent-logo,
+  .site-nav__link--talent:focus-visible .site-nav__talent-logo {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  /* hover の下線装飾は logo に被ると視覚ノイズなので無効化 */
+  .site-nav__link--talent::after {
+    display: none;
+  }
+  .site-nav__label--talent {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
   /* locale switch glyph — IME 切替ボタン風に、 切替先言語の代表文字を
      正方形・角丸 border で囲って表示。 言語コードのすぐ左に密接配置。
      色は --color-olive で統一、 主張しすぎない */
@@ -276,6 +337,29 @@ const navItems = [
     .site-nav__label {
       font-size: 0.8125rem;
       letter-spacing: 0.06em;
+    }
+    /* mobile: talent ロゴを隠し、 label テキストで代替 (= 幅節約) */
+    .site-nav__talent-logo {
+      display: none;
+    }
+    .site-nav__label--talent {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      clip-path: none;
+      overflow: visible;
+      white-space: normal;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+
+  /* 420px↓ では幅限界、 talent 項目自体を隠す (= brand wordmark も隠れる帯域) */
+  @media (max-width: 420px) {
+    .site-nav__item--talent {
+      display: none;
     }
   }
 
