@@ -204,9 +204,18 @@ const navItems = [
     color: var(--color-ink-faint);
   }
 
+  /* 2026-05-26 user fb (iPhone SE 3 = 375px viewport で 4 ナビ項目が全て 2 行折返し +
+     talent ロゴ hide で「不格好」): ナビ全体は flex-wrap で折返し許可 + 右寄せ、
+     ナビ項目の文字単位改行は `.site-nav__label` の `white-space: nowrap` で禁止。
+     これで「ミッション / プロダクト / talent / 事業概要」 の 4 項目を 1 行目右寄せ +
+     「お問合せ / [A] / EN」 の locale 系を 2 行目右寄せ、 が SE 3 帯域で成立する。
+     row-gap は折返し時の縦間隔のみ控えめ (= column-gap は既存 clamp 値を流用)。 */
   .site-nav__list {
     display: flex;
-    gap: clamp(1rem, 2.5vw, 2.25rem);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: clamp(1rem, 2.5vw, 2.25rem);
+    row-gap: 0.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -257,6 +266,10 @@ const navItems = [
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.1em;
+    /* 文字単位改行禁止 (= 「ミッショ\nン」 「お問合\nせ」 のような不格好な折返し抑止)。
+       ナビ全体は `.site-nav__list` 側の flex-wrap で行折返しする運用、 個別ラベルは
+       1 語まとめて改行される。 */
+    white-space: nowrap;
   }
 
   /* talent ロゴ nav 項目 — 主力プロダクトへの直接導線。
@@ -394,14 +407,11 @@ const navItems = [
     }
   }
 
-  /* 420px↓ では幅限界、 talent 項目 + brand wordmark を隠して
-     mark + nav 項目 + locale switch のみに絞る帯域。
-     2026-05-26 shime レポート #9 で 2 つに分かれていた @media (max-width: 420px)
-     ブロックを 1 つに統合。 */
+  /* 420px↓ では brand wordmark を隠して左 column を mark のみに絞る帯域。
+     旧: talent 項目も hide していたが、 2026-05-26 user fb で nav 全体を flex-wrap
+     右寄せ折返し化 → SE 3 (= 375px) でも talent ロゴが 1 行目に収まる設計に変更したため
+     talent 項目 hide は撤去。 wordmark は折返し前提でも左 column を圧迫するため依然 hide。 */
   @media (max-width: 420px) {
-    .site-nav__item--talent {
-      display: none;
-    }
     .site-header__wordmark {
       display: none;
     }
