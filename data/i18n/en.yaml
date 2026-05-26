@@ -39,7 +39,7 @@ header:
     talent_aria: "Explore Talent — our flagship game (= cross-cultural management sim × education)"
 
 footer:
-  colophon_label: "Colophon"
+  colophon_label: "About this site"
   colophon_text: 'The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br /> Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br /> A software development business. <br /> This site is built with Astro and Tailwind.'
   nav_label_navigation: "Navigation"
   nav_label_elsewhere: "Elsewhere"

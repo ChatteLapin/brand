@@ -39,7 +39,7 @@ header:
     talent_aria: "主力プロダクト『Talent』 (= 国際文化 × 経営シム × 教育) の詳細へ"
 
 footer:
-  colophon_label: "Colophon"
+  colophon_label: "サイトについて"
   colophon_text: '<strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br /> 2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br /> 業種はソフトウェア開発業。 <br /> このサイトは Astro と Tailwind で制作しています。'
   nav_label_navigation: "Navigation"
   nav_label_elsewhere: "Elsewhere"
