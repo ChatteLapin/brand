@@ -463,6 +463,7 @@ products_talent:
     marginalia: "Vocations"
     title: "Strengthening social studies through vocational expansion."
     paragraph: 'Conventional business simulations have tended to favor showy occupations — cafés, convenience stores, residential districts. Talent departs from this; through the series, it deliberately takes up <strong>the wide range of vocations that support society</strong>. This is the core differentiating axis through which the work carries the social-studies aim of understanding work, labor, and social structure.'
+    figure_alt: "Part 1 Chapter 1 header screen: Aumi Town, Yayoi Kingdom (= the player opens as a baker)"
     items:
       - tag: "A"
         title: "Familiar entry points"
@@ -518,6 +519,7 @@ products_talent:
     title: "Foreign-language learning, embedded through language switching."
     paragraph_1: 'In many games, language switching is hidden behind the heavy steps of "settings → language selection → restart," and as a result, many players finish in their first language.'
     paragraph_2: 'Talent <strong>anchors the language-switch button at the top-right of the screen</strong>, so the player can switch JA ↔ EN with a single click while keeping game progress intact. The same meaning in the same scene, placed side by side in the mother tongue and another — for a child, this becomes the doorway to a first contact with a foreign language.'
+    figure_alt: "The language-switch button anchored at the top-right of the screen (= JA ↔ EN)"
     table:
       head_scene: "Scene"
       head_ja: "Japanese"

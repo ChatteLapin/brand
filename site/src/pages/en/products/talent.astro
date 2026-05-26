@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import Layout from '../../../components/Layout.astro';
 import i18n from '../../../../../data/i18n/en.yaml';
 import talentLogo9to16 from '../../../assets/products/talent/logo-9to16.svg';
+import vocationsFigure from '../../../assets/products/talent/header-part-1-chapter-1.png';
+import languageFigure from '../../../assets/products/talent/switch-language-ja-en.png';
 import '../../../styles/products/talent.css';
 
 const p = i18n.products_talent;
@@ -170,6 +172,9 @@ const p = i18n.products_talent;
           <div class="section__body">
             <h2 class="section__title">{p.vocations.title}</h2>
             <p class="section__paragraph" set:html={p.vocations.paragraph}></p>
+            <figure class="product-section__figure">
+              <Image src={vocationsFigure} alt={p.vocations.figure_alt} loading="lazy" />
+            </figure>
             <div class="category-list">
               {p.vocations.items.map((item: { tag: string; title: string; text: string }) => (
                 <div class="category-list__item">
@@ -236,6 +241,9 @@ const p = i18n.products_talent;
             <h2 class="section__title">{p.language.title}</h2>
             <p class="section__paragraph">{p.language.paragraph_1}</p>
             <p class="section__paragraph" set:html={p.language.paragraph_2}></p>
+            <figure class="product-section__figure product-section__figure--small">
+              <Image src={languageFigure} alt={p.language.figure_alt} loading="lazy" />
+            </figure>
             <div class="table-wrap">
               <table>
                 <thead>

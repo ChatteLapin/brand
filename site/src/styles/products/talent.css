@@ -60,6 +60,44 @@
 }
 
 /* ============================================================
+ * Product section figure — 各セクション内の UI スクショ等を添える wrapper
+ *
+ * `<figure class="product-section__figure">` で囲み、 中の <img> を中央寄せ
+ * + 紙折れ枠 + 軽 shadow で「印刷物のキャプション付き図版」 風に表示する。
+ * 用途に応じて以下のバリアント:
+ *   - default: 中サイズ (= max-width 480px) — vocations 章 header 等
+ *   - --small: 小サイズ (= max-width 280px) — UI button のような小要素
+ * scale up は基本しない (= 元 PNG が小さく解像度が低いため、 元寸 + α で表示)。
+ * ============================================================ */
+
+.product-section__figure {
+  margin: 1.75rem 0 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-section__figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--color-paper-fold);
+  background-color: var(--color-paper-warm);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 6px 18px rgba(74, 90, 47, 0.08);
+}
+
+.product-section__figure--small img {
+  max-width: clamp(180px, 40vw, 280px);
+}
+
+@media (max-width: 640px) {
+  .product-section__figure {
+    margin: 1.25rem 0;
+  }
+}
+
+/* ============================================================
  * Section subtitle / lift paragraph
  * ============================================================ */
 
