@@ -15,31 +15,47 @@
  */
 
 /* ============================================================
- * Product header — talent 専用 hero ロゴ
+ * Product header — talent 専用 hero (= 2 列 grid + 9:16 縦長ロゴ)
  *
- * /products/talent (ja/en) page の <header class="product-header"> 直下、
- * breadcrumb の下に 3:1 ロゴ画像を hero として配置。 site Header の talent
- * ロゴ pill (= 36px) より大きく、 page の主役として存在感を持たせる。
- * 配色・border は Header と同調 (= 紙折れ枠 + 紙色背景 + 軽 shadow + pill 角丸)。
+ * /products/talent (ja/en) page の <header class="product-header"> 内。
+ * 大画面: 左に text (breadcrumb / h1 / tagline / meta)、 右に縦長 9:16 ロゴ。
+ *   top page の hero (= 左 text + 右 figure) のメタファーを踏襲。
+ * 小画面 (879px↓): 1 列、 ロゴが上 (= order: -1) でテキストの上に。
+ *
+ * 配色・border は site Header の talent pill と同調 (= 紙折れ枠 + 紙色背景 +
+ * 軽 shadow + 角丸)。 9:16 ゆえ角丸はやや穏やかに (= 完全 pill にはしない)。
  * ============================================================ */
+
+.product-header__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
 
 .product-header__logo {
   display: block;
+  width: clamp(160px, 18vw, 220px);
+  aspect-ratio: 9 / 16;
   height: auto;
-  width: clamp(280px, 50vw, 520px);
-  aspect-ratio: 3 / 1;
-  margin: 1.5rem 0 1.75rem;
-  border-radius: clamp(28px, 5vw, 48px);
+  border-radius: clamp(20px, 2vw, 28px);
   border: 1px solid var(--color-paper-fold);
   background-color: #fdf6ec;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 14px rgba(74, 90, 47, 0.06);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 8px 24px rgba(74, 90, 47, 0.08);
 }
 
-@media (max-width: 640px) {
+/* mobile / tablet: 1 列、 ロゴをテキストの上に */
+@media (max-width: 879px) {
+  .product-header__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
   .product-header__logo {
-    width: 100%;
-    margin: 1rem 0 1.25rem;
-    border-radius: 24px;
+    order: -1;
+    width: clamp(160px, 40vw, 240px);
+    margin: 0 auto;
+    border-radius: clamp(20px, 4vw, 28px);
   }
 }
 

@@ -1,5 +1,8 @@
 ---
 // プロダクトカード — 編集記事風 (= 番号 + タイトル + バッジ + tagline + 矢印リンク)
+// logoSrc 渡された場合は card 全体を 2 列 grid 化し、 右に円形クリップした
+// ロゴ (= 多言語と「Talent」 文字を切り落とし、 中央の金貨 + Ŧ + bas-relief
+// だけを浮かび上がらせる構図) を配置する。
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
@@ -33,30 +36,33 @@ const sizeClasses = {
 ---
 
 <a href={href} class={`editorial-card ${sizeClasses[size]} variant-${variant}`}>
-  {number && <span class="editorial-card__num">{number}</span>}
+  <div class="editorial-card__main">
+    {number && <span class="editorial-card__num">{number}</span>}
 
-  <div class="editorial-card__head">
-    {logoSrc && (
-      <Image
-        src={logoSrc}
-        alt=""
-        class="editorial-card__logo"
-        loading="lazy"
-      />
-    )}
-    <h3 class="editorial-card__title">{name}</h3>
-    {badge && (
-      <span class={`editorial-card__badge ${variant === 'primary' ? 'editorial-card__badge--primary' : ''}`}>
-        {badge}
-      </span>
-    )}
+    <div class="editorial-card__head">
+      <h3 class="editorial-card__title">{name}</h3>
+      {badge && (
+        <span class={`editorial-card__badge ${variant === 'primary' ? 'editorial-card__badge--primary' : ''}`}>
+          {badge}
+        </span>
+      )}
+    </div>
+
+    <p class="editorial-card__tagline">{tagline}</p>
+
+    <span class="editorial-card__arrow">
+      Read more
+    </span>
   </div>
 
-  <p class="editorial-card__tagline">{tagline}</p>
-
-  <span class="editorial-card__arrow">
-    Read more
-  </span>
+  {logoSrc && (
+    <Image
+      src={logoSrc}
+      alt=""
+      class="editorial-card__logo"
+      loading="lazy"
+    />
+  )}
 </a>
 
 <style>
@@ -80,6 +86,18 @@ const sizeClasses = {
     font-size: 1.125rem;
   }
 
+  /* logoSrc ありの card は全体を 2 列 grid 化 (= main + 右ロゴ)。 logo なしカードは
+     既存の block flow (= main の中身を直下に並べる) を維持。 */
+  .editorial-card:has(.editorial-card__logo) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+  .editorial-card__main {
+    min-width: 0;
+  }
+
   .editorial-card__head {
     display: flex;
     align-items: flex-start;
@@ -87,34 +105,40 @@ const sizeClasses = {
     gap: 1rem;
     flex-wrap: wrap;
   }
-  /* logoSrc ありの card のみ中央揃え (= ロゴと title を視覚的に揃える)。
-     logo なしカード (= volt/business/brand) は flex-start を維持し、 title が
-     2 行に折れた時に badge が「title 先頭行」 に揃う既存挙動を保持 */
-  .editorial-card__head:has(.editorial-card__logo) {
-    align-items: center;
-  }
 
-  /* product 固有ロゴ — talent の 1:1 金貨ロゴ等。 card head の左に title と
-     並んで配置。 サイズは card サイズに連動 (= large は 64px、 medium は 48px)。
-     pill 形ボタン化は site Header と同調 (= 紙折れ枠 + 紙色背景 + 軽 shadow)。
-     title「Talent」 文字はロゴ内にもあるが、 h3 テキストは a11y / SEO のため保持。 */
+  /* product 固有ロゴ — talent の 1:1 ロゴを円形クリップ (= border-radius: 50%) で
+     金貨 + Ŧ + chattelapin bas-relief だけを浮かび上がらせる。 1:1 SVG の中央付近に
+     金貨があり、 周囲の多言語散布と下中央の「Talent」 文字は円外で自然に消える。
+     視覚的に「主力商品の brand mark」 としてカード右側に存在感を持たせる。
+     mobile (640px↓) では card の上下 padding を圧迫するため隠す (= site Header の
+     pill ロゴで talent ブランドは既に提示済)。 */
   .editorial-card__logo {
-    flex-shrink: 0;
-    height: 64px;
-    width: 64px;
+    height: clamp(96px, 12vw, 140px);
+    width: clamp(96px, 12vw, 140px);
     border-radius: 50%;
     border: 1px solid var(--color-paper-fold);
     background-color: #fdf6ec;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    object-fit: cover;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 16px rgba(74, 90, 47, 0.08);
+    transition: transform 240ms ease, box-shadow 240ms ease;
   }
   .card-medium .editorial-card__logo,
   .card-small .editorial-card__logo {
-    height: 48px;
-    width: 48px;
+    height: clamp(72px, 10vw, 96px);
+    width: clamp(72px, 10vw, 96px);
   }
-  /* head の中で logo 左 + title 中央 + badge 右 になるよう、 title に flex grow */
-  .editorial-card__logo + .editorial-card__title {
-    flex: 1 1 auto;
+  .editorial-card:hover .editorial-card__logo {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04), 0 8px 22px rgba(74, 90, 47, 0.14);
+  }
+
+  @media (max-width: 640px) {
+    .editorial-card:has(.editorial-card__logo) {
+      grid-template-columns: 1fr;
+    }
+    .editorial-card__logo {
+      display: none;
+    }
   }
 
   .variant-primary {

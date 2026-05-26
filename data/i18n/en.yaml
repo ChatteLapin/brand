@@ -376,7 +376,6 @@ products_talent:
     description: "Talent — a PWA game that weaves global cultures × business simulation × education. A business simulation a child can play alone, and a parent can quietly recommend."
   breadcrumb_label: "Products"
   header:
-    eyebrow: "Flagship product"
     title: "Talent"
     tagline: "A business simulation a child can play alone, and a parent can quietly recommend."
     meta:

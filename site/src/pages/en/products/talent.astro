@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../../../components/Layout.astro';
 import i18n from '../../../../../data/i18n/en.yaml';
-import talentLogo3to1 from '../../../assets/products/talent-logo-3to1.svg';
+import talentLogo9to16 from '../../../assets/products/talent/logo-9to16.svg';
 import '../../../styles/products/talent.css';
 
 const p = i18n.products_talent;
@@ -12,24 +12,27 @@ const p = i18n.products_talent;
   <article class="product-article">
     <header class="product-header reveal">
       <div class="col-wrap">
-        <p class="product-header__breadcrumb">
-          <a href="/en#products">{p.breadcrumb_label}</a>
-          <span aria-hidden="true">/</span>
-          <span>{p.header.title}</span>
-        </p>
-        <Image
-          src={talentLogo3to1}
-          alt=""
-          class="product-header__logo"
-          loading="eager"
-        />
-        <p class="eyebrow product-header__eyebrow">{p.header.eyebrow}</p>
-        <h1 class="product-header__title">{p.header.title}</h1>
-        <p class="product-header__tagline">{p.header.tagline}</p>
-        <div class="product-header__meta">
-          <div><span>{p.header.meta.field_label}</span><strong>{p.header.meta.field_value}</strong></div>
-          <div><span>{p.header.meta.distribution_label}</span><strong>{p.header.meta.distribution_value}</strong></div>
-          <div><span>{p.header.meta.status_label}</span><strong>{p.header.meta.status_value}</strong></div>
+        <div class="product-header__grid">
+          <div class="product-header__text">
+            <p class="product-header__breadcrumb">
+              <a href="/en#products">{p.breadcrumb_label}</a>
+              <span aria-hidden="true">/</span>
+              <span>{p.header.title}</span>
+            </p>
+            <h1 class="product-header__title">{p.header.title}</h1>
+            <p class="product-header__tagline">{p.header.tagline}</p>
+            <div class="product-header__meta">
+              <div><span>{p.header.meta.field_label}</span><strong>{p.header.meta.field_value}</strong></div>
+              <div><span>{p.header.meta.distribution_label}</span><strong>{p.header.meta.distribution_value}</strong></div>
+              <div><span>{p.header.meta.status_label}</span><strong>{p.header.meta.status_value}</strong></div>
+            </div>
+          </div>
+          <Image
+            src={talentLogo9to16}
+            alt=""
+            class="product-header__logo"
+            loading="eager"
+          />
         </div>
       </div>
     </header>

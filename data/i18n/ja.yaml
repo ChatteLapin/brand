@@ -376,7 +376,6 @@ products_talent:
     description: "国際文化 × 経営シミュレーション × 教育の PWA ゲーム『Talent』。 子どもがひとりで遊んでも、 大人がそっと推せる経営シミュレーション。"
   breadcrumb_label: "プロダクト"
   header:
-    eyebrow: "主力プロダクト"
     title: "Talent"
     tagline: "子どもがひとりで遊んでも、 大人がそっと推せる経営シミュレーション。"
     meta:
