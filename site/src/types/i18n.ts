@@ -50,7 +50,6 @@ export interface HeroDict {
     domicile_value: string;
   };
   logo_alt: string;
-  figure: { num: string; desc: string };
   scroll_label: string;
   scroll_aria: string;
 }

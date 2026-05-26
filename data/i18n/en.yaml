@@ -21,9 +21,6 @@ hero:
     domicile_label: "Domicile"
     domicile_value: "Atami, JP"
   logo_alt: "ChatteLapin logo. A watercolor figure of a cat-like rabbit, with hand-lettered Chatte Lapin"
-  figure:
-    num: "Fig. 01"
-    desc: "Logotype — ChatteLapin"
   scroll_label: "Scroll"
   scroll_aria: "To the next section"
 
@@ -43,7 +40,7 @@ header:
 
 footer:
   colophon_label: "Colophon"
-  colophon_text: 'The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br /> Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br /> Operated under blue-form taxation with a 650,000 JPY deduction, <br /> and quietly typeset with Astro and Tailwind.'
+  colophon_text: 'The official site of <strong>ChatteLapin</strong> (Japanese: シャラパン). <br /> Opened in May 2026 as a sole proprietorship under Atami Tax Office, Japan. <br /> A software development business. <br /> This site is built with Astro and Tailwind.'
   nav_label_navigation: "Navigation"
   nav_label_elsewhere: "Elsewhere"
   nav_aria: "Footer navigation"

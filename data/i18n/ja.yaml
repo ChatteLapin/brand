@@ -21,9 +21,6 @@ hero:
     domicile_label: "Domicile"
     domicile_value: "Atami, JP"
   logo_alt: "ChatteLapin のロゴ。 水彩で描かれた猫的兎の図と、 手書きの Chatte Lapin の文字"
-  figure:
-    num: "Fig. 01"
-    desc: "銘 — シャラパン"
   scroll_label: "Scroll"
   scroll_aria: "次のセクションへ"
 
@@ -43,7 +40,7 @@ header:
 
 footer:
   colophon_label: "Colophon"
-  colophon_text: '本書は <strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br /> 2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br /> ソフトウェア開発業として、 青色申告 65 万円控除のもとに、 <br /> Astro と Tailwind を用い、 静かに組版されました。'
+  colophon_text: '<strong>シャラパン (ChatteLapin)</strong> の公式サイトです。 <br /> 2026 年 5 月、 熱海税務署管轄の個人事業として開業。 <br /> 業種はソフトウェア開発業。 <br /> このサイトは Astro と Tailwind で制作しています。'
   nav_label_navigation: "Navigation"
   nav_label_elsewhere: "Elsewhere"
   nav_aria: "フッターナビゲーション"
