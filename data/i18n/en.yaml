@@ -425,7 +425,7 @@ products_talent:
         text: "The daily cycle of purchasing, making, pricing, and serving. A natural sense of the ledger."
       - num: "02"
         title: "Global culture"
-        text: "Starting with Part I and unfolding through the series, motifs from many nations. The attractive and affirming sides of each culture are depicted with deliberate care."
+        text: "Starting with Part I and unfolding through the series, motifs from many nations. The attractive and affirming sides of each culture are depicted with deliberate care. Yet <em>affirming depiction is not the same as blind affirmation</em>. As the series unfolds, the duality of commerce and international relations (= fairness / exploitation / competition / cooperation) is treated with the support of the <strong>scholarly lineage</strong> (= see §05)."
       - num: "03"
         title: "Education"
         text: "A systematized framework of eight domains: national language / foreign language / arithmetic / social studies / economics & commerce / food education / sociality / history & ethics."
@@ -522,6 +522,7 @@ products_talent:
     marginalia: "Safety"
     title: "A design parents can safely hand to their children."
     check_items:
+      - "<strong>Zero personal-data collection</strong> — no account registration, local save only (= structural conformance to COPPA / GDPR-K)"
       - "<strong>Zero violence, bloodshed, or cruelty</strong>"
       - "<strong>Zero sexual depiction, no forced romance, no harassment elements</strong>"
       - "<strong>Zero gambling, gacha, or probability-based monetization</strong> — pay-to-win elements are structurally excluded"
@@ -605,7 +606,7 @@ products_talent:
     items:
       - '<strong>The warp of characters</strong> — people met in each chapter return in other parts through letters and reunion. Rather than one-time "passings," the work builds relationships meant to be cherished over the long term.'
       - '<strong>The warp of languages</strong> — JA / EN in Part I; from Part II onward, languages corresponding to the motif country of each part are added in stages, in the natural flow of the story.'
-      - '<strong>The warp of vocations</strong> — beginning with the bakery in Part I, each part takes up a new vocation, while maintaining the common grammar of "the basic cycle of trade."'
+      - '<strong>The warp of vocations</strong> — beginning with the onigiri shop in Part I, each part takes up a new vocation, while maintaining the common grammar of "the basic cycle of trade."'
   roadmap:
     num: "§ 11"
     marginalia: "Roadmap"
@@ -628,7 +629,7 @@ products_talent:
         content: "Chapter 2 = a single Stage A vessel implemented (= one of: cross-cultural trade / tourist town / specialty shop). Linear fixed chapter order has been withdrawn (= ADR-062 revision; skill-stage gates + player vessel selection)"
         time: "Targeted for 2027"
       - version: "Side stories (= expansion via the axis × vessel split)"
-        content: "New vessels placed on the same axis (= Rina's perspective / Washigorou's youth / spin-offs). Players need no relearning."
+        content: "New vessels placed on the same axis (= Sara's perspective / Washigorou's youth / spin-offs). Players need no relearning."
         time: "Continuing on a several-month to one-year cadence"
       - version: "Volume II"
         content: "The axis itself extended one step (= ESG / Sustainability at the center, generational handover). The duality of commerce is brought to the fore."
@@ -655,10 +656,10 @@ products_talent:
     marginalia: "Links"
     title: "Related links."
     items:
-      - label: "Development status"
+      - label: "All design rationale, openly published"
         href: "https://github.com/ChatteLapin/talent"
         text: "github.com/ChatteLapin/talent"
-        note: ""
+        note: "(= ADRs, educational design, and concept all open. Development progress is followed here too.)"
         external: true
       - label: "Restricted demo"
         href: "https://talent.orz.cc"

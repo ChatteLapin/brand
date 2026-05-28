@@ -425,7 +425,7 @@ products_talent:
         text: "仕入・製造・値付け・接客の毎日サイクル。 収支感覚を自然に。"
       - num: "02"
         title: "国際文化"
-        text: "第 1 篇から始まり、 シリーズを通じて多国モチーフを展開。 各国文化の魅力的・肯定的側面を意図的に描写。"
+        text: "第 1 篇から始まり、 シリーズを通じて多国モチーフを展開。 各国文化の魅力的・肯定的側面を意図的に描写。 ただし <em>肯定的描写は盲目的描写と異なります</em>。 商業や国際関係の両義性 (= 公平 / 搾取 / 競争 / 協力) は、 シリーズ進行とともに <strong>学術系譜</strong> (= §05 参照) に裏打ちされた形で扱います。"
       - num: "03"
         title: "教育"
         text: "国語 / 外国語 / 算数 / 社会 / 経済・商業 / 食育 / 社会性 / 歴史・道徳 の 8 領域を体系化。"
@@ -522,6 +522,7 @@ products_talent:
     marginalia: "Safety"
     title: "親が安心して子に渡せる設計。"
     check_items:
+      - "<strong>個人情報収集ゼロ</strong> — アカウント登録不要、 ローカルセーブのみ (= COPPA / GDPR-K への構造的準拠)"
       - "<strong>暴力・流血・残酷描写ゼロ</strong>"
       - "<strong>性的描写 / 恋愛強要 / セクハラ要素ゼロ</strong>"
       - "<strong>賭博 / ガチャ / 確率課金ゼロ</strong> — pay-to-win 要素を構造的に排除"
@@ -605,7 +606,7 @@ products_talent:
     items:
       - '<strong>キャラの縦糸</strong> — 各章で出会う人物が、 別の篇でも文通や再会の形で再登場。 一度きりの「すれ違い」 ではなく、 長く愛される関係を構築。'
       - '<strong>言語の縦糸</strong> — 第 1 篇では JA / EN、 第 2 篇以降は各篇のモチーフ国に対応する言語が、 物語の自然な流れで段階追加。'
-      - '<strong>業種の縦糸</strong> — 第 1 篇のパン屋から始まり、 篇ごとに新業種を扱いつつ、 「商売の基本サイクル」 という共通文法は維持。'
+      - '<strong>業種の縦糸</strong> — 第 1 篇のおにぎり屋から始まり、 篇ごとに新業種を扱いつつ、 「商売の基本サイクル」 という共通文法は維持。'
   roadmap:
     num: "§ 11"
     marginalia: "Roadmap"
@@ -628,7 +629,7 @@ products_talent:
         content: "第 2 章 = 段階 A の器をひとつ実装 (= 異文化貿易系 / 観光地系 / 専門店系 のいずれか)。 線形固定章順は撤回 (= ADR-062 改訂、 スキル段階ゲート + プレイヤー器選択)"
         time: "2027 想定"
       - version: "外伝 (= 軸×器分離による拡張)"
-        content: "同じ軸の上に新しい器を足す (= リナ視点 / 鷲五郎の若き日 / 番外編)。 プレイヤーは覚え直し不要"
+        content: "同じ軸の上に新しい器を足す (= サラ視点 / 鷲五郎の若き日 / 番外編)。 プレイヤーは覚え直し不要"
         time: "数ヶ月〜1 年スパンで継続"
       - version: "第二巻"
         content: "軸自体を一段拡張 (= ESG / Sustainability を中核、 世代交代等)。 商業の両義性を主題化"
@@ -655,10 +656,10 @@ products_talent:
     marginalia: "Links"
     title: "関連リンク。"
     items:
-      - label: "開発状況・進捗"
+      - label: "設計の根拠を全公開"
         href: "https://github.com/ChatteLapin/talent"
         text: "github.com/ChatteLapin/talent"
-        note: ""
+        note: "(= ADR・教育設計・コンセプトを含め公開。 開発状況・進捗もここで追えます)"
         external: true
       - label: "限定公開デモ"
         href: "https://talent.orz.cc"
