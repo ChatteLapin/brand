@@ -459,6 +459,8 @@ export interface ProductsTalentDict {
     marginalia: string;
     title: string;
     paragraph: string;
+    categories: { tag: string; title: string; text: string }[];
+    lift_text: string;
     table: { head_area: string; head_body: string };
     rows: TalentCurriculumRow[];
   };

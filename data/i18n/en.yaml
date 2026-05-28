@@ -433,8 +433,19 @@ products_talent:
   curriculum:
     num: "§ 05"
     marginalia: "Curriculum"
-    title: "Educational design — a system of eight domains."
-    paragraph: 'This work deliberately weaves <strong>eight domains</strong> corresponding to school subjects into the in-game experience. The framework is systematized as an evidence document that can be presented to educational institutions considering adoption.'
+    title: "Educational design — three overarching categories across eight domains."
+    paragraph: "This work's educational value is organized into <strong>three overarching categories</strong> (= shown below). Using these as the top-level positioning, the <strong>eight domains</strong> (= further below) are systematized as subject-level evidence. The whole serves as an evidence document presentable to educational institutions considering adoption."
+    categories:
+      - tag: "Foundation"
+        title: "Foundational Education"
+        text: "National language, arithmetic, history (etymology and origins), foreign language. Old-fashioned turns of phrase with furigana, arithmetic felt through commerce, an always-visible one-click language switch — the basics of school subjects are woven into the game experience in the form of something <strong>noticed later, as a result</strong>."
+      - tag: "Practical"
+        title: "Social Studies (Management) Education"
+        text: "Social studies (geography, culture, vocations), economics & commerce + <strong>a twelve-discipline management curriculum (= the MBA core systematized as life-essential literacy)</strong>. The domain recently spotlighted as 'money education' is reached even into management studies — usually taught only at the university level — and made encounterable in daily play from childhood. This is Talent's distinctive axis of differentiation."
+      - tag: "Affective"
+        title: "Affective Education (+ Peace Education)"
+        text: "Food education, sociality and human relations, ethics and character formation + the cross-cutting theme of '<strong>waiting</strong>,' and <strong>peace education</strong> brought to fruition as fable in the final chapter. The domain easily lost to IT, smartphones, and two-working-parent households is reclaimed through game experience."
+    lift_text: '"<strong>Social Studies (Management)</strong>" does not strictly map onto formal school terminology, but is used here as a convenient label for Talent''s distinctive offering (= a domain in which today''s society, economy, and management are learned as life-essential literacy from childhood). Peace education is positioned as a subordinate strand of Affective Education (+), brought to fruition as <em>fable</em> in the final chapter of the story.'
     table:
       head_area: "Domain"
       head_body: "In-game learning experience"
@@ -460,7 +471,7 @@ products_talent:
     marginalia: "Vocations"
     title: "Strengthening social studies through vocational expansion."
     paragraph: 'Conventional business simulations have tended to favor showy occupations — cafés, convenience stores, residential districts. Talent departs from this; through the series, it deliberately takes up <strong>the wide range of vocations that support society</strong>. This is the core differentiating axis through which the work carries the social-studies aim of understanding work, labor, and social structure.'
-    figure_alt: "Part 1 Chapter 1 header screen: Aumi Town, Yayoi Kingdom (= the player opens as a baker)"
+    figure_alt: "Part 1 Chapter 1 header screen: Aumi Town, Asuka Kingdom (= the player opens as an onigiri shop owner)"
     items:
       - tag: "A"
         title: "Familiar entry points"
@@ -474,7 +485,7 @@ products_talent:
       - tag: "D"
         title: "Quiet but essential infrastructure vocations"
         text: 'Electricity, water, gas, postal service, waste collection. Awareness of, and gratitude toward, "the people who hold up the everyday."'
-    lift_text: 'Through this expansion, the work aims to increase the <strong>options that come to mind</strong> at the moment of future career choice, and to quietly take apart, through game experience, the oversimplified view that "a showy job is a good job."'
+    lift_text: 'Through this expansion, the work aims to increase the <strong>options that come to mind</strong> at the moment of future career choice, and to quietly take apart, through game experience, the oversimplified view that "a showy job is a good job." To preserve continuity of game mechanics, however, the vocations played as <strong>full business simulations</strong> are limited to those with a sourcing → making → selling backbone (= Category A in the main, and parts of B); large-scale industrial and infrastructure vocations are introduced instead as <strong>"vocations to encounter"</strong> — <em>customers, characters, episodes, and background</em> (= the <em>encounter / operate</em> distinction).'
   safety:
     num: "§ 07"
     marginalia: "Safety"
