@@ -150,6 +150,19 @@ const p = i18n.products_talent;
                 </div>
               ))}
             </div>
+            <h3 class="section__subtitle">{p.curriculum.disciplines.subtitle}</h3>
+            <p class="section__paragraph" set:html={p.curriculum.disciplines.intro}></p>
+            <div class="category-list">
+              {p.curriculum.disciplines.items.map((item: { tag: string; title: string; text: string }) => (
+                <div class="category-list__item">
+                  <p class="category-list__tag">{item.tag}</p>
+                  <div>
+                    <h3 class="category-list__title" set:html={item.title}></h3>
+                    <p class="category-list__text" set:html={item.text}></p>
+                  </div>
+                </div>
+              ))}
+            </div>
             <p class="section__paragraph section__paragraph--lift" set:html={p.curriculum.lift_text}></p>
             <div class="table-wrap">
               <table>
