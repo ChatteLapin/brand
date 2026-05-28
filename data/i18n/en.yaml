@@ -434,7 +434,7 @@ products_talent:
     num: "§ 05"
     marginalia: "Curriculum"
     title: "Educational design — three overarching categories across eight domains."
-    paragraph: "This work's educational value is organized into <strong>three overarching categories</strong> (= shown below). Using these as the top-level positioning, the <strong>eight domains</strong> (= further below) are systematized as subject-level evidence. The whole serves as an evidence document presentable to educational institutions considering adoption."
+    paragraph: "This work's educational value is organized into <strong>three overarching categories</strong> (= shown below). Using these as the top-level positioning, the <strong>twelve management disciplines</strong> (= the contents of the 'Practical' category, further below) and the <strong>eight domains</strong> (= subject-level detail, further below) are each systematized as evidence. The whole serves as an evidence document presentable to educational institutions considering adoption."
     categories:
       - tag: "Foundation"
         title: "Foundational Education"
@@ -445,6 +445,46 @@ products_talent:
       - tag: "Affective"
         title: "Affective Education (+ Peace Education)"
         text: "Food education (= ingredients, combinations, seasons, origins) / sociality and human relations (= closeness, parting, asynchronous letters) / ethics and character formation (= living with failure, consideration for others) + the cross-cutting theme of '<strong>waiting</strong>' (= concentration, introspection, anticipation, afterglow), and <strong>peace education</strong> brought to fruition as fable in the final chapter. The domain easily lost to IT, smartphones, and two-working-parent households is reclaimed through game experience."
+    disciplines:
+      subtitle: "Twelve management disciplines — the MBA core, as life-essential literacy."
+      intro: 'The twelve disciplines that form the core of the "<strong>Practical</strong>" category. Drawing on the updated MBA core (= 2020s revision) — typically taught only at the university level — they are dissolved into the daily rhythm of commerce, without lecture or textbook framing. Most appear as <em>seeds</em> in Chapter 1 and unfold in stages across the series. Weight is annotated with tags (= <strong>Core</strong> / <strong>Mid</strong> / <strong>Seed</strong> / <strong>Finale</strong>).'
+      items:
+        - tag: "Core"
+          title: "01 — Marketing"
+          text: "The core loop of Chapter 1. Demand is felt through pricing and customer service (= Stage 1). Customer-segment analysis (STP) and promotion follow (= Stage 2), then competitive differentiation and brand (= Stage 3). The 4Ps come home as <em>lived intuition</em> rather than terminology."
+        - tag: "Seed"
+          title: "02 — Operations & Supply Chain"
+          text: 'The "make and replenish" axis. Procurement volume, inventory, sell-outs and leftovers (= Stage 1) → quality, sequencing, efficiency (= Stage 2) → scale and process design (= Stage 3). Large-scale SCM is not addressed directly for children; the sense of sequencing is built through daily play.'
+        - tag: "Core"
+          title: "03 — Accounting"
+          text: 'The most direct continuity with Talent''s operational domain. "Today''s books" = sales – cost – gross profit / margin (= Stage 1), then break-even and cash flow (= Stage 2), then investment and reinvestment decisions (= Stage 3). The central axis of the "money literacy" movement.'
+        - tag: "Seed"
+          title: "04 — Finance"
+          text: "Distinguished from Accounting as an independent discipline. Borrowing, investment, and future value are encountered naturally as the player expands shops or attempts new ventures later in the series. Large-scale finance (= equity markets, foreign exchange specialty) is sown as a seed without deep dive."
+        - tag: "Mid"
+          title: "05 — Management (OB, Leadership)"
+          text: 'The "lead" axis = Organizational Behavior, Leadership, People. Chapter 1 begins as a <em>seed</em> — receiving help from Sara (= Stage 0). Later it opens into hiring, mentoring, role allocation (= Stage 2), and the design of organization and delegation (= Stage 3). The felt sense of "moving with people."'
+        - tag: "Mid"
+          title: "06 — Strategy"
+          text: 'The "choose" axis. Which customers to prioritize (= Stage 1), competitive analysis, location, and exit decisions (= Stage 2), then long-term vision and Win-Win design (= Stage 3). The upper layer that supports the final chapter''s core (= Negotiation).'
+        - tag: "Seed"
+          title: "07 — Economics (+ Behavioral)"
+          text: 'Price and demand, opportunity cost, and behavioral economics (= the biases and habits of intuition in choice). Walking alongside arithmetic (= the four operations and estimation), it builds the felt sense that "<em>people are not purely rational</em>."'
+        - tag: "Core"
+          title: "08 — Entrepreneurship & Innovation"
+          text: 'The "start" axis. The challenge of opening a shop (= dovetailed with the no-Game-Over design) is Stage 1, then opportunity discovery and new ventures (= Stage 2), and diversification and succession (= Stage 3). The ground that nurtures "<em>failure is allowed</em>" and "<em>the next move</em>."'
+        - tag: "Mid"
+          title: "09 — International Business"
+          text: 'The "cross" axis. Foreign customers visiting, differences in food culture (= Stage 1) → exchange rates, tariffs, localization (= Stage 2) → multi-country expansion and value exchange (= Stage 3). Directly tied to the international-culture axis (= §04), reaching the peak of "commerce × peace" in the final chapter.'
+        - tag: "Seed"
+          title: "10 — Business Analytics & DX (successor to MIS)"
+          text: 'The successor to Management Information Systems. For children, it is dissolved into Accounting and arithmetic as "<em>count and observe</em>." Demand records, inventory data, and customer trends become part of daily play without preaching.'
+        - tag: "Core"
+          title: "11 — Business Ethics · Sustainability · ESG"
+          text: "The duality of commerce (= fairness / exploitation, competition / cooperation, one's own region / others). A domain that bears <em>full weight even for children</em>. The foundation that connects to the peace-education fable in the final chapter (= the Kant / Doyle lineage in §05 rigor)."
+        - tag: "Finale"
+          title: "12 — Negotiation"
+          text: 'The <em>core of the final chapter</em> across the series. Win-Win deal design. Positioned at the peak as the venue for redeeming the trust networks (= friends, partners, foreign relations) accumulated across each Part. Not "a new skill demanded suddenly," but "<strong>what you have built actually works here</strong>."'
     lift_text: '"<strong>Social Studies (Management)</strong>" does not strictly map onto formal school terminology, but is used here as a convenient label for Talent''s distinctive offering (= a domain in which today''s society, economy, and management are learned as life-essential literacy from childhood). Peace education is positioned as a subordinate strand of Affective Education (+), brought to fruition as <em>fable</em> in the final chapter of the story.'
     table:
       head_area: "Domain"
