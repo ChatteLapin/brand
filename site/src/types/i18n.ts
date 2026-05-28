@@ -463,6 +463,11 @@ export interface ProductsTalentDict {
     lift_text: string;
     table: { head_area: string; head_body: string };
     rows: TalentCurriculumRow[];
+    rigor: {
+      subtitle: string;
+      intro: string;
+      items: { tag: string; title: string; text: string }[];
+    };
   };
   vocations: {
     num: string;

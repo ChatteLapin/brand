@@ -169,6 +169,19 @@ const p = i18n.products_talent;
                 </tbody>
               </table>
             </div>
+            <h3 class="section__subtitle">{p.curriculum.rigor.subtitle}</h3>
+            <p class="section__paragraph" set:html={p.curriculum.rigor.intro}></p>
+            <div class="category-list">
+              {p.curriculum.rigor.items.map((item: { tag: string; title: string; text: string }) => (
+                <div class="category-list__item">
+                  <p class="category-list__tag">{item.tag}</p>
+                  <div>
+                    <h3 class="category-list__title" set:html={item.title}></h3>
+                    <p class="category-list__text" set:html={item.text}></p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
