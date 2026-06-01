@@ -762,6 +762,16 @@ td {
   color: var(--color-ink-deep);
   margin: 0.5rem 0 1.5rem;
 }
+.product-section .section__epigraph {
+  font-family: var(--font-serif-jp);
+  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  line-height: 1.75;
+  color: var(--color-ink-soft);
+  margin: 0 0 0.75rem;
+  max-width: 50ch;
+}
 .product-section .section__paragraph {
   font-family: var(--font-sans-jp);
   font-size: 0.9375rem;

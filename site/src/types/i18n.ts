@@ -428,6 +428,7 @@ export interface ProductsTalentDict {
     num: string;
     marginalia: string;
     title: string;
+    epigraph: string;
     paragraph_1: string;
     paragraph_2: string;
     callout: CalloutBlock;

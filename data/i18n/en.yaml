@@ -386,6 +386,7 @@ products_talent:
     num: "§ 01"
     marginalia: "Overview"
     title: "About the work."
+    epigraph: "Set up a shop, then set out on a journey. Learn what money means — and notice what money cannot buy."
     paragraph_1: '<strong>Talent</strong> is a business simulation game delivered as a PWA (= Progressive Web App). The player opens a small shop in a seaside trading town, finds materials at the morning market, finishes the goods by hand, welcomes guests through the day, and spends a brief moment with the townspeople at night — quietly layering one day upon the next, like leaves of a calendar.'
     paragraph_2: 'What deserves emphasis is that the work is designed so that <strong>playing the game itself becomes a gentle learning experience</strong>. Arithmetic (= the ledger of trade), social studies (= global cultures and geography, and through the series, <strong>encounters with a wide range of vocations</strong>), national language (= reading, writing, and Japanese phrasing), <strong>foreign language</strong> (= a language-switch button anchored at the top-right of the screen, placing the same scene side by side in the mother tongue and a foreign tongue), economics (= the relation between price and demand), food (= ingredients and seasons), and ways of relating to people (= closeness, parting, and letters) — none of these are preached or imposed; all are woven into the rhythm of the daily round.'
     callout:
@@ -478,7 +479,7 @@ products_talent:
           text: 'The "cross" axis. Foreign customers visiting, differences in food culture (= Stage 1) → exchange rates, tariffs, localization (= Stage 2) → multi-country expansion and value exchange (= Stage 3). Directly tied to the international-culture axis (= §04), reaching the peak of "commerce × peace" in the final chapter.'
         - tag: "Seed"
           title: "10 — Business Analytics & DX (successor to MIS)"
-          text: 'The successor to Management Information Systems. For children, it is dissolved into Accounting and arithmetic as "<em>count and observe</em>." Demand records, inventory data, and customer trends become part of daily play without preaching.'
+          text: 'The successor to Management Information Systems. For children, it is dissolved into Accounting and arithmetic as "<em>count and observe</em>." Demand records, inventory data, and customer trends become part of daily play without preaching. (= The foundations corresponding to undergraduate <strong>Business Statistics</strong> are placed in Stages 0–2 of this discipline = Descriptive Statistics + Regression, continuous with the MBA Y1 Q1 core "Quantitative Methods." Not counted as an independent discipline in the modern MBA standard.)'
         - tag: "Core"
           title: "11 — Business Ethics · Sustainability · ESG"
           text: "The duality of commerce (= fairness / exploitation, competition / cooperation, one's own region / others). A domain that bears <em>full weight even for children</em>. The foundation that connects to the peace-education fable in the final chapter (= the Kant / Doyle lineage in §05 rigor)."
