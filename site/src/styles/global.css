@@ -796,6 +796,18 @@ td {
   margin-top: 1rem;
   margin-bottom: -0.875rem;
 }
+.product-section .section__epigraph ruby {
+  font-style: normal;
+}
+.product-section .section__epigraph rt {
+  font-family: var(--font-serif-jp);
+  font-size: 0.42em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-soft);
+  text-align: center;
+}
 .product-section .section__paragraph {
   font-family: var(--font-sans-jp);
   font-size: 0.9375rem;
