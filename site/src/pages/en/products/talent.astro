@@ -48,6 +48,7 @@ const p = i18n.products_talent;
           </aside>
           <div class="section__body">
             <h2 class="section__title">{p.overview.title}</h2>
+            <p class="section__epigraph" set:html={p.overview.epigraph}></p>
             <p class="section__paragraph" set:html={p.overview.paragraph_1}></p>
             <p class="section__paragraph" set:html={p.overview.paragraph_2}></p>
             <div class="callout">
