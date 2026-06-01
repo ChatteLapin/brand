@@ -707,6 +707,11 @@ products_talent:
         text: "talent.orz.cc"
         note: "(= Cloudflare Access ゲート)"
         external: true
+      - label: "開発を支援する"
+        href: "https://chattelapin.booth.pm/items/8439354"
+        text: "ChatteLapin 開発支援 ―『Talent』をつくる (BOOTH)"
+        note: "(= ¥100 から。 応援は任意。 リターンは制作が続くこと、 それ自体)"
+        external: true
       - label: "お問合せ"
         href: "/#contact"
         text: "トップページのお問合せセクション"
