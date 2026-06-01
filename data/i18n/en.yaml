@@ -385,8 +385,8 @@ products_talent:
   overview:
     num: "§ 01"
     marginalia: "Overview"
-    title: "About the work."
-    epigraph: "Set up a shop, then set out on a journey. Learn what money means — and notice what money cannot buy."
+    title: "About the work"
+    epigraph: 'Set up a shop, then set out on a journey.<br />Learn what money means — and notice what money cannot buy.'
     paragraph_1: '<strong>Talent</strong> is a business simulation game delivered as a PWA (= Progressive Web App). The player opens a small shop in a seaside trading town, finds materials at the morning market, finishes the goods by hand, welcomes guests through the day, and spends a brief moment with the townspeople at night — quietly layering one day upon the next, like leaves of a calendar.'
     paragraph_2: 'What deserves emphasis is that the work is designed so that <strong>playing the game itself becomes a gentle learning experience</strong>. Arithmetic (= the ledger of trade), social studies (= global cultures and geography, and through the series, <strong>encounters with a wide range of vocations</strong>), national language (= reading, writing, and Japanese phrasing), <strong>foreign language</strong> (= a language-switch button anchored at the top-right of the screen, placing the same scene side by side in the mother tongue and a foreign tongue), economics (= the relation between price and demand), food (= ingredients and seasons), and ways of relating to people (= closeness, parting, and letters) — none of these are preached or imposed; all are woven into the rhythm of the daily round.'
     callout:

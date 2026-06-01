@@ -764,13 +764,37 @@ td {
 }
 .product-section .section__epigraph {
   font-family: var(--font-serif-jp);
-  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
   font-style: italic;
-  letter-spacing: 0.08em;
-  line-height: 1.75;
-  color: var(--color-ink-soft);
-  margin: 0 0 0.75rem;
-  max-width: 50ch;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 2;
+  color: var(--color-ink-deep);
+  text-align: center;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 38ch;
+  padding: 1.75rem 1rem;
+  border-top: 1px solid var(--color-ink-soft);
+  border-bottom: 1px solid var(--color-ink-soft);
+  position: relative;
+}
+.product-section .section__epigraph::before,
+.product-section .section__epigraph::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--color-ink-soft);
+  margin: 0 auto;
+  opacity: 0.55;
+}
+.product-section .section__epigraph::before {
+  margin-bottom: 1rem;
+  margin-top: -0.875rem;
+}
+.product-section .section__epigraph::after {
+  margin-top: 1rem;
+  margin-bottom: -0.875rem;
 }
 .product-section .section__paragraph {
   font-family: var(--font-sans-jp);
