@@ -4,3 +4,7 @@
 tmp/
 .vscode/
 .idea/
+
+# talent(private) 由来の背景元。公開 repo には全景を載せない(成果物カードは松の一部のみ)。
+# サンクスカード deco 再生成時は talent/public/placeholders/bg/asuka_viewport.png を thankyou-src/ に cp
+assets/thankyou-src/asuka_viewport.png
