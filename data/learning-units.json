@@ -1,0 +1,630 @@
+{
+  "$schema": "https://github.com/ChatteLapin/talent — ADR-113 §5 learning units export",
+  "generatedAt": "2026-06-11T14:20:21.350Z",
+  "subjects": [
+    {
+      "subjectId": "math",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "さんすう",
+          "en": "Math"
+        },
+        "adult": {
+          "ja": "算数",
+          "en": "Mathematics"
+        }
+      }
+    },
+    {
+      "subjectId": "food_education",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "食べものの知恵",
+          "en": "Food wisdom"
+        },
+        "adult": {
+          "ja": "食育",
+          "en": "Food education"
+        }
+      }
+    },
+    {
+      "subjectId": "home_economics",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "家庭",
+          "en": "Home skills"
+        },
+        "adult": {
+          "ja": "家庭科",
+          "en": "Home economics"
+        }
+      }
+    },
+    {
+      "subjectId": "art_and_craft",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "図工",
+          "en": "Arts & crafts"
+        },
+        "adult": {
+          "ja": "図画工作 (美術)",
+          "en": "Arts & crafts"
+        }
+      }
+    },
+    {
+      "subjectId": "ethics",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "どうとく",
+          "en": "Right & wrong"
+        },
+        "adult": {
+          "ja": "倫理・哲学",
+          "en": "Ethics & philosophy"
+        }
+      }
+    },
+    {
+      "subjectId": "japanese_language",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "こくご",
+          "en": "Words & reading"
+        },
+        "adult": {
+          "ja": "国語",
+          "en": "Language arts"
+        }
+      }
+    },
+    {
+      "subjectId": "social_studies",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "社会",
+          "en": "Society & places"
+        },
+        "adult": {
+          "ja": "社会 (地理・文化・職業)",
+          "en": "Social studies"
+        }
+      }
+    },
+    {
+      "subjectId": "social_skills",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "人とのつきあい",
+          "en": "Getting along"
+        },
+        "adult": {
+          "ja": "社会性 (人間関係)",
+          "en": "Social skills"
+        }
+      }
+    },
+    {
+      "subjectId": "history",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "歴史",
+          "en": "History"
+        },
+        "adult": {
+          "ja": "歴史",
+          "en": "History"
+        }
+      }
+    },
+    {
+      "subjectId": "foreign_language",
+      "group": "basic",
+      "label": {
+        "kids": {
+          "ja": "外国のことば",
+          "en": "Other languages"
+        },
+        "adult": {
+          "ja": "外国語",
+          "en": "Foreign language"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_accounting",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "会計",
+          "en": "Accounting"
+        },
+        "adult": {
+          "ja": "会計",
+          "en": "Accounting"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_operations",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "仕入れと在庫",
+          "en": "Buying & stock"
+        },
+        "adult": {
+          "ja": "オペレーション",
+          "en": "Operations"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_economics",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "値段のしくみ",
+          "en": "How prices work"
+        },
+        "adult": {
+          "ja": "経済学",
+          "en": "Economics"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_marketing",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "売り方",
+          "en": "How to sell"
+        },
+        "adult": {
+          "ja": "マーケティング",
+          "en": "Marketing"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_strategy",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "作戦",
+          "en": "Game plans"
+        },
+        "adult": {
+          "ja": "戦略",
+          "en": "Strategy"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_finance",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "お金のやりくり",
+          "en": "Managing money"
+        },
+        "adult": {
+          "ja": "ファイナンス",
+          "en": "Finance"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_management",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "仲間と働く",
+          "en": "Working together"
+        },
+        "adult": {
+          "ja": "組織・人材",
+          "en": "Organization & people (OB)"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_entrepreneurship",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "新しい商売づくり",
+          "en": "Starting new things"
+        },
+        "adult": {
+          "ja": "起業家精神",
+          "en": "Entrepreneurship"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_international",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "世界との商い",
+          "en": "Trade with the world"
+        },
+        "adult": {
+          "ja": "国際ビジネス",
+          "en": "International business"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_analytics",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "数字で考える",
+          "en": "Thinking with numbers"
+        },
+        "adult": {
+          "ja": "データ分析",
+          "en": "Analytics & DX"
+        }
+      }
+    },
+    {
+      "subjectId": "mba_negotiation",
+      "group": "business",
+      "label": {
+        "kids": {
+          "ja": "話し合い",
+          "en": "Talking it out"
+        },
+        "adult": {
+          "ja": "交渉",
+          "en": "Negotiation"
+        }
+      }
+    },
+    {
+      "subjectId": "bookkeeping_3",
+      "group": "certification",
+      "label": {
+        "kids": {
+          "ja": "簿記 3 級",
+          "en": "Bookkeeping Level 3"
+        },
+        "adult": {
+          "ja": "日商簿記 3 級",
+          "en": "Nissho Bookkeeping Level 3"
+        }
+      }
+    },
+    {
+      "subjectId": "medicine",
+      "group": "specialized",
+      "label": {
+        "kids": {
+          "ja": "からだと病気",
+          "en": "Body & sickness"
+        },
+        "adult": {
+          "ja": "医学",
+          "en": "Medicine"
+        }
+      }
+    },
+    {
+      "subjectId": "nutrition",
+      "group": "specialized",
+      "label": {
+        "kids": {
+          "ja": "栄養",
+          "en": "Nutrition"
+        },
+        "adult": {
+          "ja": "栄養学",
+          "en": "Nutrition science"
+        }
+      }
+    },
+    {
+      "subjectId": "engineering",
+      "group": "specialized",
+      "label": {
+        "kids": {
+          "ja": "ものづくりの仕組み",
+          "en": "How things are made"
+        },
+        "adult": {
+          "ja": "工学",
+          "en": "Engineering"
+        }
+      }
+    },
+    {
+      "subjectId": "folklore",
+      "group": "specialized",
+      "label": {
+        "kids": {
+          "ja": "暮らしの文化",
+          "en": "Everyday culture"
+        },
+        "adult": {
+          "ja": "民俗学",
+          "en": "Folklore studies"
+        }
+      }
+    }
+  ],
+  "units": [
+    {
+      "unitId": "double_entry_intro",
+      "status": "implemented",
+      "subjectIds": [
+        "mba_accounting",
+        "bookkeeping_3"
+      ],
+      "title": {
+        "kids": {
+          "ja": "お金の出入りを 紙に 書きとめる",
+          "en": "Writing down money in and out"
+        },
+        "adult": {
+          "ja": "複式簿記入門",
+          "en": "Introduction to double-entry bookkeeping"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "売れたお金と 使ったお金を 毎日 帳面につけて、 お店のようすを読む。",
+          "en": "Write down the money you earned and spent every day, and read how your shop is doing."
+        },
+        "adult": {
+          "ja": "売上と費用を仕訳として記録し、 帳簿から店の状態を読む。",
+          "en": "Record sales and expenses as journal entries, and read the state of the shop from the ledger."
+        }
+      },
+      "citations": [
+        "Luca Pacioli, Summa de arithmetica, geometria, proportioni et proportionalita (1494)",
+        "日商簿記 3 級 出題範囲"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "inventory_intro",
+      "status": "implemented",
+      "subjectIds": [
+        "mba_operations"
+      ],
+      "title": {
+        "kids": {
+          "ja": "お店を始めるときの 仕入れ",
+          "en": "Buying goods to start your shop"
+        },
+        "adult": {
+          "ja": "在庫管理入門",
+          "en": "Introduction to inventory management"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "何個仕入れるか。 売り切れも 売れ残りも、 どちらも損。",
+          "en": "How many should you buy? Selling out and having leftovers are both losses."
+        },
+        "adult": {
+          "ja": "仕入量の判断。 売切れの機会損失と売残りのリスク、 両側を体験する。",
+          "en": "Deciding purchase quantity. Experience both sides: opportunity loss of stockouts and risk of leftovers."
+        }
+      },
+      "citations": [
+        "Operations Management 教科書 (= EOQ 萌芽)"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "fifo",
+      "status": "implemented",
+      "subjectIds": [
+        "mba_accounting",
+        "mba_operations",
+        "bookkeeping_3"
+      ],
+      "title": {
+        "kids": {
+          "ja": "古いものから 先に使う",
+          "en": "Use the oldest first"
+        },
+        "adult": {
+          "ja": "先入先出法 (FIFO)",
+          "en": "First-In, First-Out (FIFO)"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "同じ米でも買った日で値段がちがう。 先に買ったものから使うと決める。",
+          "en": "The same rice costs different prices on different days. Decide to use what you bought first."
+        },
+        "adult": {
+          "ja": "取得時期の異なる在庫の払出単価を「先に買ったものから」 と決めて原価計算する。",
+          "en": "Cost inventory bought at different times by deciding \"first purchased, first used\"."
+        }
+      },
+      "citations": [
+        "日商簿記 3 級 出題範囲 (= 先入先出法)"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "price_and_demand",
+      "status": "implemented",
+      "subjectIds": [
+        "mba_economics",
+        "mba_marketing",
+        "math"
+      ],
+      "title": {
+        "kids": {
+          "ja": "値段で お客さんが 変わる",
+          "en": "Prices change your customers"
+        },
+        "adult": {
+          "ja": "価格と需要 (= 価格弾力性の入口)",
+          "en": "Price and demand (gateway to price elasticity)"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "高くすると客が減り、 安くすると もうけが減る。 ちょうどいい値段をさがす。",
+          "en": "Raise the price and customers leave; lower it and your profit shrinks. Search for the right price."
+        },
+        "adult": {
+          "ja": "価格を上げれば需要が減り、 下げれば利幅が痩せる。 原価を床に、 需要を観察して探索する。",
+          "en": "Higher prices reduce demand; lower prices thin margins. Explore with cost as the floor, observing demand."
+        }
+      },
+      "citations": [
+        "Alfred Marshall, Principles of Economics (1890)"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "accrual_basis",
+      "status": "implemented",
+      "subjectIds": [
+        "mba_accounting",
+        "bookkeeping_3"
+      ],
+      "title": {
+        "kids": {
+          "ja": "売れた分だけが 費用になる",
+          "en": "Only what sells becomes an expense"
+        },
+        "adult": {
+          "ja": "発生主義と費用収益対応",
+          "en": "Accrual basis and expense-revenue matching"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "棚に残っているぶんは まだ費用じゃない。 捨てたぶんは 損として書く。",
+          "en": "What's still on the shelf isn't an expense yet. What you throw away is written down as a loss."
+        },
+        "adult": {
+          "ja": "仕入れた瞬間でなく売れた時に費用化する。 廃棄はその日のうちに損として計上する。",
+          "en": "Expense at the time of sale, not purchase. Disposals are recognized as losses the same day."
+        }
+      },
+      "citations": [
+        "日商簿記 3 級 出題範囲 (= 費用収益対応の原則)"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "food_freshness_processing",
+      "status": "implemented",
+      "subjectIds": [
+        "food_education",
+        "mba_operations"
+      ],
+      "title": {
+        "kids": {
+          "ja": "加工で 寿命を のばす",
+          "en": "Cooking makes food last longer"
+        },
+        "adult": {
+          "ja": "食材の鮮度と加工",
+          "en": "Food freshness and processing"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "生ものは その日かぎり。 火を通せば長持ちするけれど、 味は変わる。",
+          "en": "Raw food lasts only a day. Cooking it makes it last, but changes the taste."
+        },
+        "adult": {
+          "ja": "生ものの当日廃棄を加工で延命する。 ただし延命と売れることは別問題。",
+          "en": "Extend same-day-disposal raw ingredients by processing. But lasting longer and selling are different problems."
+        }
+      },
+      "citations": [
+        "食育基本法 (2005) の理念"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "profit_calculation",
+      "status": "implemented",
+      "subjectIds": [
+        "math",
+        "mba_accounting"
+      ],
+      "title": {
+        "kids": {
+          "ja": "もうけの計算",
+          "en": "Counting your earnings"
+        },
+        "adult": {
+          "ja": "利益計算 (= 売上 − 費用)",
+          "en": "Profit calculation (sales minus expenses)"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "売上から費用を引くと、 もうけ。 たし算・ひき算・割合を商売で使う。",
+          "en": "Sales minus expenses equals profit. Use addition, subtraction, and ratios in real trade."
+        },
+        "adult": {
+          "ja": "売上 − 費用 = 利益。 四則演算と割合を商売の実感で身につける。",
+          "en": "Sales − expenses = profit. Arithmetic and ratios learned through the feel of trade."
+        }
+      },
+      "citations": [
+        "小学校算数 (= 加減乗除・割合の応用場面)"
+      ],
+      "inspirations": []
+    },
+    {
+      "unitId": "jobs_to_be_done",
+      "status": "partial",
+      "subjectIds": [
+        "mba_marketing"
+      ],
+      "title": {
+        "kids": {
+          "ja": "お客さんが 本当に ほしいもの",
+          "en": "What customers really want"
+        },
+        "adult": {
+          "ja": "Jobs to be Done",
+          "en": "Jobs to be Done"
+        }
+      },
+      "summary": {
+        "kids": {
+          "ja": "お客さんが買うのは「品物」 じゃなくて「困りごとの解決」。",
+          "en": "Customers don't buy 'things' — they buy solutions to their troubles."
+        },
+        "adult": {
+          "ja": "顧客が買うのは商品でなく「用事の解決」。 ドリルでなく穴。",
+          "en": "Customers hire products to solve a job. Not the drill, but the hole."
+        }
+      },
+      "citations": [
+        "Theodore Levitt, 'Marketing Myopia', Harvard Business Review (1960)",
+        "Clayton Christensen, Jobs to be Done 理論"
+      ],
+      "inspirations": []
+    }
+  ]
+}

@@ -446,6 +446,10 @@ products_talent:
       - tag: "Affective"
         title: "Affective Education (+ Peace Education)"
         text: "Food education (= ingredients, combinations, seasons, origins) / sociality and human relations (= closeness, parting, asynchronous letters) / ethics and character formation (= living with failure, consideration for others) + the cross-cutting theme of '<strong>waiting</strong>' (= concentration, introspection, anticipation, afterglow), and <strong>peace education</strong> brought to fruition as fable in the final chapter. The domain easily lost to IT, smartphones, and two-working-parent households is reclaimed through game experience."
+    implemented:
+      subtitle: "What you can learn today — from the same data as the in-game index."
+      intro: 'The list below shows the learning units <strong>actually playable in the current early version</strong>. It is generated mechanically from <strong>the same data</strong> as the in-game "Index" bookmark — so what this site claims and what the game contains can never drift apart: <strong>overstatement is structurally impossible</strong>. As new units land, this list is regenerated from the same source.'
+      citations_label: "Sources:"
     disciplines:
       subtitle: "Twelve management disciplines — the MBA core, as life-essential literacy."
       intro: 'The twelve disciplines that form the core of the "<strong>Practical</strong>" category. Drawing on the updated MBA core (= 2020s revision) — typically taught only at the university level — they are dissolved into the daily rhythm of commerce, without lecture or textbook framing. Most appear as <em>seeds</em> in Chapter 1 and unfold in stages across the series. Weight is annotated with tags (= <strong>Core</strong> / <strong>Mid</strong> / <strong>Seed</strong> / <strong>Finale</strong>).'
