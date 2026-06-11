@@ -5,6 +5,7 @@ import i18n from '../../../../data/i18n/ja.yaml';
 import talentLogo9to16 from '../../assets/products/talent/logo-9to16.svg';
 import vocationsFigure from '../../assets/products/talent/header-part-1-chapter-1.png';
 import languageFigure from '../../assets/products/talent/switch-language-ja-en.png';
+import learningUnits from '../../../../data/learning-units.json';
 import '../../styles/products/talent.css';
 
 const p = i18n.products_talent;
@@ -150,6 +151,25 @@ const p = i18n.products_talent;
                   </div>
                 </div>
               ))}
+            </div>
+            <h3 class="section__subtitle">{p.curriculum.implemented.subtitle}</h3>
+            <p class="section__paragraph" set:html={p.curriculum.implemented.intro}></p>
+            <div class="table-wrap">
+              <table>
+                <tbody>
+                  {learningUnits.units.map((u) => (
+                    <tr>
+                      <td class="cell-strong" style="width: 30%">{u.title.adult.ja}</td>
+                      <td>
+                        {u.summary.adult.ja}
+                        {u.citations.length > 0 && (
+                          <span class="link-list__note"> {p.curriculum.implemented.citations_label} {u.citations.join(' / ')}</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <h3 class="section__subtitle">{p.curriculum.disciplines.subtitle}</h3>
             <p class="section__paragraph" set:html={p.curriculum.disciplines.intro}></p>
