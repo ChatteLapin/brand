@@ -1,6 +1,6 @@
 {
   "$schema": "https://github.com/ChatteLapin/talent — ADR-113 §5 learning units export",
-  "generatedAt": "2026-06-11T14:20:21.350Z",
+  "generatedAt": "2026-06-11T20:59:22.328Z",
   "subjects": [
     {
       "subjectId": "math",
@@ -397,7 +397,7 @@
       },
       "citations": [
         "Luca Pacioli, Summa de arithmetica, geometria, proportioni et proportionalita (1494)",
-        "日商簿記 3 級 出題範囲"
+        "日商簿記 3 級『簿記の基本原理』"
       ],
       "inspirations": []
     },
@@ -428,7 +428,7 @@
         }
       },
       "citations": [
-        "Operations Management 教科書 (= EOQ 萌芽)"
+        "オペレーションズ・マネジメント『在庫管理と EOQ』"
       ],
       "inspirations": []
     },
@@ -461,7 +461,7 @@
         }
       },
       "citations": [
-        "日商簿記 3 級 出題範囲 (= 先入先出法)"
+        "日商簿記 3 級『先入先出法』"
       ],
       "inspirations": []
     },
@@ -526,7 +526,7 @@
         }
       },
       "citations": [
-        "日商簿記 3 級 出題範囲 (= 費用収益対応の原則)"
+        "日商簿記 3 級『費用収益対応の原則』"
       ],
       "inspirations": []
     },
@@ -558,7 +558,7 @@
         }
       },
       "citations": [
-        "食育基本法 (2005) の理念"
+        "食育基本法『食育の理念』(2005)"
       ],
       "inspirations": []
     },
@@ -590,7 +590,7 @@
         }
       },
       "citations": [
-        "小学校算数 (= 加減乗除・割合の応用場面)"
+        "小学校算数『加減乗除・割合の応用場面』"
       ],
       "inspirations": []
     },
