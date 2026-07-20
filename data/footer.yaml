@@ -1,0 +1,45 @@
+# ChatteLapin 統一フッター SoT (= single source of truth)
+#
+# 公開 web 面を持つ全 prj は本 yaml の内容 (帰属・© 表記・リンク集合) に準拠する。
+# レンダリングは各 prj が自分のスタック・意匠で行う (視覚統一はしない、内容の統一のみ)。
+# 規約 = brand/guidelines.md「統一フッター規約」section。
+#
+# 更新時の手順:
+#   1. 本 yaml を更新して brand に commit
+#   2. 準拠 prj (下記 consumers) それぞれに反映 commit (brand site は import 参照なので自動追従)
+#
+# consumers (= 準拠している実装):
+#   - brand site: site/src/components/Footer.astro (= 本 yaml を直接 import)
+#   - erg: src/erg/brain/public_html.py (= Python 文字列生成、手動同期)
+
+attribution:
+  # 全サービス共通の事業者帰属表記。公開ページのフッターに必ず含める
+  name:
+    ja: シャラパン
+    en: ChatteLapin
+  url: https://chattelapin.orz.cc/
+
+copyright:
+  holder: ChatteLapin
+  since: 2026
+
+github:
+  org: https://github.com/ChatteLapin
+  contact: https://github.com/ChatteLapin/brand/issues/new
+
+# 公開中サービスの相互リンク。一般公開に達したサービスのみ載せる
+# (talent = BASIC auth プレビュー中 / mel = 私用 CF Access 内 → 公開時に追加)
+services:
+  - id: brand
+    name:
+      ja: 公式サイト
+      en: Official Site
+    url: https://chattelapin.orz.cc/
+  - id: erg
+    name:
+      ja: erg — 家庭電力の自動運転
+      en: erg — home power automation
+    url: https://erg.orz.cc/
+
+# 特商法表記・プライバシーポリシー等の法的リンク。整備時に追加し全 consumers に反映
+legal: []

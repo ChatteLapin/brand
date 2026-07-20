@@ -3,12 +3,19 @@
 // 翻訳テキストは data/i18n/{ja,en}.yaml に集約。 colophon は HTML (= <strong>, <br>) を含むため set:html で render。
 import jaDict from '../../../data/i18n/ja.yaml';
 import enDict from '../../../data/i18n/en.yaml';
+// リンク・帰属・© 表記の SoT (= 統一フッター規約、 brand/guidelines.md 参照)
+import footerData from '../../../data/footer.yaml';
 
 const year = new Date().getFullYear();
+const since = footerData.copyright.since;
+const copyYears = since && since < year ? `${since}–${year}` : `${year}`;
 const locale = Astro.currentLocale || 'ja';
 const isJa = locale === 'ja';
 const i18n = isJa ? jaDict : enDict;
 const homeHref = isJa ? '/' : '/en';
+
+// 公開中の姉妹サービス相互リンク (= 自分自身は除外)
+const siblingServices = (footerData.services || []).filter((s) => s.id !== 'brand');
 
 const navItems = [
   { label: i18n.header.nav.mission, href: `${homeHref}#mission` },
@@ -41,13 +48,18 @@ const navItems = [
     <div class="site-footer__elsewhere">
       <p class="site-footer__nav-label">{i18n.footer.nav_label_elsewhere}</p>
       <ul class="site-footer__nav-list">
+        {siblingServices.map((s) => (
+          <li>
+            <a href={s.url} target="_blank" rel="noopener">{isJa ? s.name.ja : s.name.en}</a>
+          </li>
+        ))}
         <li>
-          <a href="https://github.com/ChatteLapin" target="_blank" rel="noopener">
+          <a href={footerData.github.org} target="_blank" rel="noopener">
             {i18n.footer.github_org}
           </a>
         </li>
         <li>
-          <a href="https://github.com/ChatteLapin/brand/issues/new" target="_blank" rel="noopener">
+          <a href={footerData.github.contact} target="_blank" rel="noopener">
             {i18n.footer.issues_link}
           </a>
         </li>
@@ -57,7 +69,7 @@ const navItems = [
 
   <div class="site-footer__base">
     <p class="site-footer__copy">
-      <span class="site-footer__year">{year}</span>
+      <span class="site-footer__year">{copyYears}</span>
       <span aria-hidden="true">·</span>
       <span>{i18n.footer.copy_name}</span>
       <span aria-hidden="true">·</span>
